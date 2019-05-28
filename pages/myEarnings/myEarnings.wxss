@@ -1,0 +1,108 @@
+/* pages/myEarnings/myEarnings.wxss */
+.container{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  font-size: 30rpx;
+}
+.benfit{
+  height: 480rpx;
+ background:linear-gradient(0deg,rgba(19,235,249,1) 0%,rgba(37,116,235,1) 100%);
+  display: flex;
+  flex-direction: column;
+
+}
+.total{
+  text-align: center;
+  margin-top: 60rpx;
+  font-size: 50rpx;
+  font-weight: bold;
+  color: #fff;
+  line-height: 52rpx;
+}
+.money{
+  margin-bottom:43rpx ;
+  text-align: center;
+  color: #F4EA2A;
+  font-size: 70rpx;
+  font-weight: 600;
+}
+.draw{
+  padding: 0 30rpx;
+  display: flex;
+  justify-content: space-between;
+  height: 68rpx;
+  line-height: 68rpx;
+  color: #fff;
+}
+.draw .center{
+  font-size: 40rpx;
+}
+.draw .rf{
+  width: 180rpx;
+  height: 100%;
+  background: #fff;
+  color:#333;
+  text-align: center;
+  border-radius:7rpx;
+}
+.bargain{
+  padding: 0 30rpx;
+  position: relative;
+  margin: 16rpx 0 20rpx 0;
+  color: #fff;
+}
+.bargain .center{
+  position: absolute;
+  left: 45%;
+  top:0;
+}
+.rank{
+  text-align: center;
+  color: #fff;
+}
+.record{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.record-title{ 
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  border-bottom: 2rpx solid #1DA9F1;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.scroll-v{
+ 
+  height: 100%;
+}
+.record-content{
+  padding: 0 30rpx;
+  /* overflow: scroll; */
+}
+
+.record-item{
+  height: 100rpx;
+  border-bottom: 2rpx solid #818181;
+  line-height: 100rpx;
+}
+.record-item .item{
+  width: 33.33%;
+  display: inline-block;
+}
+.item.center{
+  text-align: center;
+}
+.item.right{
+  text-align: right;
+}
+.red{
+  color: red;
+}
+.loadMore{
+  height: 100rpx;
+  text-align: center;
+  line-height: 70rpx;
+}

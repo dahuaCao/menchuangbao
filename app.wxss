@@ -1,0 +1,30 @@
+/**app.wxss**/
+@import 'styles/iconfont.wxss';
+::-webkit-scrollbar{
+width: 0;
+height: 0;
+color: transparent;
+}
+.bg{
+  height: 17rpx;
+  background: #F5F5F5;
+}
+page{
+  height: 100%;
+  background: #fff;
+  font-size:28rpx;
+  color:#333;
+}
+.container {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+} 
+
+view{
+  box-sizing:border-box;
+}
+.pos{
+  height: 17rpx;
+  background:#F5F5F5;
+}

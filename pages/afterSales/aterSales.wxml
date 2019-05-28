@@ -1,0 +1,48 @@
+<!--pages/afterSales/aterSales.wxml-->
+<view>
+  <view class='pos'></view>
+  <view class='pro'>
+    <view class='lf'>
+      <image src='http://temp.im/250x235' mode='aspectFit'></image>
+    </view>
+    <view class='rf'>
+      <view class='item'>铝合金一体窗105系列隔热防蚊平开窗</view>
+      <view class='item'>订单编号: 201809242247</view>
+      <view class='item'>订单金额: ¥ 580:00</view>
+    </view>
+  </view>
+  <view class='info'>
+   <view style='border-bottom:2rpx solid #333;'>
+     <view class='title'>
+       <text class="iconfont iconicontouxiang" style='color:#1C9ADC;margin-right:20rpx;' ></text>师傅信息
+    </view>
+    <view class='bd'>
+      <view class='item'>姓　　　名:　王大军</view>
+      <view class='item'>电　　　话:　1851****220　　　</view>
+      <view class='item'>好　评　率:　98%</view>
+    </view>
+   </view>
+  </view>
+  <view class='uploader-img'>
+    <view class='title'>
+      <view>图片上传 <text style='color:#A9A9A9'>(请上传不少于2张实景图片)</text> </view>
+      <view><text style='color:#FF0000'>*</text>必填项</view>
+    </view>
+    <view>
+      <my-uploader />
+    </view>
+  </view>
+  <view class='uploader-video'>
+    <view class='title'>视频上传 <text style='color:#A9A9A9'>(图片无法描述可上传视频)</text></view>
+    <view>
+      <my-video />
+    </view>
+  </view>
+  <view class='text-area'>
+    <view class='title'>文字描述</view>
+    <textarea placeholder='请详细门窗损坏异响,不超过300字。' cursor-spacing='100rpx'></textarea>
+  </view >
+  <view style='padding-bottom:50rpx;'>
+  <view class='btn'>提交</view>
+  </view>
+</view>

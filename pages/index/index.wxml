@@ -1,0 +1,91 @@
+<!--index.wxml-->
+<view class="">
+  <view class='hd-search'>
+    <view class='location' bindtap='goLocation'>
+      <text class="iconfont icondingwei" style='font-size:38rpx;'></text>{{location}}
+    </view>
+    <view class="search-box">
+      <icon class="search-icon" type="search" size="16"></icon>
+      <input type="text" class="search-input" placeholder="推拉门" value="{{inputVal}}" bindinput="inputTyping" />
+      <!-- <view class="icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+        <icon type="clear" size="16"></icon>
+      </view> -->
+    </view>
+  </view>
+  <m-swiper swiper-class="my-swiper" swiperObj="{{swiperObj}}" />
+  <view class="nav">
+    <view bindtap='repairApply'>
+      <image src="/images/index/my_banner.png" />
+    </view>
+    <view bindtap='goProduct'>
+      <image src="/images/index/caigou.png" />
+    </view>
+
+  </view>
+  <view style='height:10rpx;background:#F5F5F5'></view>
+  <view class="sales-process">
+    <text class="title">购买流程</text>
+    <view class="content">
+      <view class='item'>
+        <view class='item-img'>
+          <text class="iconfont iconyuyue" style='font-size:68rpx;color:#3BBACB;'></text>
+        </view>
+        <text>免费预约</text>
+      </view>
+      <view class='item'>
+        <view class='item-img' style="text-align:center;vertical-align: middle;background:#2574EB;">
+          <text class="iconfont iconceliang" style='font-size:42rpx;color:#fff;position:relative;top:10rpx;'></text>
+        </view>
+        <text>上门量尺</text>
+      </view>
+      <view class='item'>
+        <view class='item-img' style="text-align:center;vertical-align: middle;background:#FA742A;">
+          <text class="iconfont icondingjinzhifu" style='font-size:42rpx;color:#fff;position:relative;top:10rpx;'></text>
+        </view>
+        <text>支付定金</text>
+      </view>
+      <view class='item'>
+        <view class='item-img' style="text-align:center;vertical-align: middle;background:#009944;">
+          <text class="iconfont iconanzhuangweixiu" style='font-size:42rpx;color:#fff;position:relative;top:10rpx;'></text>
+        </view>
+        <text>安装维修</text>
+      </view>
+      <view class='item'>
+        <view class='item-img' style="text-align:center;vertical-align: middle;background:#EF3632;">
+          <text class="iconfont iconsousuoyemiantubiao" style='font-size:42rpx;color:#fff;position:relative;top:10rpx;'></text>
+        </view>
+        <text>完工评价</text>
+      </view>
+    </view>
+  </view>
+  <view style='height:10rpx;background:#F5F5F5'></view>
+  <view class='staff'>
+    <view class='staff-item' style='margin-right:20rpx;'>
+      <image src='http://temp.im/250x235' />
+    </view>
+    <view class='staff-item'>
+      <image src='http://temp.im/250x235' />
+    </view>
+  </view>
+  <view style='height:10rpx;background:#F5F5F5'></view>
+  <view class='tab'>
+    <view class='tab-item' data-index='0' bindtap='goPage'>
+      <text class="iconfont iconwudingdan" style='font-size:50rpx;'></text> 快捷下单
+    </view>
+    <view class='tab-item' data-index='1' bindtap='goPage'>
+      <text class="iconfont iconwudingdan" style='font-size:50rpx;'></text> 员工风采
+    </view>
+    <view class='tab-item' data-index='2' bindtap='goPage'>
+      <text class="iconfont iconwudingdan" style='font-size:50rpx;'></text> 产品时讯
+    </view>
+  </view>
+  <view class='ad'>
+    <view class='ad-item' bindtap='goProduct'>
+      <image src='http://temp.im/250x235' />
+    </view>
+    <view class='ad-item' bindtap='goProduct'>
+      <image src='http://temp.im/250x235' />
+    </view>
+  </view>
+  <view class='link'>如有疑问,请拨打客服热线400-666668-01</view>
+</view>

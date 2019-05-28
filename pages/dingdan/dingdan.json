@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "my-time": "/components/timeLine/index"
+  },
+  "navigationBarTitleText": "我的订单"
+}

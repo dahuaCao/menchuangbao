@@ -1,0 +1,23 @@
+<!--components/videoUploader/index.wxml-->
+<view class='video-contain'>
+  <view class="video-area" hidden='{{!videoSrc}}'>
+    <video class='video'  id="{{ID}}" src="{{videoSrc}}" object-fit='cover' bindplay="bindplay" bindpause="bindpause" bindfullscreenchange="screenChange" bindended="closeVideo" >
+      <!-- <cover-view class='controls' style="display:{{isDisplay}};">
+        <cover-view class='pre-img'>
+          <cover-image class='img' src='images/time.jpg'></cover-image>
+        </cover-view>
+        <cover-view class='play' bindtap="videoPlay">
+          <cover-image src='images/play.png'></cover-image>
+        </cover-view>
+      </cover-view> -->
+       <cover-view class='delete-btn' bindtap="videoDelete" style="display:{{isDisplay}};">
+          <cover-image src='images/delete.png'></cover-image>
+        </cover-view>
+    </video>
+
+  </view>
+  <view class='uploader-input' bindtap="chooseVideo" hidden='{{videoSrc}}'>
+    <text class="iconfont iconbofang" style='color:#515151;font-size:70rpx;'></text>
+    <text>添加视频</text>
+  </view>
+</view>

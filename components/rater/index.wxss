@@ -1,0 +1,8 @@
+/* components/rater/index.wxss */
+
+.star {
+  width: 42rpx;
+  height: 42rpx;
+  margin-right: 26rpx;
+  vertical-align: middle;
+}

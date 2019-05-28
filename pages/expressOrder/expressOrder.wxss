@@ -1,0 +1,81 @@
+/* pages/expressOrder/expressOrder.wxss */
+.container{
+  height: 100%;
+}
+.form{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 56rpx;
+}
+.form .form-content{
+  padding: 56rpx 60rpx;
+
+}
+.form-content .title{
+  text-align: center;
+}
+.form-content .form-item{
+  display: flex;
+  line-height: 60rpx;
+  margin-top:30rpx;
+}
+.form-content .form-item .cell-hd{
+  margin-right: 30rpx;
+}
+.form-content .form-item .cell-bd{
+  flex: 1;
+}
+.form-content .form-item .cell-bd input{
+  height: 60rpx;
+  padding-left: 16rpx;
+  border:2rpx solid rgba(37,116,235,1);
+  border-radius:5px;
+}
+.form-item .cell-bd .yz{
+  display: flex;
+  margin-top: 30rpx;
+}
+.form-item .cell-bd .yz .yz-input{
+  width: 212rpx;
+  margin-right: 30rpx;
+}
+.form-item .cell-bd radio{
+  transform:scale(0.7);
+}
+.form-item .cell-bd .radio{
+  margin-left: 15rpx;
+}
+.form-bottom .clause{
+  text-align: center;
+  display: flex;
+  margin-bottom: 45rpx;
+}
+.form-bottom .clause checkbox-group{
+  display: block;
+  width: 100%;
+}
+.form-bottom .clause navigator{
+  display: inline-block;
+  color: #ccc;
+}
+.form-bottom .clause checkbox-group checkbox{
+   transform:scale(0.6);
+}
+.form-bottom .btn-area{
+  padding: 0 80rpx;
+}
+.form-bottom .btn{
+  height: 68rpx;
+  line-height: 68rpx;
+  background:rgba(37,116,235,1);
+  border-radius:34px;
+  color:#fff;
+  margin-bottom: 28rpx;
+}
+.form-bottom .tips{
+  color: #3C3737;
+  font-size: 18rpx;
+  text-align: center;
+}

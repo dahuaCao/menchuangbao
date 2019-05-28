@@ -1,0 +1,64 @@
+<!--pages/dingdan/dingdan.wxml-->
+<view class='pos'></view>
+<view class='lists'>
+  <navigator class='item' url="/pages/bookedOrders/bookedOrders">
+    <view class='item-c'>
+      <text class="iconfont iconSVG_zhunshida-tianchong" style='font-size:64rpx;color:#FFB106;margin-left:-8rpx;'></text>
+      <view class='text-c'>
+        <text>已预约</text>
+        <view class='posi'>1</view>
+      </view>
+    </view>
+    <view class='arrow'>
+      <text class="iconfont iconjiantou" style='font-size:50rpx;'></text>
+    </view>
+  </navigator>
+  <navigator class='item' url="/pages/complateOrders/complateOrders">
+    <view class='item-c'>
+      <text class="iconfont icondaifukuan" style='font-size:44rpx;color:#FF3045;'></text>
+      <view class='text-c'>
+        <text>待付款</text>
+        <view class='posi'>1</view>
+      </view>
+    </view>
+    <view class='arrow'>
+      <text class="iconfont iconjiantou" style='font-size:50rpx;'></text>
+    </view>
+  </navigator>
+  <navigator class='item' url="/pages/complateOrders/complateOrders">
+    <view class='item-c'>
+      <text class="iconfont iconweixiu3" style='font-size:56rpx;color:#3F78DB;'></text>
+      <view class='text-c'>
+        <text>待安装/维修中</text>
+        <!-- <view class='posi'>1</view> -->
+      </view>
+    </view>
+    <view class='arrow'>
+      <text class="iconfont iconjiantou" style='font-size:50rpx;'></text>
+    </view>
+  </navigator>
+  <navigator class='item' url="/pages/complateOrders/complateOrders">
+    <view class='item-c'>
+      <text class="iconfont iconwancheng" style='font-size:44rpx;color:#FF6D23;'></text>
+      <view class='text-c'>
+        <text>已完成</text>
+        <!-- <view class='posi'>1</view> -->
+      </view>
+    </view>
+    <view class='arrow'>
+      <text class="iconfont iconjiantou" style='font-size:50rpx;'></text>
+    </view>
+  </navigator>
+  <navigator class='item' url="/pages/complateOrders/complateOrders">
+    <view class='item-c'>
+      <text class="iconfont iconshouhou1" style='font-size:56rpx;color:#019945;'></text>
+      <view class='text-c'>
+        <text>售后</text>
+        <!-- <view class='posi'>1</view> -->
+      </view>
+    </view>
+    <view class='arrow'>
+      <text class="iconfont iconjiantou" style='font-size:50rpx;'></text>
+    </view>
+  </navigator>
+</view>

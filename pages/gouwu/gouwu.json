@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "m-rater": "/components/rater/index"
+  }
+}

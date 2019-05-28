@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "my-uploader": "/components/uploader/index",
+    "my-video": "/components/videoUploader/index"
+  },
+  "navigationBarTitleText": "门窗售后服务"
+}

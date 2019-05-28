@@ -1,0 +1,89 @@
+<!--pages/productDetail/productDetail.wxml-->
+<view class='container'>
+  <view class='bg'></view>
+  <view class='content'>
+    <scroll-view style='height:100%' scroll-y>
+      <view class='content-item'>
+          <image src='http://temp.im/250x235'></image>
+          <view class='right'>
+             <text>蒙毅铝合金高档隔热隔音窗防潮MY-112-90</text>
+             <view class='item-detail'>
+                <view class='price'>588-988</view>
+                <view class='sales'>月销　25笔　99%好评</view>
+             </view>
+          </view>
+      </view>
+      <view class='content-item'>
+          <image src='http://temp.im/250x235'></image>
+          <view class='right'>
+             <text>蒙毅铝合金高档隔热隔音窗防潮MY-112-90</text>
+             <view class='item-detail'>
+                <view class='price'>588-988</view>
+                <view class='sales'>月销　25笔　99%好评</view>
+             </view>
+          </view>
+      </view>
+      <view class='content-item'>
+          <image src='http://temp.im/250x235'></image>
+          <view class='right'>
+             <text>蒙毅铝合金高档隔热隔音窗防潮MY-112-90</text>
+             <view class='item-detail'>
+                <view class='price'>588-988</view>
+                <view class='sales'>月销　25笔　99%好评</view>
+             </view>
+          </view>
+      </view>
+      <view class='content-item'>
+          <image src='http://temp.im/250x235'></image>
+          <view class='right'>
+             <text>蒙毅铝合金高档隔热隔音窗防潮MY-112-90</text>
+             <view class='item-detail'>
+                <view class='price'>588-988</view>
+                <view class='sales'>月销　25笔　99%好评</view>
+             </view>
+          </view>
+      </view>
+      <view class='content-item'>
+          <image src='http://temp.im/250x235'></image>
+          <view class='right'>
+             <text>蒙毅铝合金高档隔热隔音窗防潮MY-112-90</text>
+             <view class='item-detail'>
+                <view class='price'>588-988</view>
+                <view class='sales'>月销　25笔　99%好评</view>
+             </view>
+          </view>
+      </view>
+      <view class='content-item'>
+          <image src='http://temp.im/250x235'></image>
+          <view class='right'>
+             <text>蒙毅铝合金高档隔热隔音窗防潮MY-112-90</text>
+             <view class='item-detail'>
+                <view class='price'>588-988</view>
+                <view class='sales'>月销　25笔　99%好评</view>
+             </view>
+          </view>
+      </view>
+      <view class='content-item'>
+          <image src='http://temp.im/250x235'></image>
+          <view class='right'>
+             <text>蒙毅铝合金高档隔热隔音窗防潮MY-112-90</text>
+             <view class='item-detail'>
+                <view class='price'>588-988</view>
+                <view class='sales'>月销　25笔　99%好评</view>
+             </view>
+          </view>
+      </view>
+      <view class='content-item'>
+          <image src='http://temp.im/250x235'></image>
+          <view class='right'>
+             <text>蒙毅铝合金高档隔热隔音窗防潮MY-112-90</text>
+             <view class='item-detail'>
+                <view class='price'>588-988</view>
+                <view class='sales'>月销 25笔</view>
+             </view>
+          </view>
+      </view>
+    </scroll-view>
+
+  </view>
+</view>

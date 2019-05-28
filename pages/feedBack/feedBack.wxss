@@ -1,0 +1,91 @@
+/* pages/feedBack/feedBack.wxss */
+
+.form {
+  flex: 1;
+}
+
+.content {
+  padding: 0 28rpx 0 50rpx;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.title {
+  height: 113rpx;
+  display: flex;
+  align-items: center;
+}
+
+.my-custom {
+  font-size: 80rpx;
+  color: #2574eb;
+  margin-right: 10rpx;
+}
+
+.typeOpin {
+  padding: 24rpx 0 30rpx;
+}
+
+.opinon {
+  margin-bottom: 10rpx;
+}
+
+.radio {
+  margin-left: 40rpx;
+  padding: 6rpx 0;
+}
+
+.radio radio {
+  transform: scale(0.6);
+}
+
+.title-input {
+  height: 94rpx;
+  display: flex;
+  align-items: center;
+}
+
+.des {
+  width: 184rpx;
+  height: 54rpx;
+  border: 2rpx solid rgba(129, 129, 129, 1);
+  margin-left: 60rpx;
+  padding-left: 10rpx;
+}
+
+.area {
+  width: 100%;
+  height: 221rpx;
+  border: 2rpx solid #3C3737;
+  border-radius: 7rpx;
+  text-indent: 20rpx;
+  padding-top: 10rpx;
+  margin-bottom: 34rpx;
+}
+
+.ipnut-item {
+  height: 110rpx;
+  display: flex;
+  align-items: center;
+}
+
+.ipnut-item input {
+  flex: 1;
+  margin: 0 40rpx;
+  height: 60rpx;
+  border: 2rpx solid rgba(37, 116, 235, 1);
+  border-radius: 5rpx;
+  padding-left: 6rpx;
+}
+
+.bottom {
+  height: 68rpx;
+  line-height: 68rpx;
+  background: rgba(37, 116, 235, 1);
+  border-radius: 34rpx;
+  margin: 0 52rpx 100rpx 30rpx;
+  color: #fff;
+}

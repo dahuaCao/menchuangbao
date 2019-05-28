@@ -1,0 +1,40 @@
+<!--pages/Complaints/Complaints.wxml-->
+<view>
+  <view class='pos'></view>
+  <view class='columns'>
+    <view class='item'>
+      <view class='title'>
+        <view>订单编号: 20182240224</view>
+        <view>已处理</view>
+      </view>
+      <view class='bd'>
+        <view class='lf'>
+          <image src='http://temp.im/250x235' mode='scaleToFill'></image>
+        </view>
+        <view class='rf'>
+          <view class='rf-item'>维修类别:窗户</view>
+          <view class='rf-item'>申请时间: 2019-02-15 16:04:20</view>
+          <view class='rf-item'>申请原因:胶脱落</view>
+        </view>
+      </view>
+      <view class='btn' bindtap='goDetail'>查看详情</view>
+    </view>
+    <view class='item'>
+      <view class='title'>
+        <view>订单编号: 20182240224</view>
+        <view>已处理</view>
+      </view>
+      <view class='bd'>
+        <view class='lf'>
+          <image src='http://temp.im/250x235' mode='scaleToFill'></image>
+        </view>
+        <view class='rf'>
+          <view class='rf-item'>维修类别:窗户</view>
+          <view class='rf-item'>申请时间: 2019-02-15 16:04:20</view>
+          <view class='rf-item'>申请原因:胶脱落</view>
+        </view>
+      </view>
+      <view class='btn' bindtap='goDetail'>查看详情</view>
+    </view>
+  </view>
+</view>

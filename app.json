@@ -1,0 +1,76 @@
+{
+  "pages": [
+    "pages/index/index",
+    
+    "pages/ceshi/ceshi",
+      
+    "pages/afterSales/aterSales", 
+    "pages/mulitySelect/mulitySelect",
+    "pages/dingdan/dingdan",
+    "pages/bookedOrders/bookedOrders",
+    "pages/complateOrders/complateOrders",
+    "pages/expressOrder/expressOrder",
+    "pages/timeLine/timeLine",
+    "pages/gouwu/gouwu",
+    "pages/Complaints/Complaints",
+    "pages/mine/mine",
+    "pages/appeal/appeal",
+    "pages/evaluations/evaluations",
+    "pages/cashApplication/cashApplication",
+    "pages/cardManger/cardManger",
+    "pages/addressManger/addressManger",
+    "pages/feedBack/feedBack",
+    "pages/addAddress/addAddress",
+    "pages/repairApplication/repairApplication",
+    "pages/myEarnings/myEarnings",
+    "pages/productNews/productNews",
+    "pages/staffStyle/staffStyle",
+    "pages/payResult/payResult",
+    "pages/coupon/coupon",
+    "pages/position/position",
+    "pages/productCenter/productCenter",
+    "pages/productDetail/productDetail",
+    "pages/logs/logs",
+    "pages/orderDetail/orderDetail"
+  
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "门窗宝",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#3C3737",
+    "selectedColor": "#5465F2",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/tab/homePage.png",
+        "selectedIconPath": "images/tab/homePage-s.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/dingdan/dingdan",
+        "iconPath": "images/tab/order.png",
+        "selectedIconPath": "images/tab/order-s.png",
+        "text": "订单"
+      },
+      {
+        "pagePath": "pages/gouwu/gouwu",
+        "iconPath": "images/tab/shopCart.png",
+        "selectedIconPath": "images/tab/shopCart-s.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "images/tab/personal.png",
+        "selectedIconPath": "images/tab/personal-s.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,49 @@
+/* pages/bookedOrders/bookedOrders.wxss */
+.item{
+  height: auto;
+  box-shadow:0px 4rpx 6rpx 0px rgba(0, 0, 0, 0.1);
+  padding: 0 30rpx 20rpx;
+}
+.title{
+  height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid #858EA2;
+}
+.tl-rf{
+  color: #FE0707;
+}
+.hd{
+  display: flex;
+  height: 190rpx;
+  margin: 26rpx 0;
+  position: relative;
+}
+.hd-lf{
+  height: 190rpx;
+  width: 190rpx;
+  margin-right: 24rpx;
+  
+}
+.hd-lf image{
+  width: 100%;
+  height: 100%;
+}
+.hd-rf .time{
+  margin-top: 24rpx;
+}
+.btn{
+  width: 174rpx;
+  height: 68rpx;
+  border:1rpx solid #9A9A9A;
+  border-radius:8rpx;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  line-height: 68rpx;
+}
+.fd{
+  margin-bottom: 20rpx;
+}

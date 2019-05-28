@@ -1,0 +1,43 @@
+<!--productCenter.wxml-->
+<view class="container">
+  <view class="pos"></view>
+  <view class="search-bar">
+    <view class="search-box">
+      <icon class="icon-search_in-box" type="search" size="16"></icon>
+      <input type="text" class="search-bar_input" placeholder="推拉门" value="{{inputVal}}" bindinput="inputTyping" />
+      <view class="icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+        <icon type="clear" size="16"></icon>
+      </view>
+    </view>
+    <view class="search-bar-btn">搜索</view>
+  </view>
+  <view class="hotSearch">
+    <view class="title">热门搜索</view>
+    <view class="search-item">
+      <view ><text class="item">推拉门</text></view>
+      <view ><text class="item">铝合金</text></view>
+      <view ><text class="item">平开窗</text></view>
+    </view>
+  </view>
+  <view class="productCenter">
+      <view class="nav-left">
+        <block  wx:for="{{navLeftItems}}" wx:key="index">
+            <view class="nav_left_items {{curNav==item.id ? 'active' : ''}}" bindtap="switchRightTab" data-id="{{item.id}}">
+              {{item.desc}}
+            </view>
+        </block>
+      </view>
+      <view class="nav-right">
+        <scroll-view scroll-y style="height:100%">
+          <view class="nav-right-content">
+          <block wx:for="{{navRightItems}}" wx:key="index">
+             <view class="nav-right-item" bindtap='goDetail'>
+                <image src="{{item.src}}" mode="scaleToFill"></image>
+                <text>{{item.desc}}</text>
+             </view>
+          </block>
+        </view>
+        </scroll-view>
+      </view>
+  </view>
+</view>

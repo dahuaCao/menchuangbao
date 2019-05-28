@@ -1,0 +1,89 @@
+<!--pages/repairApplication/repairApplication.wxml-->
+
+<view class=''>
+  <view class='pos'></view>
+  <view class='top'>
+    <view class='depict'>
+      <view class='depict-item' style='margin-bottom:16rpx'>
+        <view>
+          <text class="iconfont icondi icon-item" style='color:#3174F0'></text>上门预收费用可抵扣维修费用</view>
+        <view>
+          <text class="iconfont iconyouxianji icon-item" style='color:#FF6B6A'></text>极速响应</view>
+      </view>
+      <view class='depict-item'>
+        <view>
+          <text class="iconfont iconSVG_zhunshida-tianchong icon-item" style='color:#009944'></text>准时上门维修</view>
+        <view>
+          <text class="iconfont iconyouzhipinpai icon-item" style='color:#EFB336'></text>优质服务</view>
+      </view>
+    </view>
+    <view class='address'>
+      <view class='adr'>
+        <view>
+          <text class="iconfont icondingwei" style='color:#1296DB;font-size:34rpx;margin-right:20rpx;'></text>湖北省襄阳市樊城区某小区1期2栋802室</view>
+      </view>
+      <view class='link'>王女士　　　13901245121</view>
+    </view>
+    <view class='select'>
+      选择类型
+      <m-select prop-array='{{selectArray}}' bind:myget='getDate' custom="my-dingy" />
+    </view>
+    <view class='uploader'>
+      <view class='uploader-hd'>
+        <view>上传图片
+          <text style='color:#BDBDBD;margin-left:16rpx;'>请上传至少2张实拍图片,少于2M</text>
+        </view>
+        <view style='color:#3785EA'>*非必填</view>
+      </view>
+      <view class='uploader-bd'>
+        <view class='uploader-files' id='uploaderFiles'>
+          <block wx:for="{{files}}" wx:key="*this">
+            <view class="uploader-file" bindtap="previewImage" id="{{item}}">
+              <image class="uploader-img" src="{{item}}" mode="aspectFill" />
+            </view>
+          </block>
+          <view class="uploader-file">
+            <image class="uploader-img" src="http://temp.im/250x235" />
+          </view>
+          <view class='uploader-input' bindtap="chooseImage">
+            <text class="iconfont iconxiangji" style='color:#515151;font-size:60rpx;'></text>
+            <text>添加图片</text>
+          </view>
+        </view>
+      </view>
+      <view class='uploader-fd'>
+        <input placeholder="这是一个可以自动聚焦的input" />
+        <text>*非必填</text>
+      </view>
+    </view>
+  </view>
+  <view class='pos'></view>
+  <view class='bottom'>
+    <view class='time-select'>
+      <view>期待上门时间</view>
+      <view class='input-select'>
+        <view class="section">
+          <picker bindchange="bindPickerChange" mode="date" value="{{date}}" start="2016-09" end="2022-09" bindchange="bindDateChange">
+            <view class="picker" style='color:#3785EA'>
+              {{date}}
+            </view>
+          </picker>
+        </view>
+        <view class="section">
+          <picker bindchange="timeChange" value="2" range="{{timeArray}}" mode="selector">
+            <view class="picker" style='text-align:right'>
+              {{times}}
+            </view>
+          </picker>
+        </view>
+      </view>
+    </view>
+    <view class='tips'>
+      <view class='title'>温馨提示</view>
+      <view class='tip-item'>1、下单后,请保持电话畅通,20分钟内将有维修师傅和您联系;</view>
+      <view class='tip-item'>2、同意师傅上门维修,需预付25元上门费用,此费用可抵扣维修费用;</view>
+      <view class='tip-item'>3、为保证您的权益,请通过此平台支付;</view>
+    </view>
+    <view class='tijiao'>提　交</view>
+  </view>
+</view>
