@@ -16,7 +16,7 @@
           <input class="phone-input" placeholder="请输入您手机号码" />
           <view class='yz'>
             <input class='yz-input' />
-            <view>获取短信验证码</view>
+            <view class='yz-btn'>获取短信验证码</view>
           </view>
         </view>
       </view>

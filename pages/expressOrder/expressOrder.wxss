@@ -36,10 +36,19 @@
 .form-item .cell-bd .yz{
   display: flex;
   margin-top: 30rpx;
+  justify-content: space-between;
 }
 .form-item .cell-bd .yz .yz-input{
   width: 212rpx;
-  margin-right: 30rpx;
+}
+.yz .yz-btn{
+  width: 238rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:#2574EB;
+border-radius:6rpx;
+color: #fff;
 }
 .form-item .cell-bd radio{
   transform:scale(0.7);

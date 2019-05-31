@@ -18,7 +18,7 @@ App({
       }
     })
     // 获取用户信息
-    wx.getSetting({
+    /*wx.getSetting({
       success: res => {
         if (res.authSetting['scope.userInfo']) {
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
@@ -36,7 +36,7 @@ App({
           })
         }
       }
-    })
+    })*/
   },
   getLocation:function(){
     qqmapsdk = new QQMapWX({
@@ -44,26 +44,9 @@ App({
       key: 'HPZBZ-ERACI-5VEG2-5YTBO-AX723-DCBCV'
     });
     var that = this;
-    // 调用接口
-    return new Promise((resolve, reject) => {
-      qqmapsdk.reverseGeocoder({
-        success: function (res) {
-          resolve(res)
-          that.globalData.location = res.result.address_component.city;
-        },
-        fail: function (res) {
-          that.globalData.location = '定位失败';
-          reject('定位失败')
-        },
-        complete: function (res) {
-
-        }
-      });
-    })
-   
   },
   globalData: {
     userInfo: null,
-    
+    locatInfo:null
   }
 })

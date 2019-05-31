@@ -1,0 +1,36 @@
+<!--pages/appointOrderDetail/appointOrderDetail.wxml-->
+<view>
+ <view class='pos'></view>
+ <view class='masterInfo'>
+    <view class='master-hd'>
+      <text class="iconfont iconicontouxiang" style='font-size:28rpx;color:#1296DB;margin-right:16rpx;'></text>师傅信息
+    </view>
+    <view class='master-bd'>
+       <view class='m-bd-item'>
+          姓　　　名: 王大军
+       </view>
+       <view class='m-bd-item'>
+          电　　　话: 1857****2356  <text class="iconfont iconicontouxiang" style='font-size:28rpx;color:#1296DB;margin-right:16rpx;'></text>     
+       </view>
+       <view class='m-bd-item'>
+          好　评　率: 98%
+       </view>
+    </view>
+ </view>
+ <view class='orderInfo'>
+    <view class='order-hd'>
+       <text class="iconfont iconshangpinxinxi" style='font-size:56rpx;color:#1296DB;margin-right:16rpx;'></text>订单信息
+    </view>
+    <view>
+      <view class='o-bd-item'>
+        订单编号: 201809242248
+      </view>
+       <view class='o-bd-item'>
+        商品名称: 铝合金一体窗105系列隔热防蚊平开窗
+      </view>
+      <view class='o-bd-item'>
+        下单时间: 2018-08-24 09:32:47
+      </view>
+    </view>
+ </view>
+</view>

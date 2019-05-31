@@ -49,16 +49,15 @@
       <text class="iconfont iconjiantou" style='font-size:50rpx;'></text>
     </view>
   </navigator>
-  <navigator class='item' url="/pages/complateOrders/complateOrders">
+  <!-- <navigator class='item' url="/pages/complateOrders/complateOrders">
     <view class='item-c'>
       <text class="iconfont iconshouhou1" style='font-size:56rpx;color:#019945;'></text>
       <view class='text-c'>
         <text>售后</text>
-        <!-- <view class='posi'>1</view> -->
       </view>
     </view>
     <view class='arrow'>
       <text class="iconfont iconjiantou" style='font-size:50rpx;'></text>
     </view>
-  </navigator>
+  </navigator> -->
 </view>

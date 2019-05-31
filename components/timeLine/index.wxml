@@ -13,7 +13,7 @@
       </view>
     </view>
   </block>
-  <view class='btn' bindtap='change'>
+  <view class='btn' catchtap='change'>
     订单轨迹
     <text wx:if='{{!toggle}}' class="iconfont iconbelow-s"></text>
     <text wx:else class="iconfont icontop-s"></text>

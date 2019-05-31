@@ -1,0 +1,25 @@
+/* pages/appointOrderDetail/appointOrderDetail.wxss */
+
+.masterInfo{
+  padding: 20rpx 30rpx 38rpx;
+}
+.master-hd{
+  padding: 24rpx 0;
+  border-bottom: 2rpx solid #858EA2;
+}
+.m-bd-item{
+  margin-top: 24rpx;
+}
+
+.orderInfo{
+  padding: 14rpx 30rpx 0;
+}
+.order-hd{
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 2rpx solid #858EA2;
+}
+.o-bd-item{
+  margin-top: 24rpx;
+}

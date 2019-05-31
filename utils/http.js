@@ -1,7 +1,7 @@
 /**
  * 封装http 请求方法
  */
-const apiUrl = "https://www.xxx.cn"; //服务器api地址
+const host = "https://www.easy-mock.com/mock/5cee23370ce2e125d013e304/mcb"; //服务器api地址
 
 let headObj = {
   "content-type": "application/json;charset=UTF-8"
@@ -53,7 +53,7 @@ function getData(url,header) {
   return new Promise((resolve,reject) => {
     wx.request({
       url: host + url,
-      header: headObj,
+      header: header || headObj,
       method: 'GET',
       success: function (res) {
         resolve(res.data);
@@ -63,4 +63,9 @@ function getData(url,header) {
       },
     })
   })
+}
+
+module.exports = {
+  $get: getData,
+  $post: requestPost
 }

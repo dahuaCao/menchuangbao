@@ -73,7 +73,7 @@
           <text class="iconfont iconjiantou" style='font-size:50rpx;'></text>
          </view>
       </navigator>
-      <navigator class='item' url="/pages/cardManger/cardManger">
+      <!-- <navigator class='item' url="/pages/cardManger/cardManger">
          <view class='item-c'>
             <text class="iconfont iconyinhangqia" style='font-size:60rpx;color:#16C7E4;margin-left:-8rpx'></text>
             <view class='text-c'>
@@ -84,7 +84,7 @@
          <view class='arrow'>
           <text class="iconfont iconjiantou" style='font-size:50rpx;'></text>
          </view>
-      </navigator>
+      </navigator> -->
       <navigator class='item' url="/pages/myEarnings/myEarnings" style='border:none'>
          <view class='item-c'>
             <text class="iconfont iconicon_gengduoshezhi" style='font-size:44rpx;color:#2574EB;'></text>

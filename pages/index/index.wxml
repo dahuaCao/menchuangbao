@@ -4,12 +4,9 @@
     <view class='location' bindtap='goLocation'>
       <text class="iconfont icondingwei" style='font-size:38rpx;'></text>{{location}}
     </view>
-    <view class="search-box">
+    <view class="search-box" bindtap='goSearch'>
       <icon class="search-icon" type="search" size="16"></icon>
-      <input type="text" class="search-input" placeholder="推拉门" value="{{inputVal}}" bindinput="inputTyping" />
-      <!-- <view class="icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
-        <icon type="clear" size="16"></icon>
-      </view> -->
+      <text>推拉门</text>
     </view>
   </view>
   <m-swiper swiper-class="my-swiper" swiperObj="{{swiperObj}}" />
@@ -80,12 +77,12 @@
     </view>
   </view>
   <view class='ad'>
-    <view class='ad-item' bindtap='goProduct'>
-      <image src='http://temp.im/250x235' />
-    </view>
-    <view class='ad-item' bindtap='goProduct'>
-      <image src='http://temp.im/250x235' />
-    </view>
+    <view class='ad-item' bindtap='goProduct'> 
+      <image src='http://temp.im/250x235' /> 
+    </view> 
+    <view class='ad-item' bindtap='goProduct'> 
+      <image src='http://temp.im/250x235' /> 
+    </view> 
   </view>
-  <view class='link'>如有疑问,请拨打客服热线400-666668-01</view>
+  <view class='link' data-reply-phone="400-666668-01" bindtap="phoneCall">如有疑问,请拨打客服热线400-666668-01</view>
 </view>

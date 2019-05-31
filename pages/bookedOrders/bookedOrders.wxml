@@ -2,7 +2,7 @@
 <view>
  <view class='pos'></view>
  <view>
-   <view class='item'>
+   <view class='item' bindtap='goDetail'>
       <view class='title'>
         <view>订单编号:201809242247</view>
         <view class='tl-rf'>待上门</view>

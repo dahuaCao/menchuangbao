@@ -17,7 +17,7 @@
             <view class="item">
                 <text>商品金额:　¥9776.00</text>
             </view>
-            <view class="judge">
+            <view class="judge" catchtap="evaluation">
                 <text class="des">评　　价</text>
             </view>           
         </view>

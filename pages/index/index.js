@@ -1,13 +1,12 @@
 //index.js
 //获取应用实例
 const app = getApp();
+const http = require('../../utils/http.js');
+const utils = require('../../utils/util.js');
 
 Page({
   data: {
-    motto: "Hello World",
     userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse("button.open-type.getUserInfo"),
     swiperObj: {
       autoplay: true,
       indicatorDots: true,
@@ -15,7 +14,8 @@ Page({
       interval: 3000,
       duration: 300
     },
-    location:'定位中...'
+    location:'定位中...',
+    adList:''
   },
   //事件处理函数
   bindViewTap: function() {
@@ -36,6 +36,11 @@ Page({
       url: "../logs/logs"
     });
   },
+  goSearch:function(){
+    wx.navigateTo({
+      url: "/pages/productCenter/productCenter"
+    });
+  },
   goProduct:function(){
     wx.navigateTo({
       url: "/pages/productCenter/productCenter"
@@ -46,55 +51,39 @@ Page({
       url: "/pages/repairApplication/repairApplication"
     });
   },
-  onLoad: function (options) {
-    var that = this;
-    if (app.globalData.location){
-      that.setData({
-        location: app.globalData.location
-      })
-    }else{
-      app.getLocation().then(function (res) {
-        that.setData({
-          location: app.globalData.location
-        })
-      })
-    }
-    
-    
-   
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      });
-    } else if (this.data.canIUse) {
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        });
-      };
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo;
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          });
-        }
-      });
-    }
+  phoneCall:function(e){
+    console.log(e)
+    wx.makePhoneCall({
+      phoneNumber: e.currentTarget.dataset.replyPhone,
+      success:function(){
+        
+      }
+    })
   },
-  getUserInfo: function(e) {
-    console.log(e);
-    app.globalData.userInfo = e.detail.userInfo;
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    });
+  onLoad: function (options) {
+    this.getAd();
+    var that = this;
+    utils.getLocation(function(res){
+      if(res.result){
+        that.setData({
+          location:res.result.address_component.city
+        })
+        console.log(res)
+        app.globalData.locatInfo = res.result;
+      }else{
+        that.setData({
+          location: res.result.address_component.city
+        })
+      }
+    })  
+  },
+  getAd:function(){
+    console.log('接口调用')
+   /* http.$get('/productImg').then((res) => {
+      console.log(res)
+      this.setData({
+        adList:res.data.imgArr
+      })
+    })*/
   }
 });
