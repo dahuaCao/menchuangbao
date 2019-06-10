@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "m-select": "/components/select/index"
+    "m-select": "/components/select/index",
+    "m-uploader": "/components/uploader/index"
   }
 }

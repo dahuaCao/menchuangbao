@@ -1,10 +1,11 @@
 /**
  * 封装http 请求方法
  */
-const host = "https://www.easy-mock.com/mock/5cee23370ce2e125d013e304/mcb"; //服务器api地址
+// const host = "https://www.easy-mock.com/mock/5cee23370ce2e125d013e304/mcb"; //服务器api地址
+const host = "http://118.24.234.156:8090";
 
 let headObj = {
-  "content-type": "application/json;charset=UTF-8"
+  "Content-Type": "application/x-www-form-urlencoded"
 }
 // Object.assign(form, obj); 对象合并
 /**

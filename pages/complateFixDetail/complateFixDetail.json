@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "已完成订单详情",
+  "usingComponents": {
+    "m-rater": "/components/rater/index"
+  }
+}

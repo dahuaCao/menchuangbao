@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "my-time": "/components/timeLine/index"
+    "my-time": "/components/timeLine/index",
+    "m-dialog": "/components/dialog/index"
   },
   "navigationBarTitleText": "已完成订单"
 }

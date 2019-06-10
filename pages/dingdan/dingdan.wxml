@@ -13,7 +13,7 @@
       <text class="iconfont iconjiantou" style='font-size:50rpx;'></text>
     </view>
   </navigator>
-  <navigator class='item' url="/pages/complateOrders/complateOrders">
+  <navigator class='item' url="/pages/unpaidOrders/unpaidOrders">
     <view class='item-c'>
       <text class="iconfont icondaifukuan" style='font-size:44rpx;color:#FF3045;'></text>
       <view class='text-c'>
@@ -25,7 +25,7 @@
       <text class="iconfont iconjiantou" style='font-size:50rpx;'></text>
     </view>
   </navigator>
-  <navigator class='item' url="/pages/complateOrders/complateOrders">
+  <navigator class='item' url="/pages/servedOrders/servedOrders">
     <view class='item-c'>
       <text class="iconfont iconweixiu3" style='font-size:56rpx;color:#3F78DB;'></text>
       <view class='text-c'>

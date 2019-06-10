@@ -1,58 +1,81 @@
 <!--pages/dingdan/dingdan.wxml-->
 <view class='pos'></view>
-<view class="container">
-    <view class="title">
-        <view><text>订单编号: 201809240447</text></view>
-        <view class="status"><text>已完成</text></view>
+<view class="item" data-type="1" bindtap='goDetail'>
+  <view class="title">
+    <view>
+      <text>订单编号: 201809240447</text>
     </view>
-    <view class="content">
-        <view class="left"></view>
-        <view class="right">
-            <view>
-                 <text>铝合金一体窗105系列隔热防蚊平开窗</text>
-            </view>
-            <view class="item">
-                 <text>下单时间:  2019-02-15  16:04:02</text>
-            </view>
-            <view class="item">
-                <text>商品金额:　¥9776.00</text>
-            </view>
-            <view class="judge" catchtap="evaluation">
-                <text class="des">评　　价</text>
-            </view>           
+    <view class="status">
+      <text>已完成</text>
+    </view>
+  </view>
+  <view class="content">
+    <view class="left"></view>
+    <view class="right">
+      <view class='hd-title'>
+        <text>铝合金一体窗105系列隔热防热防蚊平开蚊平开窗</text>
+      </view>
+      <view class="r-item" wx:if="{{!judged}}">
+        <text>下单时间:  2019-02-15  16:04:02</text>
+      </view>
+      <view class="r-item">
+        <text>商品金额:　¥9776.00</text>
+      </view>
+      <block>
+        <view class="judge" catchtap="evaluation" wx:if="{{!judged}}">
+          <text class="des">评　　价</text>
         </view>
-    </view>
-    <view class="bottom">
-        <!-- <view class="evaluated">待评价</view>
-        <view class="locus">订单轨迹</view> -->
-        <my-time />
-    </view>
-</view>
-<view class="container">
-    <view class="title">
-        <view><text>订单编号: 201809240447</text></view>
-        <view class="status"><text>已完成</text></view>
-    </view>
-    <view class="content">
-        <view class="left"></view>
-        <view class="right">
-            <view>
-                 <text>铝合金一体窗105系列隔热防蚊平开窗</text>
-            </view>
-            <view class="item">
-                 <text>下单时间:  2019-02-15  16:04:02</text>
-            </view>
-            <view class="item">
-                <text>商品金额:　¥9776.00</text>
-            </view>
-            <view class="judge">
-                <text class="des">评　　价</text>
-            </view>           
+        <view wx:else class='handle'>
+          <view class='bill' hover-class='bill-hover' data-type="1" catchtap='bindLog'>申请开票</view>
+          <view class='complain' hover-class='complain-hover' data-type="2" catchtap='bindLog'>投诉</view>
+          <view class='afterSale' hover-class='afterSale-hover' data-type="3" catchtap='bindLog'>售后服务</view>
         </view>
+      </block>
     </view>
-    <view class="bottom">
-        <!-- <view class="evaluated">待评价</view>
-        <view class="locus">订单轨迹</view> -->
-        <my-time />
-    </view>
+  </view>
+  <view class="bottom">
+    <my-time />
+  </view>
 </view>
+<view class="item" bindtap='goDetail' data-type="2">
+  <view class="title">
+    <view>
+      <text>订单编号: 201809240447</text>
+    </view>
+    <view class="status">
+      <text>已完成</text>
+    </view>
+  </view>
+  <view class="content">
+    <view class="left"></view>
+    <view class="right">
+      <view class='hd-title'>
+        <text>维修类别:窗户</text>
+      </view>
+      <view class="r-item">
+        <text>下单时间:  2019-02-15  16:04:02</text>
+      </view>
+      <view class="r-item">
+        <text>维修金额:　¥176.00</text>
+      </view>
+      <block>
+        <view class="judge" wx:if="{{judged}}" catchtap="evaluation">
+          <text class="des">评　　价</text>
+        </view>
+        <view wx:else class='handle-l'> 
+          <text class='afterSale'>售后服务</text>
+          <text class='complain'>投诉</text>
+          
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class="bottom">
+    <!-- <view class="evaluated">待评价</view>
+        <view class="locus">订单轨迹</view> -->
+    <my-time />
+  </view>
+</view>
+<m-dialog id="dialog">
+  <text slot="content">{{artical}}</text>
+</m-dialog>

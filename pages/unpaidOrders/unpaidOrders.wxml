@@ -2,7 +2,7 @@
 <view>
   <view class='pos'></view>
   <view class='content'>
-    <view class="item">
+    <view class="item" bindtap='goDetail' data-type='1'>
       <view class="i-title">
         <view>
           <text>订单编号: 201809240447</text>
@@ -24,11 +24,11 @@
           </view>
           <view class="r-item">
             <text>定金金额:　¥ 3000.00</text>
-            <text class='pay-btn' wx:if="{{true}}">支付定金</text>
+            <text class='pay-btn' wx:if="{{true}}" catchtap='pay'>支付定金</text>
           </view>
           <view class="r-item">
             <text>尾款金额:　¥ 6776.00</text>
-            <text class='pay-btn' wx:if="{{false}}">支付尾款</text>
+            <text class='pay-btn' wx:if="{{false}}" catchtap='pay'>支付尾款</text>
           </view>
         </view>
       </view>
@@ -38,7 +38,7 @@
         <my-time />
       </view>
     </view>
-    <view class="item">
+    <view class="item" data-type='2' bindtap='goDetail'>
       <view class="i-title">
         <view>
           <text>订单编号: 201809240447</text>

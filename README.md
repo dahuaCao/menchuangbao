@@ -13,7 +13,7 @@
 2.意见反馈 feedBack
 3.我的主页 mine
  
-网络图 http://temp.im/250x235  ¥
+网络图 http://temp.im/250x235   
 
 
 
@@ -34,8 +34,13 @@
 1.购物列表 gouwu
 2.购物车全选，反选 删除 
 
+待付款订单列表 unpaidOrders
+安装待付款详情 unpaidFixDetail
+维修代付款详情 unpaidRepairDetail
+待安装(待维修)已付款列表 servedOrders
 
-已完成订单列表  complateOrders
+
+已完成订单列表  complateOrders(安装和维修)
 
 订单列表页  dingdan
 

@@ -1,17 +1,25 @@
 {
   "pages": [
-    "pages/unpaidOrders/unpaidOrders",
+    "pages/complateOrders/complateOrders",
     "pages/login/login",
+    "pages/ceshi/ceshi",
+    "pages/addAddress/addAddress",
+    "pages/repairApplication/repairApplication",
+    "pages/complateFixDetail/complateFixDetail",
+    "pages/complateRepairDetail/complateRepairDetail",
+    
+    "pages/servedOrders/servedOrders",   
+    "pages/unpaidOrders/unpaidOrders",
+    "pages/unpaidRepairDetail/unpaidRepairDetail",
+    "pages/unpaidFixDetail/unpaidFixDetail",
     "pages/appointOrderDetail/appointOrderDetail",
     "pages/orderDetail/orderDetail",
     "pages/coupon/coupon",
     "pages/index/index",
     "pages/afterSales/aterSales",
-    "pages/ceshi/ceshi",
     "pages/mulitySelect/mulitySelect",
     "pages/dingdan/dingdan",
     "pages/bookedOrders/bookedOrders",
-    "pages/complateOrders/complateOrders",
     "pages/expressOrder/expressOrder",
     "pages/timeLine/timeLine",
     "pages/gouwu/gouwu",
@@ -23,8 +31,6 @@
     "pages/cardManger/cardManger",
     "pages/addressManger/addressManger",
     "pages/feedBack/feedBack",
-    "pages/addAddress/addAddress",
-    "pages/repairApplication/repairApplication",
     "pages/myEarnings/myEarnings",
     "pages/productNews/productNews",
     "pages/staffStyle/staffStyle",
@@ -32,8 +38,7 @@
     "pages/position/position",
     "pages/productCenter/productCenter",
     "pages/productDetail/productDetail",
-    "pages/logs/logs"
-    
+    "pages/logs/logs" 
   ],
   "window": {
     "backgroundTextStyle": "light",

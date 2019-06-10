@@ -1,0 +1,50 @@
+/* pages/dingdan/dingdan.wxss */
+.item{
+    width:100%;
+    /* min-height:395rpx; */
+    height:auto;
+    background:rgba(255,255,255,1);
+    box-shadow:0 0 10rpx 0 rgba(0, 0, 0, 0.18);
+    padding:0 28rpx 32rpx 28rpx;
+    margin-bottom: 20rpx;
+}
+.item .title{
+    display:flex;
+    height:75rpx;
+    border-bottom:2rpx solid rgba(133,142,162,1);
+    justify-content:space-between;
+    align-items:center;
+}
+.item .title .status{
+    color:#FE0707;
+}
+.item .content{
+    padding:27rpx 0;
+    display:flex;
+}
+.item .content .left{
+    width:190rpx;
+    height:190rpx;
+    margin-right:24rpx;
+    background:#ccc;
+}
+.item .content .right{
+    flex:1;
+    /* height:190rpx; */
+    position: relative;
+}
+.hd-title{
+  width: 460rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.item .content .right .r-item{
+    margin-top:24rpx;
+    display: flex;
+    justify-content: space-between;
+}
+.item .bottom{
+    margin: 10rpx;
+}
+/* pages/complateOrders/complageOrders.wxss */

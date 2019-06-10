@@ -37,7 +37,7 @@
       </view>
       <view class='uploader-bd'>
         <view class='uploader-files' id='uploaderFiles'>
-          <block wx:for="{{files}}" wx:key="*this">
+          <!-- <block wx:for="{{files}}" wx:key="*this">
             <view class="uploader-file" bindtap="previewImage" id="{{item}}">
               <image class="uploader-img" src="{{item}}" mode="aspectFill" />
             </view>
@@ -48,11 +48,14 @@
           <view class='uploader-input' bindtap="chooseImage">
             <text class="iconfont iconxiangji" style='color:#515151;font-size:60rpx;'></text>
             <text>添加图片</text>
-          </view>
+          </view> -->
+          <m-uploader />
         </view>
       </view>
       <view class='uploader-fd'>
-        <input placeholder="这是一个可以自动聚焦的input" />
+        <view class='input'>
+          <textarea  auto-height placeholder="这是一个可以自动聚焦的input" />
+        </view>
         <text>*非必填</text>
       </view>
     </view>

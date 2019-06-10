@@ -5,10 +5,17 @@ Page({
    * 页面的初始数据
    */
   data: {
-    region: ["湖北省", "襄阳市", "襄城区"]
+    region: ["湖北省", "襄阳市", "襄城区"],
+    height:60
   },
   changeRegin(e) {
     this.setData({ region: e.detail.value });
+  },
+  vulueChange:function(e){
+    console.log(e)
+    if(e.detail.value){
+
+    }
   },
   /**
    * 生命周期函数--监听页面加载

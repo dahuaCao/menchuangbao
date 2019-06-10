@@ -14,30 +14,39 @@
   <view class="hotSearch">
     <view class="title">热门搜索</view>
     <view class="search-item">
-      <view ><text class="item">推拉门</text></view>
-      <view ><text class="item">铝合金</text></view>
-      <view ><text class="item">平开窗</text></view>
+      <view>
+        <text class="item">推拉门</text>
+      </view>
+      <view>
+        <text class="item">铝合金</text>
+      </view>
+      <view>
+        <text class="item">平开窗</text>
+      </view>
     </view>
   </view>
   <view class="productCenter">
-      <view class="nav-left">
-        <block  wx:for="{{navLeftItems}}" wx:key="index">
-            <view class="nav_left_items {{curNav==item.id ? 'active' : ''}}" bindtap="switchRightTab" data-id="{{item.id}}">
-              {{item.desc}}
-            </view>
-        </block>
-      </view>
-      <view class="nav-right">
-        <scroll-view scroll-y style="height:100%">
-          <view class="nav-right-content">
+    <view class="nav-left">
+      <block wx:for="{{navLeftItems}}" wx:key="index">
+        <view class="nav_left_items {{curNav==item.id ? 'active' : ''}}" bindtap="switchRightTab" data-id="{{item.id}}">
+          {{item.desc}}
+        </view>
+      </block>
+    </view>
+    <view class="nav-right">
+      <scroll-view scroll-y style="height:100%">
+        <view class="nav-right-content">
           <block wx:for="{{navRightItems}}" wx:key="index">
-             <view class="nav-right-item" bindtap='goDetail'>
-                <image src="{{item.src}}" mode="scaleToFill"></image>
-                <text>{{item.desc}}</text>
-             </view>
+            <view class="nav-right-item" bindtap='goDetail'>
+              <!-- <image src="{{item.src}}" mode="scaleToFill"></image> -->
+              <view class='image'>
+                <m-image original-image="http://temp.im/250x235" />
+              </view>
+              <text>{{item.desc}}</text>
+            </view>
           </block>
         </view>
-        </scroll-view>
-      </view>
+      </scroll-view>
+    </view>
   </view>
 </view>

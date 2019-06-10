@@ -1,0 +1,67 @@
+/* pages/unpaidFixDetail/unpaidFixDetail.wxss */
+.masterInfo{
+  padding: 20rpx 30rpx 38rpx;
+}
+.master-hd{
+  padding: 24rpx 0;
+  border-bottom: 2rpx solid #858EA2;
+}
+.m-bd-item{
+  margin-top: 24rpx;
+}
+
+.orderInfo{
+  padding: 14rpx 30rpx 34rpx;
+}
+.order-hd,.goods-hd{
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 2rpx solid #858EA2;
+}
+.o-bd-item,.goods-item{
+  margin-top: 24rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.goodsInfo{
+  padding: 14rpx 30rpx 70rpx;
+}
+.pics{
+  margin-top: 24rpx;
+}
+.pics-content{
+  overflow: hidden;
+  margin-top: 4rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+.pic-item{
+  width: 158rpx;
+  height: 110rpx;
+  /* float: left; */
+  margin: 20rpx 14rpx 0 0;
+}
+.pic-item image{
+  width: 100%;
+  height: 100%;
+}
+.total{
+  margin-top: 30rpx;
+  border-top: 2rpx solid #858EA2;
+  padding-top: 34rpx;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+}
+.pay-btn{
+  height: 68rpx;
+  margin: 80rpx 50rpx 0;
+  display: flex;
+  background:#2574EB;
+border-radius:34px;
+color:#fff;
+justify-content: center;
+align-items: center;
+}

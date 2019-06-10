@@ -1,5 +1,6 @@
 {
     "usingComponents":{
-        "m-swiper":"/components/swiper/index"
+        "m-swiper":"/components/swiper/index",
+        "m-image":"/components/imageLoader/index"
       }
 }

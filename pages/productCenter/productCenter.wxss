@@ -108,7 +108,7 @@ page{
   align-items: center;
   margin-bottom: 30rpx;
 }
-.nav-right-content .nav-right-item image{
+.nav-right-content .nav-right-item .image{
   width: 250rpx;
   height: 235rpx;
 }

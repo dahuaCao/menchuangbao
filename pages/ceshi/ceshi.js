@@ -1,4 +1,6 @@
 // pages/ceshi/ceshi.js
+var WxParse = require('../../utils/wxParse/wxParse.js');
+var https = require('../../utils/http.js');
 Page({
 
   /**
@@ -8,22 +10,28 @@ Page({
     id:'video'
   },
   play1:function(){
-    console.log(123)
-    this.videoContext.play();
+   
     
+  },
+  bindAdd:function(){
+    this.dialog.showDialog();
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+   
+    
+   
+	
+    
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    this.videoContext = wx.createVideoContext('video')
+    this.dialog = this.selectComponent("#dialog");
   },
 
   /**

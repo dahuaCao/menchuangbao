@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "my-video":"/components/videoUploader/index"
+    "my-image":"/components/imageLoader/index",
+    "m-dialog":"/components/dialog/index"
   }
 }

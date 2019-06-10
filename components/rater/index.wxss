@@ -1,5 +1,7 @@
 /* components/rater/index.wxss */
-
+.raters{
+  display: inline-block;
+}
 .star {
   width: 42rpx;
   height: 42rpx;

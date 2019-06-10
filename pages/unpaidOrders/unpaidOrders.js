@@ -7,7 +7,38 @@ Page({
   data: {
 
   },
+  goDetail:function(e){
+    console.log(e)
+    const type = e.currentTarget.dataset.type;
+    let url = '';
+    switch(type){
+      case '1':
+        url = '/pages/unpaidFixDetail/unpaidFixDetail'
+        break;
+      case '2':
+        url = '/pages/unpaidRepairDetail/unpaidRepairDetail'
+        break;
+    }
 
+    wx.navigateTo({
+      url: url,
+    })
+  },
+  pay:function(){
+    wx.showModal({
+      title: '温馨提示',
+      content: '请再次确认测量面积与所填数据信息一致',
+      confirmText: '确认',
+      confirmColor: '#FF0000',
+      cancelText: '取消',
+      cancelColor: '#999999',
+      success: function (res) {
+        if (res.confirm) {
+          
+        }
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

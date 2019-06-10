@@ -1,0 +1,58 @@
+/* pages/complateRepairDetail/complateRepairDetail.wxss */
+
+.hd{
+  padding: 0 30rpx 30rpx;
+}
+.hd-item{
+  margin-top: 24rpx;
+}
+
+.bd{
+  padding: 0 30rpx 76rpx;
+}
+.cost-item{
+  margin-top: 24rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pics{
+  margin-top: 24rpx;
+  border-bottom: 2rpx solid #858EA2;
+}
+.pics-content{
+  overflow: hidden;
+  margin-top: 4rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.pic-item{
+  width: 158rpx;
+  height: 110rpx;
+  margin: 20rpx 18rpx 30rpx 0;
+}
+.pic-item image{
+  width: 100%;
+  height: 100%;
+}
+.pic-item:nth-child(4n){
+  margin-right: 0;
+}
+.estimation{
+  padding-top: 26rpx;
+}
+.judg-item{
+  display: flex;
+  align-items: center;
+  margin-top: 26rpx;
+}
+.judg-title{
+  margin-right: 26rpx;
+}
+.orderInfo{
+  margin-top: 50rpx;
+}
+.order-item{
+  margin-bottom: 24rpx;
+}
