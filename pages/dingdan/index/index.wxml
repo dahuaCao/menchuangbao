@@ -1,7 +1,7 @@
 <!--pages/dingdan/dingdan.wxml-->
 <view class='pos'></view>
 <view class='lists'>
-  <navigator class='item' url="/pages/bookedOrders/bookedOrders">
+  <navigator class='item' url="/pages/dingdan/bookedOrders/bookedOrders">
     <view class='item-c'>
       <text class="iconfont iconSVG_zhunshida-tianchong" style='font-size:64rpx;color:#FFB106;margin-left:-8rpx;'></text>
       <view class='text-c'>
@@ -13,7 +13,7 @@
       <text class="iconfont iconjiantou" style='font-size:50rpx;'></text>
     </view>
   </navigator>
-  <navigator class='item' url="/pages/unpaidOrders/unpaidOrders">
+  <navigator class='item' url="/pages/dingdan/unpaidOrders/unpaidOrders">
     <view class='item-c'>
       <text class="iconfont icondaifukuan" style='font-size:44rpx;color:#FF3045;'></text>
       <view class='text-c'>
@@ -25,7 +25,7 @@
       <text class="iconfont iconjiantou" style='font-size:50rpx;'></text>
     </view>
   </navigator>
-  <navigator class='item' url="/pages/servedOrders/servedOrders">
+  <navigator class='item' url="/pages/dingdan/servedOrders/servedOrders">
     <view class='item-c'>
       <text class="iconfont iconweixiu3" style='font-size:56rpx;color:#3F78DB;'></text>
       <view class='text-c'>

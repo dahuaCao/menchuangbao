@@ -58,10 +58,10 @@
   <view style='height:10rpx;background:#F5F5F5'></view>
   <view class='staff'>
     <view class='staff-item' style='margin-right:20rpx;'>
-      <m-image original-image="http://temp.im/250x235" />
+      <m-image original-image="{{imgUrl}}" />
     </view>
     <view class='staff-item'>
-      <m-image original-image="http://temp.im/250x235" />
+      <m-image original-image="{{imgUrl}}" />
     </view>
   </view>
   <view style='height:10rpx;background:#F5F5F5'></view>
@@ -78,10 +78,10 @@
   </view>
   <view class='ad'>
     <view class='ad-item' bindtap='goProduct'>
-      <m-image original-image="http://temp.im/250x235" />
+      <m-image original-image="{{imgUrl}}" />
     </view>
     <view class='ad-item' bindtap='goProduct'>
-      <m-image original-image="http://temp.im/250x235" />
+      <m-image original-image="{{imgUrl}}" />
     </view>
   </view>
   <view class='link' data-reply-phone="400-666668-01" bindtap="phoneCall">如有疑问,请拨打客服热线400-666668-01</view>

@@ -1,4 +1,7 @@
 // pages/login/login.js
+const util = require('../../utils/util.js');
+const user = require('../../utils/user.js');
+const app = getApp();
 Page({
 
   /**
@@ -9,29 +12,27 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   bindGetUserInfo: function (e) {
+    if (e.detail.userInfo == undefined) {
+      app.globalData.hasLogin = false;
+      util.showErrorToast('微信登录失败');
+      return;
+    }
+
     if (e.detail.userInfo) {
-      //用户按了允许授权按钮
-      var that = this;
-      //插入登录的用户的相关信息到数据库
-     /* wx.request({
-        url: getApp().globalData.urlPath + 'hstc_interface/insert_user',
-        data: {
-          openid: getApp().globalData.openid,
-          nickName: e.detail.userInfo.nickName,
-          avatarUrl: e.detail.userInfo.avatarUrl,
-          province: e.detail.userInfo.province,
-          city: e.detail.userInfo.city
-        },
-        header: {
-          'content-type': 'application/json'
-        },
-        success: function (res) {
-          //从数据库获取用户信息
-          that.queryUsreInfo();
-          console.log("插入小程序登录用户信息成功！");
-        }
-      });*/
-      //授权成功后，跳转进入小程序首页
+      user.checkLogin().catch(() => {
+
+        user.loginByWeixin(e.detail.userInfo).then(res => {
+          app.globalData.hasLogin = true;
+
+          wx.switchTab({
+            url: '/pages/index/index'
+          })
+        }).catch((err) => {
+          app.globalData.hasLogin = false;
+          util.showErrorToast('微信登录失败');
+        });
+
+      });
       getApp().globalData.userInfo = e.detail.userInfo;
       wx.switchTab({
         url: '/pages/index/index'

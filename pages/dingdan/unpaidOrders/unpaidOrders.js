@@ -13,10 +13,10 @@ Page({
     let url = '';
     switch(type){
       case '1':
-        url = '/pages/unpaidFixDetail/unpaidFixDetail'
+        url = '/pages/dingdan/unpaidFixDetail/unpaidFixDetail'
         break;
       case '2':
-        url = '/pages/unpaidRepairDetail/unpaidRepairDetail'
+        url = '/pages/dingdan/unpaidRepairDetail/unpaidRepairDetail'
         break;
     }
 

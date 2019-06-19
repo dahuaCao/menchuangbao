@@ -41,6 +41,9 @@
 
 
 已完成订单列表  complateOrders(安装和维修)
+已完成订单详情  complateFixDetail (安装)
+已完成订单详情  complateRepairDetail (维修)
+
 
 订单列表页  dingdan
 

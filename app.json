@@ -1,25 +1,26 @@
 {
   "pages": [
-    "pages/complateOrders/complateOrders",
     "pages/login/login",
+    
     "pages/ceshi/ceshi",
     "pages/addAddress/addAddress",
     "pages/repairApplication/repairApplication",
     "pages/complateFixDetail/complateFixDetail",
     "pages/complateRepairDetail/complateRepairDetail",
-    
-    "pages/servedOrders/servedOrders",   
-    "pages/unpaidOrders/unpaidOrders",
-    "pages/unpaidRepairDetail/unpaidRepairDetail",
-    "pages/unpaidFixDetail/unpaidFixDetail",
-    "pages/appointOrderDetail/appointOrderDetail",
+    "pages/dingdan/servedOrders/servedOrders",   
+    "pages/dingdan/unpaidOrders/unpaidOrders",
+    "pages/dingdan/unpaidRepairDetail/unpaidRepairDetail",
+    "pages/dingdan/unpaidFixDetail/unpaidFixDetail",
+    "pages/dingdan/appointOrderDetail/appointOrderDetail",
+    "pages/dingdan/index/index",
+    "pages/dingdan/bookedOrders/bookedOrders",
+    "pages/complateOrders/complateOrders",
     "pages/orderDetail/orderDetail",
     "pages/coupon/coupon",
     "pages/index/index",
     "pages/afterSales/aterSales",
     "pages/mulitySelect/mulitySelect",
-    "pages/dingdan/dingdan",
-    "pages/bookedOrders/bookedOrders",
+    
     "pages/expressOrder/expressOrder",
     "pages/timeLine/timeLine",
     "pages/gouwu/gouwu",
@@ -59,7 +60,7 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/dingdan/dingdan",
+        "pagePath": "pages/dingdan/index/index",
         "iconPath": "images/tab/order.png",
         "selectedIconPath": "images/tab/order-s.png",
         "text": "订单"

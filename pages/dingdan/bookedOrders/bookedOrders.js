@@ -1,4 +1,4 @@
-// pages/servedOrders/servedOrders.js
+// pages/bookedOrders/bookedOrders.js
 Page({
 
   /**
@@ -7,25 +7,10 @@ Page({
   data: {
 
   },
-  goDetail:function(e){
-    /**
-     * type 类型 1 安装订单 2 维修订单
-    */
-    const type = e.currentTarget.dataset.type;
-    console.log(type)
-    let url = '';
-    switch (type) {
-      case '1':
-        url = '/pages/unpaidFixDetail/unpaidFixDetail?paid=true'
-        break;
-      case '2':
-        url = '/pages/unpaidRepairDetail/unpaidRepairDetail?paid=true'
-        break;
-    }
-
+  goDetail:function(){
     wx.navigateTo({
-      url: url,
-    })
+      url: "/pages/dingdan/appointOrderDetail/appointOrderDetail"
+    });
   },
   /**
    * 生命周期函数--监听页面加载

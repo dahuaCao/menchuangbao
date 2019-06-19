@@ -15,7 +15,8 @@ Page({
       duration: 300
     },
     location:'定位中...',
-    adList:''
+    adList:'',
+    imgUrl:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1560768892900&di=3270d9380d0962634d212f098609bbc3&imgtype=0&src=http%3A%2F%2Fpic.k73.com%2Fup%2Fsoft%2F2016%2F0102%2F092635_44907394.jpg'
   },
   //事件处理函数
   bindViewTap: function() {
@@ -64,6 +65,7 @@ Page({
     this.getAd();
     var that = this;
     utils.getLocation(function(res){
+      console.log('hahah')
       if(res.result){
         that.setData({
           location:res.result.address_component.city
