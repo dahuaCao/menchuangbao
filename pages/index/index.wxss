@@ -71,9 +71,10 @@
   display: flex;
   height: 130rpx;
   width: 100%;
-  justify-content:space-around;
+  /* justify-content:space-around; */
 }
 .sales-process .content .item{
+  height: 130rpx;
   font-size: 22rpx;
   display:flex;
   flex: 1;

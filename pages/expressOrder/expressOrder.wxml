@@ -28,8 +28,9 @@
       </view>
       <view class='form-item'>
         <view class='cell-hd'>详细地址</view>
-        <view class='cell-bd'>
-          <input class="name-input" placeholder="请输入所要服务的详细地址" />
+        <view class='cell-bd textArea'>
+          <!-- <input class="name-input" placeholder="请输入所要服务的详细地址" /> -->
+           <textarea  auto-height placeholder="请输入所要服务的详细地址"  rows="10" />
         </view>
       </view>
       <view class='form-item'>

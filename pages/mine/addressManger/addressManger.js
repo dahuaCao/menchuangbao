@@ -12,9 +12,9 @@ Page({
     ]
   },
   goAddress:function(){
-    console.log(123)
+  
     wx.navigateTo({
-      url: "/pages/addAddress/addAddress"
+      url: "/pages/mine/addAddress/addAddress"
     });
   },
   radioChange:function(e){

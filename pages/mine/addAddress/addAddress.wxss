@@ -20,38 +20,51 @@
 .lf {
   margin-right: 40rpx;
   height: 58rpx;
+  white-space: nowrap;
 }
-
+.textArea{
+  white-space: nowrap;
+}
 .rf {
   flex: 1;
   /* height: 58rpx; */
+  overflow: hidden;
 }
-
+.text{
+   border: 2rpx solid rgba(37, 116, 235, 1);
+   min-height: 58rpx;
+}
+.text textarea{
+  width: 100%;
+  padding-top: 10rpx;
+  text-indent: 20rpx;
+}
+picker{
+  width:100%;
+}
 .custom {
   display: flex;
+ 
+  justify-content: space-between;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
 .cs-item {
   flex: 1;
+  /* width: 32%; */
   height: 58rpx;
   line-height: 58rpx;
   text-align: center;
   border: 2rpx solid rgba(37, 116, 235, 1);
   border-radius: 5rpx;
   color: #ccc;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
-.text{
-   border: 2rpx solid rgba(37, 116, 235, 1);
-   /* background: red; */
-   min-height: 58rpx;
-   /* line-height: 58rpx; */
-   padding-top: 10rpx;
-}
-.text textarea{
-  width: 100%;
-  /* line-height: 58rpx; */
-  text-indent: 20rpx;
-}
+
+
 
 .rf input {
   height: 58rpx;

@@ -18,10 +18,10 @@ Page({
     let url = '';
     switch(type){
       case '1':
-        url = "/pages/complateFixDetail/complateFixDetail";
+        url = "/pages/dingdan/complateFixDetail/complateFixDetail";
         break;
       case '2':
-        url = "/pages/complateFixDetail/complateFixDetail?isFixd="+type;
+        url = "/pages/dingdan/complateFixDetail/complateFixDetail?isFixd="+type;
         break;
     }
     wx.navigateTo({

@@ -1,4 +1,6 @@
 优惠券 coupon
+地址管理 addressManger
+1.新增地址 addAdress
 员工风采 staffStyle
 产品时讯 productNews
 预约支付成功页 payResult
@@ -9,7 +11,7 @@
 快捷下单  expressOrder
 
 订单管理页面
-1.新增地址 addAdress
+
 2.意见反馈 feedBack
 3.我的主页 mine
  

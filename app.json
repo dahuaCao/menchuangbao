@@ -3,10 +3,9 @@
     "pages/login/login",
     
     "pages/ceshi/ceshi",
-    "pages/addAddress/addAddress",
+   
     "pages/repairApplication/repairApplication",
-    "pages/complateFixDetail/complateFixDetail",
-    "pages/complateRepairDetail/complateRepairDetail",
+    
     "pages/dingdan/servedOrders/servedOrders",   
     "pages/dingdan/unpaidOrders/unpaidOrders",
     "pages/dingdan/unpaidRepairDetail/unpaidRepairDetail",
@@ -14,9 +13,11 @@
     "pages/dingdan/appointOrderDetail/appointOrderDetail",
     "pages/dingdan/index/index",
     "pages/dingdan/bookedOrders/bookedOrders",
-    "pages/complateOrders/complateOrders",
+    "pages/dingdan/complateOrders/complateOrders",
+    "pages/dingdan/complateFixDetail/complateFixDetail",
+    "pages/dingdan/complateRepairDetail/complateRepairDetail",
     "pages/orderDetail/orderDetail",
-    "pages/coupon/coupon",
+    
     "pages/index/index",
     "pages/afterSales/aterSales",
     "pages/mulitySelect/mulitySelect",
@@ -25,14 +26,17 @@
     "pages/timeLine/timeLine",
     "pages/gouwu/gouwu",
     "pages/Complaints/Complaints",
-    "pages/mine/mine",
+    "pages/mine/index/index",
+    "pages/mine/coupon/coupon",
+    "pages/mine/addAddress/addAddress",
+    "pages/mine/addressManger/addressManger",
+    "pages/mine/feedBack/feedBack",
+    "pages/mine/myEarnings/myEarnings",
+    "pages/mine/cashApplication/cashApplication",
     "pages/appeal/appeal",
     "pages/evaluations/evaluations",
-    "pages/cashApplication/cashApplication",
+    
     "pages/cardManger/cardManger",
-    "pages/addressManger/addressManger",
-    "pages/feedBack/feedBack",
-    "pages/myEarnings/myEarnings",
     "pages/productNews/productNews",
     "pages/staffStyle/staffStyle",
     "pages/payResult/payResult",
@@ -72,7 +76,7 @@
         "text": "购物车"
       },
       {
-        "pagePath": "pages/mine/mine",
+        "pagePath": "pages/mine/index/index",
         "iconPath": "images/tab/personal.png",
         "selectedIconPath": "images/tab/personal-s.png",
         "text": "我的"

@@ -29,7 +29,7 @@
         </view>
       </view>
       <view class='item'>
-        <view class='lf'>详细地址</view>
+        <view class='lf textArea'>详细地址</view>
         <view class='rf text' >
             <textarea  auto-height placeholder="请输入所要服务的详细地址" bindinput="vulueChange"  />
         </view>

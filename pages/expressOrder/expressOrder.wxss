@@ -20,9 +20,12 @@
   display: flex;
   line-height: 60rpx;
   margin-top:30rpx;
+  min-height: 60rpx;
+  flex-direction: row;
 }
 .form-content .form-item .cell-hd{
   margin-right: 30rpx;
+  white-space: nowrap;
 }
 .form-content .form-item .cell-bd{
   flex: 1;
@@ -32,6 +35,18 @@
   padding-left: 16rpx;
   border:2rpx solid rgba(37,116,235,1);
   border-radius:5px;
+}
+.textArea{
+  min-height: 60rpx;
+  padding-left: 16rpx;
+  border:2rpx solid rgba(37,116,235,1);
+  border-radius:5px;
+ 
+}
+.textArea textarea{
+  width: 100%;
+  padding-top: 10rpx;
+  line-height:12rpx;
 }
 .form-item .cell-bd .yz{
   display: flex;

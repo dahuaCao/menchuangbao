@@ -14,7 +14,7 @@ Page({
   applyCash:function(){
     console.log(1232)
     wx.navigateTo({
-      url: '/pages/cashApplication/cashApplication',
+      url: '/pages/mine/cashApplication/cashApplication',
     })
   },
   /**

@@ -37,7 +37,7 @@
       <text class="iconfont iconjiantou" style='font-size:50rpx;'></text>
     </view>
   </navigator>
-  <navigator class='item' url="/pages/complateOrders/complateOrders">
+  <navigator class='item' url="/pages/dingdan/complateOrders/complateOrders">
     <view class='item-c'>
       <text class="iconfont iconwancheng" style='font-size:44rpx;color:#FF6D23;'></text>
       <view class='text-c'>

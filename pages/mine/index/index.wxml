@@ -19,7 +19,7 @@
         </view>
         <view></view>
       </view>
-      <navigator class='item' url="/pages/coupon/coupon">
+      <navigator class='item' url="/pages/mine/coupon/coupon">
         <view class='item-c'>
           <text class="iconfont iconyouhuiquan" style='font-size:44rpx;color:#DB3721;'></text>
           <view class='text-c'>
@@ -31,7 +31,7 @@
           <text class="iconfont iconjiantou" style='font-size:50rpx;'></text>
         </view>
       </navigator>
-      <navigator class='item' url="/pages/addressManger/addressManger">
+      <navigator class='item' url="/pages/mine/addressManger/addressManger">
         <view class='item-c'>
           <text class="iconfont icondizhi" style='font-size:44rpx;color:#12B2A6;'></text>
           <view class='text-c'>
@@ -43,7 +43,7 @@
           <text class="iconfont iconjiantou" style='font-size:50rpx;'></text>
         </view>
       </navigator>
-      <navigator class='item' url="/pages/coupon/coupon">
+      <navigator class='item' url="/pages/mine/coupon/coupon">
         <view class='item-c'>
           <text class="iconfont iconbangzhuzhongxin" style='font-size:44rpx;color:#FF3030;'></text>
           <view class='text-c'>
@@ -55,7 +55,7 @@
           <text class="iconfont iconjiantou" style='font-size:50rpx;'></text>
         </view>
       </navigator>
-      <navigator class='item' url="/pages/feedBack/feedBack">
+      <navigator class='item' url="/pages/mine/feedBack/feedBack">
         <view class='item-c'>
           <text class="iconfont iconyijianfankui" style='font-size:44rpx;color:#509FD8;'></text>
           <view class='text-c'>
@@ -67,7 +67,7 @@
           <text class="iconfont iconjiantou" style='font-size:50rpx;'></text>
         </view>
       </navigator>
-      <navigator class='item' url="/pages/myEarnings/myEarnings">
+      <navigator class='item' url="/pages/mine/myEarnings/myEarnings">
         <view class='item-c'>
           <text class="iconfont iconshouyi-" style='font-size:44rpx;color:#F96400;'></text>
           <view class='text-c'>
@@ -91,7 +91,7 @@
           <text class="iconfont iconjiantou" style='font-size:50rpx;'></text>
          </view>
       </navigator> -->
-      <navigator class='item' url="/pages/myEarnings/myEarnings" style='border:none'>
+      <navigator class='item' url="/pages/mine/myEarnings/myEarnings" style='border:none'>
         <view class='item-c'>
           <text class="iconfont iconicon_gengduoshezhi" style='font-size:44rpx;color:#2574EB;'></text>
           <view class='text-c'>

@@ -48,8 +48,23 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
-			"list": []
+			"current": 1,
+			"list": [
+				{
+					"id": -1,
+					"name": "1",
+					"pathName": "pages/staffStyle/staffStyle",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "2",
+					"pathName": "pages/productCenter/productCenter",
+					"query": "",
+					"scene": null
+				}
+			]
 		}
 	}
 }
