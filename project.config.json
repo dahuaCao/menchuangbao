@@ -53,7 +53,7 @@
 				{
 					"id": -1,
 					"name": "1",
-					"pathName": "pages/helpCenter/helpCenter",
+					"pathName": "pages/mine/helpCenter/helpCenter",
 					"query": "",
 					"scene": null
 				}

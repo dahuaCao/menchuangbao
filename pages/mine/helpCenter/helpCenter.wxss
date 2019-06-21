@@ -1,0 +1,35 @@
+/* pages/helpCenter/helpCenter.wxss */
+.helpContent{
+  min-height: 100%;
+}
+.helpContent .h{
+  height: 80rpx;
+  display: flex;
+  padding: 0 28rpx;
+}
+.h .item{
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+.h .item.active{
+  color: #FF0000;
+}
+.txt{
+  display: block;
+  width: 100%;
+  text-align: center;
+  border-right: 2rpx solid #818181;
+  line-height: 28rpx;
+}
+.h .item:last-child .txt{
+  border-color: transparent;
+}
+.helpContent .b{
+  height: auto;
+  padding: 0 28rpx 34rpx 28rpx;
+}
+.b .b-content{
+  min-height: 1080rpx;
+  box-shadow:0px 6rpx 20rpx 0px rgba(0, 0, 0, 0.09);
+}

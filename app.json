@@ -28,6 +28,7 @@
     "pages/mine/feedBack/feedBack",
     "pages/mine/myEarnings/myEarnings",
     "pages/mine/cashApplication/cashApplication",
+    "pages/mine/helpCenter/helpCenter",
     "pages/appeal/appeal",
     "pages/evaluations/evaluations",
     "pages/cardManger/cardManger",
@@ -37,8 +38,8 @@
     "pages/position/position",
     "pages/productCenter/productCenter",
     "pages/productDetail/productDetail",
-    "pages/logs/logs",
-    "pages/helpCenter/helpCenter"
+    "pages/logs/logs"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",
