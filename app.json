@@ -1,12 +1,9 @@
 {
   "pages": [
     "pages/login/login",
-    
     "pages/ceshi/ceshi",
-   
     "pages/repairApplication/repairApplication",
-    
-    "pages/dingdan/servedOrders/servedOrders",   
+    "pages/dingdan/servedOrders/servedOrders",
     "pages/dingdan/unpaidOrders/unpaidOrders",
     "pages/dingdan/unpaidRepairDetail/unpaidRepairDetail",
     "pages/dingdan/unpaidFixDetail/unpaidFixDetail",
@@ -17,11 +14,9 @@
     "pages/dingdan/complateFixDetail/complateFixDetail",
     "pages/dingdan/complateRepairDetail/complateRepairDetail",
     "pages/orderDetail/orderDetail",
-    
     "pages/index/index",
     "pages/afterSales/aterSales",
     "pages/mulitySelect/mulitySelect",
-    
     "pages/expressOrder/expressOrder",
     "pages/timeLine/timeLine",
     "pages/gouwu/gouwu",
@@ -35,7 +30,6 @@
     "pages/mine/cashApplication/cashApplication",
     "pages/appeal/appeal",
     "pages/evaluations/evaluations",
-    
     "pages/cardManger/cardManger",
     "pages/productNews/productNews",
     "pages/staffStyle/staffStyle",
@@ -43,7 +37,8 @@
     "pages/position/position",
     "pages/productCenter/productCenter",
     "pages/productDetail/productDetail",
-    "pages/logs/logs" 
+    "pages/logs/logs",
+    "pages/helpCenter/helpCenter"
   ],
   "window": {
     "backgroundTextStyle": "light",

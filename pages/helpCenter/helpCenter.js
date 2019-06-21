@@ -1,31 +1,25 @@
-// pages/my/my.js
-
+// pages/helpCenter/helpCenter.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    userInfo: {}
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const userInfo = wx.getStorageSync('userInfo');
-    if (userInfo){
-      this.setData({userInfo})
-    }
-  
-    console.log(this.data.userInfo)
+
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
+
   },
 
   /**

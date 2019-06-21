@@ -9,15 +9,13 @@
       <text>推拉门</text>
     </view>
   </view>
-  <m-swiper swiper-class="my-swiper" swiperObj="{{swiperObj}}" />
+  <m-swiper swiper-class="my-swiper" swiperObj="{{swiperObj}}" imgUrls="{{dataObj.carousel}}" />
   <view class="nav">
-    <view bindtap='repairApply'>
-      <image src="/images/index/my_banner.png" />
-    </view>
-    <view bindtap='goProduct'>
-      <image src="/images/index/caigou.png" />
-    </view>
-
+    <block wx:for="{{dataObj.top}}" wx:key="id">
+      <view class='nav-img' data-index='{{index}}' bindtap='repairApply'>
+        <m-image original-image="{{item.picture}}" my-class='nav-img-item' />
+      </view>
+    </block>
   </view>
   <view style='height:10rpx;background:#F5F5F5'></view>
   <view class="sales-process">
@@ -57,12 +55,11 @@
   </view>
   <view style='height:10rpx;background:#F5F5F5'></view>
   <view class='staff'>
-    <view class='staff-item' style='margin-right:20rpx;'>
-      <m-image original-image="{{imgUrl}}" />
-    </view>
-    <view class='staff-item'>
-      <m-image original-image="{{imgUrl}}" />
-    </view>
+    <block wx:for="{{dataObj.abovefloor}}" wx:key="id">
+      <view class='staff-item'>
+        <m-image original-image="{{item.picture}}" my-class='staff-img' />
+      </view>
+    </block>
   </view>
   <view style='height:10rpx;background:#F5F5F5'></view>
   <view class='tab'>
@@ -77,12 +74,11 @@
     </view>
   </view>
   <view class='ad'>
-    <view class='ad-item' bindtap='goProduct'>
-      <m-image original-image="{{imgUrl}}" />
-    </view>
-    <view class='ad-item' bindtap='goProduct'>
-      <m-image original-image="{{imgUrl}}" />
-    </view>
+    <block wx:for="{{dataObj.floor}}" wx:key="id" >
+      <view class='ad-item'  bindtap='goProduct'>
+        <m-image original-image="{{item.picture}}"  />
+      </view>
+    </block>
   </view>
   <view class='link' data-reply-phone="400-666668-01" bindtap="phoneCall">如有疑问,请拨打客服热线400-666668-01</view>
 </view>

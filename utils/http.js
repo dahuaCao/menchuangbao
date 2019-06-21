@@ -73,14 +73,14 @@ function request(url, data = {}, method = "GET") {
       data: data,
       method: method,
       header: {
-        'Content-Type': 'application/json'
-        // 'X-Litemall-Token': wx.getStorageSync('token')
+        'Content-Type': 'application/json',
+        'X-MCB-Token': wx.getStorageSync('token')
       },
       success: function (res) {
-
+        console.log(res)
         if (res.statusCode == 200) {
 
-          if (res.data.errno == 501) {
+          if (res.data.errno == 502) {
             // 清除登录相关内容
             try {
               wx.removeStorageSync('userInfo');
@@ -90,7 +90,7 @@ function request(url, data = {}, method = "GET") {
             }
             // 切换到登录页面
             wx.navigateTo({
-              url: '/pages/auth/login/login'
+              url: '/pages/login/login'
             });
           } else {
             resolve(res.data);

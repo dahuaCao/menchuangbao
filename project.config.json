@@ -48,19 +48,12 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 0,
 			"list": [
 				{
 					"id": -1,
 					"name": "1",
-					"pathName": "pages/staffStyle/staffStyle",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "2",
-					"pathName": "pages/productCenter/productCenter",
+					"pathName": "pages/helpCenter/helpCenter",
 					"query": "",
 					"scene": null
 				}

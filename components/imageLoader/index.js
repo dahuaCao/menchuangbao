@@ -23,7 +23,7 @@ Component({
     //图片剪裁mode，同Image组件的mode
     mode: {
       type: String,
-      value: 'scaleToFill',
+      value: 'aspectFill',
     },
   },
 
