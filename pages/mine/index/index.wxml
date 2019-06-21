@@ -43,7 +43,7 @@
           <text class="iconfont iconjiantou" style='font-size:50rpx;'></text>
         </view>
       </navigator>
-      <navigator class='item' url="/pages/mine/coupon/coupon">
+      <navigator class='item' url="/pages/mine/helpCenter/helpCenter">
         <view class='item-c'>
           <text class="iconfont iconbangzhuzhongxin" style='font-size:44rpx;color:#FF3030;'></text>
           <view class='text-c'>

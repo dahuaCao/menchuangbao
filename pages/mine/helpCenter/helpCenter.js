@@ -1,6 +1,5 @@
 
 const http = require('../../../utils/http.js');
-const utils = require('../../../utils/util.js');
 const api = require('../../../config/api.js');
 const WxParse = require('../../../utils/wxParse/wxParse.js');
 Page({
