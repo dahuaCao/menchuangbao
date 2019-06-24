@@ -85,9 +85,29 @@ function showErrorToast(msg) {
     image: '/images/icon_error.png'
   })
 }
-
+function debounce(handler,delay){
+  let timer = null;
+  return function(){
+    let _this = this,_arg = arguments;
+    clearTimeout(timer);
+    timer = setTimeout(function(){
+      handler.apply(_this,_arg)
+    },delay)
+  }
+}
+function throttle(fn,gapTime){
+  let _lastTime = null;
+  return function () {
+    let _nowTime = + new Date()
+    if (_nowTime - _lastTime > gapTime || !_lastTime) {
+      fn.apply(this,arguments);
+      _lastTime = _nowTime
+    }
+  }
+}
 module.exports = {
   formatTime: formatTime,
   getLocation: getLocation,
-  showErrorToast
+  showErrorToast,
+  debounce
 }

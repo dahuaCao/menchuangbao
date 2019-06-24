@@ -50,9 +50,11 @@ Page({
       url: "/pages/productCenter/productCenter"
     });
   },
-  repairApply:function(){
+  repairApply:function(e){
+    const index = e.currentTarget.dataset.index;
+    const PageArr = ["/pages/repairApplication/repairApplication", "/pages/productCenter/productCenter"];
     wx.navigateTo({
-      url: "/pages/repairApplication/repairApplication"
+      url: PageArr[index]
     });
   },
   phoneCall:function(e){

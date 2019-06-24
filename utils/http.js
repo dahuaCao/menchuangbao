@@ -77,6 +77,7 @@ function request(url, data = {}, method = "GET") {
         'X-MCB-Token': wx.getStorageSync('token')
       },
       success: function (res) {
+
         if (res.statusCode == 200) {
 
           if (res.data.errno == 502 || res.data.errno == 501) {

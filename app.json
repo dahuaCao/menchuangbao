@@ -38,8 +38,8 @@
     "pages/position/position",
     "pages/productCenter/productCenter",
     "pages/productDetail/productDetail",
-    "pages/logs/logs"
-    
+    "pages/logs/logs",
+    "pages/product/newsDetail/newsDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -10,7 +10,7 @@
         <view class='typeOpin'>
           <view class='opinon'>意见类型</view>
           <view class='type'>
-            <radio-group class="radio-group" bindchange="radioChange">
+            <radio-group class="radio-group" bindchange="radioChange" name="type">
               <label class="radio" wx:for="{{items}}" wx:key="*this">
                 <radio value="{{item.name}}" checked="{{item.checked}}" /> {{item.value}}
               </label>
@@ -20,10 +20,10 @@
         <view class='form-section'>
           <view class='title-input'>
             具体情况描述
-            <input name="des" class='des' />
+            <!-- <input name="des" class='des' /> -->
           </view>
           <view class='content-area'>
-            <textarea placeholder="请详细描述你所遇到的问题或建议" name="textarea" class='area' />
+            <textarea placeholder="请详细描述你所遇到的问题或建议" name="details" class='area' />
           </view>
           <view class='ipnut-item'>
             姓　　名
@@ -31,12 +31,12 @@
           </view>
           <view class='ipnut-item'>
             联系方式
-            <input name="phone" cursor-spacing="20" placeholder="请输入您的手机号码" />
+            <input name="mobile" cursor-spacing="20" placeholder="请输入您的手机号码" />
           </view>
         </view>
       </view>
       <view>
-        <button form-type="submit" class='bottom'>提 交</button>
+        <button form-type="submit" class='bottom' hover-class='blue'>提 交</button>
       </view>
     </view>
   </form>

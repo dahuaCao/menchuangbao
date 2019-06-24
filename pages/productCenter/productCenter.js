@@ -1,4 +1,7 @@
 // pages/productCenter/productCenter.js
+const http = require('../../utils/http.js');
+const api = require('../../config/api.js')
+
 Page({
 
   /**
@@ -80,11 +83,16 @@ Page({
       url: '../productDetail/productDetail',
     })
   },
+  getDetail:function(){
+    http.$request(api.productCenter,{},'POST').then(function(){
+
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+    this.getDetail();
   },
 
   /**

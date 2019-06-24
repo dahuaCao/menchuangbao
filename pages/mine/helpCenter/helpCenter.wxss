@@ -1,4 +1,5 @@
 /* pages/helpCenter/helpCenter.wxss */
+@import "/utils/wxParse/wxParse.wxss";
 .helpContent{
   min-height: 100%;
 }

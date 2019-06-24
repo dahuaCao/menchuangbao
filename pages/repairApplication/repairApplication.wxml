@@ -56,7 +56,7 @@
         <view class='input'>
           <textarea  auto-height placeholder="这是一个可以自动聚焦的input" />
         </view>
-        <text>*非必填</text>
+        <text>*必填</text>
       </view>
     </view>
   </view>

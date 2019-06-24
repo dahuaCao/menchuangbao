@@ -51,9 +51,9 @@
 			"current": 0,
 			"list": [
 				{
-					"id": 0,
+					"id": -1,
 					"name": "1",
-					"pathName": "pages/productNews/productNews",
+					"pathName": "pages/productCenter/productCenter",
 					"query": "",
 					"scene": null
 				}

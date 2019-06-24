@@ -89,3 +89,6 @@
   margin: 0 52rpx 100rpx 30rpx;
   color: #fff;
 }
+.bottom.blue{
+  background: rgba(37, 116, 235, .8);
+}
