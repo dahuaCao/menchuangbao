@@ -10,57 +10,9 @@ Page({
   data: {
     inputShowed: false,
     inputVal: "",
-    navLeftItems: [{
-      id: 1,
-      desc: '铝合金门窗'
-    }, {
-      id: 2,
-      desc: '塑钢窗'
-    }, {
-      id: 3,
-      desc: '玻璃门'
-    }, {
-      id: 4,
-      desc: '木门'
-    }, {
-      id: 5,
-      desc: '铝合金门'
-    }],
-    navRightItems: [{
-      desc: "推拉窗",
-      src: "http://temp.im/250x235"
-    }, {
-      desc: "平开窗",
-      src: "http://temp.im/250x235"
-    }, {
-      desc: "日光浴",
-      src: "http://temp.im/250x235"
-    }, {
-      desc: "开天窗",
-      src: "http://temp.im/250x235"
-    }, {
-      desc: "好日子",
-      src: "http://temp.im/250x235"
-    }, {
-      desc: "推拉窗",
-      src: "http://temp.im/250x235"
-      }, {
-        desc: "推拉窗",
-        src: "http://temp.im/250x235"
-      }, {
-        desc: "平开窗",
-        src: "http://temp.im/250x235"
-      }, {
-        desc: "日光浴",
-        src: "http://temp.im/250x235"
-      }, {
-        desc: "开天窗",
-        src: "http://temp.im/250x235"
-      }, {
-        desc: "好日子",
-        src: "http://temp.im/250x235"
-      }],
-    curNav: 1
+    currentCategoryId: '',
+    categoryList: [],
+    currentSubCategoryList: {},
   },
   inputTyping: function(e) {
     this.setData({
@@ -75,17 +27,46 @@ Page({
   switchRightTab: function(e) {
     let id = e.target.dataset.id;
     this.setData({
-      curNav: id
+      currentCategoryId: id
     })
+    this.getCurrentCategory(id);
   },
-  goDetail:function(){
+  goDetail:function(e){
+    console.log(e.currentTarget.dataset.id)
     wx.navigateTo({
-      url: '../productDetail/productDetail',
+      url: '../productDetail/productDetail?id='+e.currentTarget.dataset.id,
     })
   },
   getDetail:function(){
-    http.$request(api.productCenter,{},'POST').then(function(){
-
+    const _this = this;
+    wx.showLoading({
+      title: '加载中...',
+    });
+    http.$request(api.CatalogList).then(function(res){
+      wx.hideLoading();
+       if(res.errno == '0'){
+         _this.setData({
+           categoryList: res.data.categoryList,
+           currentCategoryId: res.data.currentCategory.id,
+           currentSubCategoryList:res.data.currentSubCategoryList
+         })
+       }
+    })
+  },
+  getCurrentCategory: function (id){
+    const _this = this;
+    wx.showLoading({
+      title: '加载中...',
+    });
+    http.$request(api.CatalogList, {categoryId:id}).then(function (res) {
+      wx.hideLoading();
+      if (res.errno == '0') {
+        _this.setData({
+          
+          currentCategoryId: res.data.currentCategory.id,
+          currentSubCategoryList: res.data.currentSubCategoryList
+        })
+      }
     })
   },
   /**

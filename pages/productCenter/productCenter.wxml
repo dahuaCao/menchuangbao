@@ -27,22 +27,22 @@
   </view>
   <view class="productCenter">
     <view class="nav-left">
-      <block wx:for="{{navLeftItems}}" wx:key="index">
-        <view class="nav_left_items {{curNav==item.id ? 'active' : ''}}" bindtap="switchRightTab" data-id="{{item.id}}">
-          {{item.desc}}
+      <block wx:for="{{categoryList}}" wx:key="index">
+        <view class="nav_left_items {{currentCategoryId==item.id ? 'active' : ''}}" bindtap="switchRightTab" data-id="{{item.id}}">
+          {{item.categoryName}}
         </view>
       </block>
     </view>
     <view class="nav-right">
       <scroll-view scroll-y style="height:100%">
         <view class="nav-right-content">
-          <block wx:for="{{navRightItems}}" wx:key="index">
-            <view class="nav-right-item" bindtap='goDetail'>
+          <block wx:for="{{currentSubCategoryList}}" wx:key="index">
+            <view class="nav-right-item" bindtap='goDetail' data-id= "{{item.id}}">
               <!-- <image src="{{item.src}}" mode="scaleToFill"></image> -->
               <view class='image'>
-                <m-image original-image="http://temp.im/250x235" />
+                <m-image original-image="{{item.picture}}" />
               </view>
-              <text>{{item.desc}}</text>
+              <text>{{item.categoryName}}</text>
             </view>
           </block>
         </view>

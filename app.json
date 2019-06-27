@@ -39,7 +39,8 @@
     "pages/productCenter/productCenter",
     "pages/productDetail/productDetail",
     "pages/logs/logs",
-    "pages/product/newsDetail/newsDetail"
+    "pages/product/newsDetail/newsDetail",
+    "pages/goods/goodsDetail/goodsDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",

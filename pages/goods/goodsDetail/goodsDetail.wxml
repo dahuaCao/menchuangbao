@@ -1,0 +1,40 @@
+<!--pages/goods/goodsDetail/goodsDetail.wxml-->
+<view class='container'>
+  <swiper class="goodsimgs" indicator-dots="true" autoplay="true" interval="3000" duration="1000">
+    <swiper-item wx:for="{{goods.gallery}}" wx:key="*this">
+      <image src="{{item}}" background-size="cover"></image>
+    </swiper-item>
+  </swiper>
+  <view class='goods_name'>
+    <view class='goods_name_left'>90系列一体平开窗铝合金门窗内开窗 隔音玻璃窗  户隔热 无缝焊接</view>
+    <!-- <view class="goods_name_right" bindtap="shareFriendOrCircle">分享</view> -->
+  </view>
+  <view class='goods_price'>
+    <view class='goods_price_left'>
+      <text class='price-h'>工厂价</text>
+      <text class='price-b'>￥588-988</text>
+    </view>
+    <view class="goods_price_right" >月销152笔</view>
+  </view>
+  <view class='pos'></view>
+  <view class='goods-des'>
+    <text>服务</text>
+    <text>正品保证</text>
+    <text>不支持退换</text>
+  </view>
+  <view class='pos'></view>
+</view>
+<!-- 规格选择界面 -->
+<view class='attr-pop-box' wx:if="{{false}}">
+  <view class='attr-pop'>
+    <view>hahahhgege</view>
+  </view>
+</view>
+<view class='bottom-btn'>
+    <view class='kefu'>
+      <text class="iconfont icondingwei" style='font-size:38rpx;'></text>
+      <text>联系客服</text>
+    </view>
+    <view class='gouwu'>加入购物车</view>
+    <view class='xiadan'>预约下单</view>
+</view>

@@ -14,14 +14,17 @@ page{
   padding: 25rpx 46rpx 28rpx; 
   display: flex;
 }
-.container  .content-item image{
+.container  .content-item .image{
   width: 250rpx;
   height: 235rpx;
   margin-right: 48rpx;
 }
+.item-imgage{
+  box-shadow: 0 0  4rpx 2rpx #ccc;
+}
 .container  .content-item .right{
   flex: 1;
-  background:#ccc;
+  /* background:#ccc; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;

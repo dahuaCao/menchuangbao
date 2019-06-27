@@ -1,34 +1,20 @@
-// pages/productDetail/productDetail.js
-const http = require('../../utils/http.js');
-const api = require('../../config/api.js')
+// pages/goods/goodsDetail/goodsDetail.js
+const http = require('../../../utils/http.js');
+const utils = require('../../../utils/util.js');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    dataList:[]
+
   },
-  getList:function(id){
-    const _this = this;
-    wx.showLoading({
-      title: '加载中...',
-    });
-    http.$request(api.CatalogCurrent, {categoryId:id}).then(function (res) {
-      wx.hideLoading();
-      if (res.errno == '0') {
-        _this.setData({
-          dataList:res.data.records
-        })
-      }
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options.id)
-    this.getList(options.id);
+
   },
 
   /**

@@ -16,9 +16,10 @@ page{
   color:#333;
 }
 .container {
-  display: flex;
+  /*display: flex;
   height: 100%;
-  flex-direction: column;
+  flex-direction: column;*/
+  box-sizing: border-box;
 } 
 
 view{

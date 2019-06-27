@@ -9,5 +9,7 @@ module.exports = {
   newsCenterList: WxApiRoot + 'newsCenter/list',//产品时讯list查询
   newsCenterDetail: WxApiRoot + 'newsCenter/detail',//产品时讯详情查询
   suggestSubmit: WxApiRoot + 'suggestion/submit',//意见反馈
-  productCenter: WxApiRoot + 'goods/goodsCategory',//产品中心
+  CatalogList: WxApiRoot + 'goods/goodsCategory',//产品中心
+  CatalogCurrent: WxApiRoot + 'goods/list',//产品中心列表
+
 }
