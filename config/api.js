@@ -11,5 +11,7 @@ module.exports = {
   suggestSubmit: WxApiRoot + 'suggestion/submit',//意见反馈
   CatalogList: WxApiRoot + 'goods/goodsCategory',//产品中心
   CatalogCurrent: WxApiRoot + 'goods/list',//产品中心列表
+  GoodsDetail:WxApiRoot + 'goods/goodsDetail', //产品详情
+  
 
 }

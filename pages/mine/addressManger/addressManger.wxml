@@ -1,8 +1,21 @@
 <!--pages/addressManger/addressManger.wxml-->
 <view>
   <view class='pos'></view>
-  <view style='padding:0 30rpx;'>
-    <radio-group class="radio-group" bindchange="radioChange">
+  <view class="address-list" wx:for="{{list}}" wx:key="index">
+    <view class='item'>
+      <view class="l">
+        <view class="name">张女士</view>
+        <view class="default" wx:if="{{true}}">默认地址</view>
+      </view>
+      <view class="c">
+        <view class="mobile">13760212973</view>
+        <view class="address">湖北省襄阳市胜利大街姚子湾6号6单元哈哈哥哥哥哥</view>
+      </view>
+      <view class="r">
+        <text class="iconfont iconshanchu" style='font-size:44rpx;color:#666;'></text>
+      </view>
+    </view>
+    <!-- <radio-group class="radio-group" bindchange="radioChange">
       <label class="radio custom" >
         <radio value="美国"  /> 
         <view class='content'>
@@ -23,7 +36,7 @@
           <view >湖北省襄阳市襄州区某小区2栋1单元503室</view>
         </view>
       </label>
-    </radio-group>
+    </radio-group> -->
   </view>
   <view class='btn' bindtap='goAddress'>添加新地址</view>
 </view>

@@ -9,7 +9,8 @@ Page({
       { name: 'USA', value: '美国' },
       { name: 'CHN', value: '中国', checked: 'true' },
       { name: 'BRA', value: '巴西' }
-    ]
+    ],
+    list:[1,2,3]
   },
   goAddress:function(){
   

@@ -73,12 +73,44 @@ picker{
   padding-left: 15rpx;
 }
 
-.btn {
-  margin: 0 80rpx 130rpx 80rpx;
-  height: 68rpx;
-  background: rgba(37, 116, 235, 1);
-  border-radius: 34px;
+.btns {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  display: flex;
+  height: 86rpx;
+  width: 100%;
+}
+.btns .cannel, .btns .save {
+  flex: 1;
+  height: 86rpx;
   text-align: center;
-  line-height: 68rpx;
+  line-height: 86rpx;
+  font-size: 28rpx;
   color: #fff;
+  border: none;
+  border-radius: 0;
+}
+.btns .cannel {
+  background: #E8EBF1;
+  color:#333;
+}
+
+.btns .save {
+  background: #2574EB;
+}
+.form-default{
+  width: 594rpx;
+  height: 68rpx;
+  background: #E8EBF1;
+  border-radius: 34rpx;
+  line-height: 68rpx;
+  text-align: center;
+  margin-top: 54rpx;
+
+}
+radio .wx-radio-input{
+   height: 32rpx; 
+    width: 32rpx;
 }

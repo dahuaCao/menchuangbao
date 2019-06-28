@@ -30,11 +30,25 @@
       </view>
       <view class='item'>
         <view class='lf textArea'>详细地址</view>
-        <view class='rf text' >
-            <textarea  auto-height placeholder="请输入所要服务的详细地址" bindinput="vulueChange"  />
+        <view class='rf text'>
+          <textarea auto-height placeholder="请输入所要服务的详细地址" bindinput="vulueChange" />
         </view>
       </view>
+      <view bindtap='bindIsDefault'>
+        <radio-group class="form-default">
+          <label class="radio">
+            <radio value="" checked="{{isChecked}}" color='#f00' />设为默认地址
+          </label>
+        </radio-group>
+      </view>
+
+
+      <!-- <text bindtap="bindIsDefault" class="default-input {{address.isDefault == 1 ? 'selected' : ''}}">设为默认地址</text> -->
+
     </view>
-    <view class='btn'>保　存</view>
+    <view class="btns">
+      <button class="cannel" bindtap="cancelAddress">取消</button>
+      <button class="save" bindtap="saveAddress">保存</button>
+    </view>
   </view>
 </view>
