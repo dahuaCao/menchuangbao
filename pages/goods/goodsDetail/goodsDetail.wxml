@@ -3,7 +3,7 @@
   <swiper class="goodsimgs" indicator-dots="true" autoplay="true" interval="3000" duration="1000">
     <swiper-item wx:for="{{goods.goodsPicture}}" wx:key="*this">
       <!-- <image src="{{item}}" background-size="cover"></image> -->
-       <m-image original-image="{{item}}" my-class='myClass' />
+      <m-image original-image="{{item}}" my-class='myClass' />
     </swiper-item>
   </swiper>
   <view class='goods_name'>
@@ -15,7 +15,7 @@
       <text class='price-h'>工厂价</text>
       <text class='price-b'>￥{{goods.goods.outparam1}}-{{goods.goods.outparam2}}</text>
     </view>
-    <view class="goods_price_right" >月销152笔</view>
+    <view class="goods_price_right">月销152笔</view>
   </view>
   <view class='pos'></view>
   <view class='goods-des'>
@@ -34,24 +34,51 @@
   </view>
 </view>
 <!-- 规格选择界面 -->
-<view class='attr-pop-box' hidden="{{!openAttr}}" bindtap='closeBox'>
-  <view class='attr-pop'>
-     <!-- 规格列表 -->
+<view class='attr-pop-box' hidden="{{openAttr}}" bindtap='closeBox'>
+  <view class='attr-pop' catchtap='openBox'>
+    <!-- 规格列表 -->
     <view class="spec-con">
-      <view class="spec-item" wx:for="{{specificationList}}" wx:for-index="key"  wx:for-item="value" wx:key="key" >
+      <view class="spec-item" wx:for="{{specificationList}}" wx:for-index="key" wx:for-item="value" wx:key="key">
         <view class="name">{{key}}</view>
         <view class="values">
-          <view class="value  {{item.value == '1' ? 'selected' : ''}}" bindtap="clickSkuValue" wx:for="{{value}}"  data-value="{{item.name}}" data-name="{{key}}" wx:key="index">{{item.name}}</view>
+          <view class="value  {{item.value == '1' ? 'selected' : ''}}" bindtap="clickSkuValue" wx:for="{{value}}" data-value="{{item.name}}" data-name="{{key}}" wx:key="index">{{item.name}}</view>
+        </view>
+      </view>
+    </view>
+    <!-- 预算造价 -->
+    <view class='bugdetPrice'>
+      <view class='bugdet-title'>预算造价</view>
+      <view>
+        <view class='lists'>
+          <view class='list-item lt'>窗户面积</view>
+          <view class='list-item ct'>
+            <input /> 米
+          </view>
+          <view class='list-item rt'>588.000</view>
+        </view>
+        <view class='lists'>
+          <view class='list-item lt'>开扇数量</view>
+          <view class='list-item ct'>
+            <input /> 个
+          </view>
+          <view class='list-item rt'>588.000</view>
+        </view>
+        <view class='lists'>
+          <view class='list-item lt'>开扇数量</view>
+          <view class='list-item ct'>
+            <input /> 个
+          </view>
+          <view class='list-item rt'>588.000</view>
         </view>
       </view>
     </view>
   </view>
 </view>
 <view class='bottom-btn'>
-    <view class='kefu'>
-      <text class="iconfont iconlianxikefu" style='font-size:60rpx;color:#666'></text>
-      <text>联系客服</text>
-    </view>
-    <view class='gouwu' bindtap='addToCart'>加入购物车</view>
-    <view class='xiadan'>预约下单</view>
+  <view class='kefu'>
+    <text class="iconfont iconlianxikefu" style='font-size:60rpx;color:#666'></text>
+    <text>联系客服</text>
+  </view>
+  <view class='gouwu' bindtap='addToCart'>加入购物车</view>
+  <view class='xiadan'>预约下单</view>
 </view>

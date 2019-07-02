@@ -6,23 +6,32 @@
       <view class='item'>
         <view class='lf'>收货人　</view>
         <view class='rf'>
-          <input placeholder='请输入您的姓名' />
+          <input placeholder='请输入您的姓名' value="{{address.name}}" bindinput="bindinputName" />
         </view>
       </view>
       <view class='item'>
         <view class='lf'>联系方式</view>
         <view class='rf'>
-          <input placeholder='请输入您的手机号码' />
+          <input placeholder='请输入您的手机号码' value="{{address.mobile}}" bindinput="bindinputMobile" />
         </view>
       </view>
       <view class='item'>
         <view class='lf'>服务区域</view>
         <view class='rf'>
-          <picker bindchange="changeRegin" mode="region" value="{{region}}">
+          <picker 
+          range="{{multiArray}}"
+          range-key="name"   
+          mode="multiSelector"
+          value="{{multiIndex}}"
+          bindchange="bindMultiPickerChange"
+          bindcolumnchange="bindMultiPickerColumnChange">
             <view class='custom'>
-              <view class='cs-item hidden'>{{region[0]}}</view>
-              <view class='cs-item hidden' style='margin:0 10rpx;'>{{region[1]}}</view>
-              <view class='cs-item hidden'>{{region[2]}}</view>
+                <input class='cs-item'  placeholder="省份" value="{{address.provinceName}}" disabled="true"/>
+                <input class='cs-item center' placeholder="城市" value="{{address.cityName}}" disabled="true"/>
+                <input class='cs-item' placeholder="区县" value="{{address.areaName}}" disabled="true"/>
+              <!-- <view class='cs-item hidden'>{{multiArray[0][multiIndex[0]]['name']}}</view> -->
+              <!-- <view class='cs-item hidden' style='margin:0 10rpx;'>{{multiArray[1][multiIndex[1]]['name']}}</view>
+              <view class='cs-item hidden'>{{multiArray[2][multiIndex[2]]['name']}}</view> -->
             </view>
 
           </picker>
@@ -31,7 +40,7 @@
       <view class='item'>
         <view class='lf textArea'>详细地址</view>
         <view class='rf text'>
-          <textarea auto-height placeholder="请输入所要服务的详细地址" bindinput="vulueChange" />
+          <textarea auto-height placeholder="请输入所要服务的详细地址" bindinput="bindinputAddress"  value="{{address.address}}"/>
         </view>
       </view>
       <view bindtap='bindIsDefault'>

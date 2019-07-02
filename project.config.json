@@ -48,7 +48,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 3,
+			"current": 4,
 			"list": [
 				{
 					"id": -1,
@@ -74,7 +74,14 @@
 				{
 					"id": 3,
 					"name": "4",
-					"pathName": "pages/goods/goodsDetail/goodsDetail",
+					"pathName": "pages/mine/addressManger/addressManger",
+					"query": "goodId=15",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "新增地址",
+					"pathName": "pages/mine/addAddress/addAddress",
 					"query": "goodId=15",
 					"scene": null
 				}

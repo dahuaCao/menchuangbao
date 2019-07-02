@@ -10,7 +10,8 @@ Page({
   data: {
     goods:{},
     openAttr: false,
-    specificationList:{}
+    specificationList:{},
+    id:''
   },
 
   /**
@@ -18,6 +19,7 @@ Page({
    */
   onLoad: function (options) {  
     console.log(options.goodId)
+  
     this.getDetail(options.goodId)
   },
 
@@ -72,11 +74,10 @@ Page({
   getDetail:function(id){
     const _this = this;
     http.$request(api.GoodsDetail, {goodsId:id}).then(function(res){
-      
-
         _this.setData({
           goods:res.data,
-          specificationList: res.data.attr
+          specificationList: res.data.attr,
+          id:res.data.goods.id
         })
     })
   },
@@ -102,10 +103,8 @@ Page({
     });
     this.setData({
       specificationList: _list
-    })
-    console.log(this.getCheckedSpecValue())
-    
-    if (this.isCheckedAllSpec){
+    }) 
+    if (this.isCheckedAllSpec()){
       this.getPrice();
     }
 
@@ -121,9 +120,11 @@ Page({
     this.getCheckedSpecValue().forEach(function(item){
         Object.assign(dataObj,item)
     })
-    console.log(dataObj)
     delete dataObj.checked;
-    console.log(dataObj)
+    let id = this.data.id;
+    http.$request(api.GoodsParams, {goodsId: id, standard: JSON.stringify(dataObj)}).then(function (res) {
+      
+    })
   },
   //获取选中的规格信息
   getCheckedSpecValue: function () {
