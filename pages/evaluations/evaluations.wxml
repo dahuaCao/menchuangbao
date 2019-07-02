@@ -1,0 +1,39 @@
+<!--pages/evaluations/evaluations.wxml-->
+<view>
+  <view class='pos'></view>
+  <view class='top'>
+    <view class='title'>请为此次服务打分</view>
+    <view class='rater-content'>
+      <view class='rater-item'>
+        <view class='lf'>　　产品质量</view>
+        <m-rater bindmyScore="score" category="true" />
+      </view>
+      <view class='rater-item'>
+        <view class='lf'>师傅服务态度</view>
+        <m-rater category="true" />
+      </view>
+      <view class='rater-item'>
+        <view class='lf'>客服服务态度</view>
+        <m-rater category="true" />
+      </view>
+    </view>
+    <view class='area-content'>
+      <textarea placeholder="请详细描述你所遇到的问题或建议" name="textarea" class='area' />
+    </view>
+    <view class='uploader-bd'>
+      <view class='uploader-files' id='uploaderFiles'>
+        <block wx:for="{{files}}" wx:key="*this">
+          <view class="uploader-file" bindtap="previewImage" id="{{item}}">
+            <image class="uploader-img" src="{{item}}" mode="aspectFill" />
+          </view>
+        </block>
+        <view class='uploader-input' bindtap="chooseImage">
+          <text class="iconfont iconxiangji" style='color:#515151;font-size:70rpx;'></text>
+          <text>添加图片</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='pos'></view>
+  <view class='btn'>发 布</view>
+</view>

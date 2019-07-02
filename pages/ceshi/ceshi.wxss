@@ -1,0 +1,5 @@
+/* pages/ceshi/ceshi.wxss */
+@import "/utils/wxParse/wxParse.wxss";
+.wxParse{
+  padding: 10rpx;
+}

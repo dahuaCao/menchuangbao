@@ -1,0 +1,138 @@
+/* pages/coupon/coupon.wxss */
+.tab{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.tab .navbar {
+  display: flex;
+  position: relative;
+  padding: 27rpx 0;
+  width: 100%;
+}
+
+.navbar .navbar-item {
+  flex: 1;
+  text-align: center;
+}
+
+.navbar .navbar-item.item-on {
+  color: #f00;
+}
+.navbar .navbar-item.border {
+  border: 2rpx solid transparent;
+  border-color: transparent #a9a9a9 transparent #a9a9a9;
+}
+.navbar-slider {
+  position: absolute;
+  content: " ";
+  left: 0;
+  bottom: 0;
+  width: 90rpx;
+  height: 6rpx;
+  background-color: #1aad19;
+  transition: transform 0.3s;
+}
+
+.tab-panel {
+  padding: 15rpx 28rpx 0;
+  /* min-height: 1200rpx; */
+  flex: 1;
+  overflow: scroll;
+}
+
+.tab-panel .tab-content .content-item {
+  height: 224rpx;
+  box-shadow: 0px 0px 20rpx 0px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+  margin-bottom: 34rpx;
+}
+
+.tab-content .content-item .item-left {
+  width: 138rpx;
+  height: 128rpx;
+  background: rgba(241, 241, 241, 1);
+  border: 1px dashed rgba(142, 142, 142, 1);
+  border-radius: 7px;
+  margin: 0 14rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #a9a9a9;
+}
+
+.tab-content .content-item .item-left.red {
+  color: #f00;
+  border-color: #f00;
+  background: #fff;
+}
+
+.content-item .item-left .top {
+  font-size: 48rpx;
+}
+
+.tab-content .content-item .item-center {
+  height: 128rpx;
+  flex: 1;
+  display: flex;
+  font-size: 24rpx;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.content-item .item-center .center {
+  border-bottom: 2rpx solid #3c3737;
+  margin: 6rpx 0;
+}
+
+.tab-content .content-item .item-right {
+  width: 104rpx;
+  height: 104rpx;
+  background: rgba(241, 241, 241, 1);
+  border: 2rpx dashed rgba(142, 142, 142, 1);
+  border-radius: 50%;
+  margin: 0 20rpx 0 18rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a9a9a9;
+}
+
+.tab-content .content-item .item-right.red {
+  color: #f00;
+  border-color: #f00;
+  background: #fff;
+}
+
+.tab-content .content-item .item-right.use {
+  width: 122rpx;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: 24rpx;
+   border: none;
+  background: #fff;
+}
+
+.tab-content .content-item .item-right .top {
+  padding: 8rpx 22rpx;
+  background: rgba(255, 0, 6, 1);
+  border-radius: 3px;
+  color: #fff;
+  margin-bottom: 8rpx;
+  position: relative;
+  top:-6rpx;
+ 
+}
+.text{
+  width: 350rpx;
+  display: flex;
+  margin: 220rpx auto 0;
+  flex-direction: column;
+  align-items: center;
+  color:#636464;
+}

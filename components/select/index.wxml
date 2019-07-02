@@ -1,0 +1,12 @@
+<!--components/select/index.wxml-->
+<view class='com-selectBox custom'>
+  <view class='com-sContent' bindtap='selectToggle'>
+    <view class='com-sTxt'>{{nowText}}</view>
+    <view class='com-bg'>
+      <view class='com-imgs' animation="{{animationData}}"></view>
+    </view>
+  </view>
+  <view class='com-sList' wx:if="{{selectShow}}">
+    <view wx:for="{{propArray}}" data-index="{{index}}" wx:key='' class='com-sItem' bindtap='setText'>{{item.text}}</view>
+  </view>
+</view>

@@ -1,0 +1,20 @@
+<!--pages/addressManger/addressManger.wxml-->
+<view>
+  <view class='pos'></view>
+  <view class="address-list" wx:for="{{addressLists}}" wx:key="id">
+    <view class='item' bindtap="addressUpdate" data-address-id="{{item.id}}">
+      <view class="l">
+        <view class="name">{{item.name}}</view>
+        <view class="default" wx:if="{{!item.isDefault}}">默认地址</view>
+      </view>
+      <view class="c">
+        <view class="mobile">{{item.mobile}}</view>
+        <view class="address">{{item.completeAddress}}</view>
+      </view>
+      <view class="r">
+        <text class="iconfont iconshanchu" style='font-size:44rpx;color:#666;' data-address-id="{{item.id}}" catchtap="deleteAddress"></text>
+      </view>
+    </view>
+  </view>
+  <view class='btn' bindtap='goAddress'>添加新地址</view>
+</view>

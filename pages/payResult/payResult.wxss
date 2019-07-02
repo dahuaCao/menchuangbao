@@ -1,0 +1,49 @@
+/* pages/payResult/payResult.wxss */
+
+.icon-area{
+  padding-top: 54rpx;
+  text-align: center;
+
+}
+
+.text-area{
+  text-align: center;
+  font-size: 32rpx;
+  margin: 32rpx 0 70rpx 0;
+}
+.link{
+  padding:0 28rpx;
+  /* text-align: center; */
+ color:rgba(60,55,55,1);
+  line-height:46rpx;
+}
+.recommend{
+
+}
+.recommend .title{
+  text-align: center;
+  font-size: 32rpx;
+  color: #0874D0;
+  margin: 50rpx 0 35rpx;
+}
+.recommend .content{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.recommend .content .item{
+  display: flex;
+  flex-direction: column;
+}
+.content .item image{
+  width: 334rpx;
+  height: 420rpx;
+}
+.item .desc{
+  line-height: 25rpx;
+  margin: 30rpx 0;
+}
+.item .price{
+  color: #FE0000;
+  font-size: 32rpx;
+}

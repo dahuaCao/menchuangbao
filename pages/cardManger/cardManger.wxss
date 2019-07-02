@@ -1,0 +1,56 @@
+/* pages/cardManger/cardManger.wxss */
+
+.cards {
+  padding: 30rpx 30rpx 270rpx;
+  font-size: 32rpx;
+  color: #fff;
+}
+
+.radio {
+  margin-bottom: 30rpx;
+  display: block;
+  position: relative;
+}
+
+radio {
+  position: absolute;
+  top: 26rpx;
+  right: 20rpx;
+  border-radius: 50%;
+  width: 40rpx; /* 最好是4的倍数，不然会不在中间 */
+  height: 40rpx;
+  border: 4rpx solid #fff; /* 设置边框（外圆） */
+  font-size: 0; /* 让边框重合 */
+}
+
+radio .wx-radio-input {
+  border-radius: 50%;
+  width: 40rpx;
+  height: 40rpx;
+  border: none; /* 替换边框（隐藏原有边框） */
+  background: transparent;
+}
+
+.cards-item {
+  height: 238rpx;
+  width: 100%;
+  background: #1da9f1;
+  border-radius: 22rpx;
+  padding: 30rpx 0 0 50rpx;
+}
+.item-title{
+  margin-bottom:30rpx;
+  display: flex;
+  align-items: center;
+}
+.addBtn{
+  display: flex;
+  height: 98rpx;
+  background: #2574EB;
+  border-radius:42rpx;
+  margin: 0 64rpx;
+  justify-content: center;
+  align-items: center;
+  font-size: 32rpx;
+  color: #fff;
+}

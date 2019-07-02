@@ -1,0 +1,5 @@
+<!--pages/timeLine/timeLine.wxml-->
+<view>
+ <view class='pos'></view>
+ <my-time />
+</view>

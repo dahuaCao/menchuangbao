@@ -1,0 +1,63 @@
+<!--pages/productDetail/productDetail.wxml-->
+<view class='container'>
+  <view class='bg'></view>
+  <view class='content'>
+    <scroll-view style='height:100%' scroll-y>
+      <block wx:if="{{dataList.length > 0}}">
+        <view class='content-item'  wx:for="{{dataList}}" wx:key="id" data-id="{{item.id}}">
+          <view class='image'>
+            <m-image original-image="{{item.picture}}" my-class='item-imgage' />
+          </view>
+          <view class='right'>
+            <text>{{item.title}}</text>
+            <view class='item-detail'>
+              <view wx:if="{{-item.outparam1}}" class='price'>{{item.outparam1}}-{{item.outparam2}}</view>
+              <view wx:else class='price'>{{item.outparam1}}hah</view>
+              <view class='sales'>月销　25笔　99%好评</view>
+            </view>
+          </view>
+        </view>
+      </block>
+
+      <block wx:else>
+    <view class="bg_red">暂无数据</view>
+</block>
+
+
+      <!-- <view class='content-item'>
+          <image src='http://temp.im/250x235'></image>
+          <view class='right'>
+             <text>蒙毅铝合金高档隔热隔音窗防潮MY-112-90</text>
+             <view class='item-detail'>
+                <view class='price'>588-988</view>
+                <view class='sales'>月销　25笔　99%好评</view>
+             </view>
+          </view>
+      </view>
+      <view class='content-item'>
+          <image src='http://temp.im/250x235'></image>
+          <view class='right'>
+             <text>蒙毅铝合金高档隔热隔音窗防潮MY-112-90</text>
+             <view class='item-detail'>
+                <view class='price'>588-988</view>
+                <view class='sales'>月销　25笔　99%好评</view>
+             </view>
+          </view>
+      </view>
+      <view class='content-item'>
+          <image src='http://temp.im/250x235'></image>
+          <view class='right'>
+             <text>蒙毅铝合金高档隔热隔音窗防潮MY-112-90</text>
+             <view class='item-detail'>
+                <view class='price'>588-988</view>
+                <view class='sales'>月销　25笔　99%好评</view>
+             </view>
+          </view>
+      </view>
+       -->
+
+
+    </scroll-view>
+
+  </view>
+</view>

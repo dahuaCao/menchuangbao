@@ -1,0 +1,29 @@
+<!--components/selectCity/index.wxml-->
+
+<scroll-view class="cityList" scroll-y scroll-into-view="{{currentIndex}}" bindscroll="scroll">
+	
+	<view wx:for="{{citys}}"  data-my="{{item}}" class="pesticide"  wx:key='index'>
+		<view class="letter-class" id="id{{index}}">{{item.letter}}</view>
+		<view
+		 class="item-class"
+		 wx:for="{{item.citylist}}"
+		 wx:for-item="cityItem"
+		 bindtap="citySelectEvent"
+		 data-city='{{cityItem.name}}'
+		 data-letter='{{cityItem.key}}'
+       wx:key='index'
+		>
+			{{cityItem.name}}
+		</view>
+	</view>
+</scroll-view>
+
+<view
+ class="citySlide"
+ catchtouchstart="slideStart"
+ catchtouchmove="slideMove"
+ catchtouchend='slideEnd'
+>
+	<view class="citySlideItem {{index == activeIndex?'active':'' }}" wx:for="{{citys}}" wx:key="{{index}}">{{item.letter}}</view>
+</view>
+

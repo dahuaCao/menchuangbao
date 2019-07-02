@@ -1,0 +1,20 @@
+/* pages/productNews/productNews.wxss */
+
+.media-box{
+  display: flex;
+  padding: 28rpx;
+
+}
+.media-left{
+  width: 126rpx;
+  height: 126rpx;
+  background: #666;
+}
+ .media-left .image{
+   box-shadow: 0 0 6rpx 0 rgba(0, 0, 0, 0.09);
+ }
+.media-center{
+  margin: 0 40rpx 0 24rpx;
+   flex: 1;
+   line-height: 40rpx;
+}

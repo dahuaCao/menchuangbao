@@ -1,0 +1,17 @@
+<!--components/uploader/index.wxml-->
+<view class='uploader-bd'>
+  <view class='uploader-files' id='uploaderFiles'>
+    <block wx:for="{{files}}" wx:key="*this">
+      <view class="uploader-file" bindtap="previewImage" id="{{item}}">
+        <image class="uploader-img" src="{{item}}" mode="aspectFill" />
+        <view class="delete-btn" data-index="{{index}}" catchtap="deleteImg">
+          <text class="iconfont iconguanbi" style='color:#000;font-size:34rpx;'></text>
+        </view>
+      </view>
+    </block>
+    <view class='uploader-input' bindtap="chooseImage">
+      <text class="iconfont iconxiangji" style='color:#515151;font-size:70rpx;'></text>
+      <text>添加图片</text>
+    </view>
+  </view>
+</view>

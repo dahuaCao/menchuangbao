@@ -1,0 +1,96 @@
+<!--pages/unpaidFixDetail/unpaidFixDetail.wxml-->
+<view>
+  <view class='pos'></view>
+  <view class='masterInfo'>
+    <view class='master-hd'>
+      <text class="iconfont iconicontouxiang" style='font-size:28rpx;color:#1296DB;margin-right:16rpx;'></text>师傅信息
+    </view>
+    <view class='master-bd'>
+      <view class='m-bd-item'>
+        姓　　　名: 王大军
+      </view>
+      <view class='m-bd-item'>
+        电　　　话: 1857****2356
+        <text class="iconfont iconicontouxiang" style='font-size:28rpx;color:#1296DB;margin-right:16rpx;'></text>
+      </view>
+      <view class='m-bd-item'>
+        好　评　率: 98%
+      </view>
+    </view>
+  </view>
+  <view class='orderInfo'>
+    <view class='order-hd'>
+      <text class="iconfont iconshangpinxinxi" style='font-size:56rpx;color:#1296DB;margin-right:16rpx;'></text>订单信息
+    </view>
+    <view>
+      <view class='o-bd-item'>
+        订单编号: 201809242248
+      </view>
+      <view class='o-bd-item'>
+        下单时间: 2019-03-24 09:10:00
+      </view>
+      <view class='o-bd-item'>
+        <text>定金金额: 3000.00</text>
+        <text>待付款</text>
+      </view>
+      <view class='o-bd-item'>
+        <text>尾款金额: 6000.00</text>
+      </view>
+    </view>
+  </view>
+  <view class='goodsInfo'>
+    <view class='goods-hd'>
+      <text class="iconfont iconshangpinxinxi" style='font-size:56rpx;color:#1296DB;margin-right:16rpx;'></text>订单信息
+    </view>
+    <view>
+      <view class='goods-item'>
+        商品名称: 铝合金一体窗105系列隔热防蚊平开窗
+      </view>
+      <view class='goods-item'>
+        货　　号: NY21057
+      </view>
+      <view class='goods-item'>
+        <text>颜色分类: 室内咖啡色 室外咖啡色</text>
+        <text>单价：588.00</text>
+      </view>
+      <view class='goods-item'>
+        <text>边　　框: 8.5㎡</text>
+      </view>
+      <view class='goods-item'>
+        <text>开扇数量: 2</text>
+        <text>单价：200.00</text>
+      </view>
+      <view class='goods-item'>
+        <text>服务附加: 5㎡ {{char_lt}} X {{char_lt}} 10㎡</text>
+      </view>
+      <view class='pics'>
+        <text>照片图纸</text>
+        <view class='pics-content'>
+            <block wx:for='{{lists}}' wx:key="index">
+            
+                <view class='pic-item'>
+                  <image src='http://temp.im/250x235' />
+                </view>
+            </block>
+        </view>
+      </view>
+      <view class='goods-item'>
+        <text>小　　　计</text>
+        <text>¥ 90000.00</text>
+      </view>
+      <view class='goods-item'>
+        <text>安　装　费</text>
+        <text>¥ 90000.00</text>
+      </view>
+      <view class='goods-item'>
+        <text>运　　　费</text>
+        <text>¥ 90000.00</text>
+      </view>
+      <view class='total'>
+        <text>合　　　计</text>
+        <text>¥ 90000.00</text>
+      </view>
+      <view class='pay-btn' wx:if="{{!paid}}" >支付定金</view>
+    </view>
+  </view>
+</view>

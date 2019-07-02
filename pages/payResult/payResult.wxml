@@ -1,0 +1,26 @@
+<!--pages/payResult/payResult.wxml-->
+<view class='container'>
+  <view class='bg'></view>
+  <view>
+    <view class='icon-area'>
+      <icon type="success" size="93"></icon>
+    </view>
+    <view class='text-area'>支付成功</view>
+    <view class='link'>感谢您使用门窗宝平台,如有任何疑问请联系客服热线 400-88888</view>
+  </view>
+  <view class='recommend'>
+      <view class='title'>专业推荐</view>
+      <view class='content'>
+        <view class='item'>
+          <image src='http://temp.im/250x235' mode="scaleToFill" ></image>
+          <view class='desc'>外开式铝合金门窗防潮隔音</view>
+          <view class='price'>¥ 580:00</view>
+        </view>
+         <view class='item'>
+          <image src='http://temp.im/250x235' mode="scaleToFill"></image>
+          <view class='desc'>外开式铝合金门窗防潮隔音</view>
+          <view class='price'>¥ 580:00</view>
+        </view>
+      </view>
+  </view>
+</view>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "my-image":"/components/imageLoader/index",
+    "m-dialog":"/components/dialog/index"
+  }
+}

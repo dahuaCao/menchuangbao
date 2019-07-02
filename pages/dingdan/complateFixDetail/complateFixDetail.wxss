@@ -1,0 +1,89 @@
+/* pages/complateRepairDetail/complateRepairDetail.wxss */
+
+.comInfo{
+  padding: 0 30rpx;
+}
+.comInfo-content{
+  padding: 30rpx 0;
+  border-bottom: 2rpx solid #858EA2;
+  display: flex;
+}
+.com-l{
+  width: 190rpx;
+  height: 190rpx;
+  background: red;
+  margin-right: 22rpx;
+}
+.com-l image{
+  width: 100%;
+  height: 100%;
+}
+.com-title{
+  width: 460rpx;
+  overflow: hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  margin-bottom: 24rpx;
+}
+.hd{
+  padding: 0 30rpx 30rpx;
+}
+.hd-item{
+  margin-top: 24rpx;
+}
+
+.bd{
+  padding: 0 30rpx 76rpx;
+}
+.priceContent{
+  padding: 0 30rpx 30rpx;
+}
+.blod{
+  font-weight: 700;
+}
+.cost-item,.price-item{
+  margin-top: 24rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pics{
+  margin-top: 24rpx;
+  border-bottom: 2rpx solid #858EA2;
+}
+.pics-content{
+  overflow: hidden;
+  margin-top: 4rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.pic-item{
+  width: 158rpx;
+  height: 110rpx;
+  margin: 20rpx 18rpx 30rpx 0;
+}
+.pic-item image{
+  width: 100%;
+  height: 100%;
+}
+.pic-item:nth-child(4n){
+  margin-right: 0;
+}
+.estimation{
+  padding-top: 26rpx;
+}
+.judg-item{
+  display: flex;
+  align-items: center;
+  margin-top: 26rpx;
+}
+.judg-title{
+  margin-right: 26rpx;
+}
+.orderInfo{
+  margin-top: 50rpx;
+}
+.order-item{
+  margin-bottom: 24rpx;
+}

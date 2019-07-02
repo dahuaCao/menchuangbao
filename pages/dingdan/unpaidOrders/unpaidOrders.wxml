@@ -1,0 +1,76 @@
+<!--pages/unpaidOrders/unpaidOrders.wxml-->
+<view>
+  <view class='pos'></view>
+  <view class='content'>
+    <view class="item" bindtap='goDetail' data-type='1'>
+      <view class="i-title">
+        <view>
+          <text>订单编号: 201809240447</text>
+        </view>
+        <view class="status">
+          <text>已量房</text>
+        </view>
+      </view>
+      <view class="hd">
+        <view class="left">
+          <image src='http://temp.im/250x235' />
+        </view>
+        <view class="right">
+          <view class='r-title'>
+            <text>铝合金一体窗105系列隔热防蚊平开窗防蚊平开窗</text>
+          </view>
+          <view class="r-item">
+            <text>商品金额:　¥ 97660.00</text>
+          </view>
+          <view class="r-item">
+            <text>定金金额:　¥ 3000.00</text>
+            <text class='pay-btn' wx:if="{{true}}" catchtap='pay'>支付定金</text>
+          </view>
+          <view class="r-item">
+            <text>尾款金额:　¥ 6776.00</text>
+            <text class='pay-btn' wx:if="{{false}}" catchtap='pay'>支付尾款</text>
+          </view>
+        </view>
+      </view>
+      <view class="bottom">
+        <!-- <view class="evaluated">待评价</view>
+        <view class="locus">订单轨迹</view> -->
+        <my-time />
+      </view>
+    </view>
+    <view class="item" data-type='2' bindtap='goDetail'>
+      <view class="i-title">
+        <view>
+          <text>订单编号: 201809240447</text>
+        </view>
+        <view class="status">
+          <text>待付款</text>
+        </view>
+      </view>
+      <view class="hd">
+        <view class="left">
+          <image src='http://temp.im/250x235' />
+        </view>
+        <view class="right">
+          <view class='r-title'>
+            <text>维修类别: 窗户</text>
+          </view>
+          <view class="r-item">
+            <text>下单时间:　2019-02-15  16:14:20</text>
+          </view>
+          <view class="r-item">
+            <text>上门服务费:　¥ 30.00</text>
+          </view>
+          <view class="goPay">
+              去支付
+          </view>
+        </view>
+      </view>
+      <view class="bottom">
+        <!-- <view class="evaluated">待评价</view>
+        <view class="locus">订单轨迹</view> -->
+        <my-time />
+      </view>
+    </view>
+  </view>
+</view>

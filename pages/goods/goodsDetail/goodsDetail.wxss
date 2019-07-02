@@ -1,0 +1,201 @@
+/* pages/goods/goodsDetail/goodsDetail.wxss */
+
+.container{
+   margin-bottom: 128rpx;
+}
+.goodsimgs {
+  width: 750rpx;
+  height: 750rpx;
+}
+.goodsimgs image {
+  width: 750rpx;
+  height: 750rpx;
+}
+.goods_name{
+  padding: 28rpx 30rpx 0;
+  font-size: 30rpx;
+  color:#333;
+  font-weight: 600;
+}
+.goods_price{
+  display: flex;
+  padding: 30rpx 28rpx;
+  justify-content: space-between;
+  align-items: center;
+}
+.goods_price_right{
+  margin-right: 28rpx;
+  font-size: 22rpx;
+  color:#AAA9A9;
+  
+}
+.goods_price_left{
+  display: flex;
+  align-items: center;
+}
+.goods_price_left .price-h{
+  display: inline-flex;
+  width: 100rpx;
+  height: 40rpx;
+  justify-content: center;
+  align-items: center;
+  color:#FFFFFF;
+  background:#F70F46;
+  border-radius:4rpx;
+}
+.goods_price_left .price-b{
+  font-size: 48rpx;
+  color:#FF003C;
+  font-weight: bold;
+}
+.goods-des{
+  height: 84rpx;
+  line-height: 84rpx;
+  font-size: 26rpx;
+}
+.process{
+  width: 100%;
+  height: 180rpx;
+  background: #F5F5F5;
+  /* margin-bottom: 200rpx; */
+}
+.attr-pop-box {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 8;
+  bottom: 0;
+  /* display: none; */
+}
+.attr-pop {
+  width: 100%;
+  height: auto;
+  max-height: 780rpx;
+  padding: 28rpx;
+  background: #fff;
+  position: fixed;
+  z-index: 9;
+  bottom: 128rpx;
+  overflow: auto;
+}
+.spec-con {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.spec-con .name {
+  height: 40rpx;
+  margin-bottom: 22rpx;
+  font-size: 29rpx;
+  font-weight: bold;
+  color: #333;
+}
+.spec-con .values {
+  height: auto;
+  margin-bottom: 32rpx;
+  font-size: 0;
+}
+.spec-con .value {
+  display: inline-block;
+  height: 62rpx;
+  padding: 0 35rpx;
+  line-height: 62rpx;
+  text-align: center;
+  margin-right: 25rpx;
+  margin-bottom: 16.5rpx;
+  border: 1px solid #333;
+  font-size: 26rpx;
+  color: #333;
+}
+.spec-con .value.selected {
+  border: 1px solid #b4282d;
+  color: #b4282d;
+}
+/* 预算造价 */
+.bugdetPrice{
+  padding: 0 2rpx 40rpx 2rpx;
+  border-top: 2rpx solid #777;
+}
+.bugdetPrice .bugdet-title{
+  height: 100rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-weight: bold;
+}
+.bugdetPrice .lists{
+  display: flex;
+  margin-bottom: 20rpx;
+}
+.bugdetPrice .lists .list-item{
+  flex: 1;
+   display: flex;
+   align-items: center;
+}
+.bugdetPrice .lists .lt{
+  text-align: left;
+}
+.bugdetPrice .lists .ct{
+  justify-content: center;
+  display: flex;
+}
+.bugdetPrice .lists .ct input{
+  height: 28rpx;
+  width: 126rpx;
+  border: 2rpx solid #B5B5B5;
+  text-align: center;
+}
+.bugdetPrice .lists .rt{
+  justify-content: flex-end;
+}
+.bugdetPrice .attachPrice{
+  display: flex;
+  margin-bottom: 20rpx;
+}
+.bugdetPrice .attachPrice .attach-title{
+  width: 180rpx;
+}
+.bugdetPrice .attachPrice .attach-content{
+  flex: 1;
+}
+.bugdetPrice .totalPrice{
+  display: flex;
+  justify-content: space-between;
+}
+.bottom-btn{
+  height: 128rpx;
+  width: 100%;
+   position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  display: flex;
+  background: #fff;
+  border-top: 2rpx solid #ccc;
+}
+.bottom-btn .kefu{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 206rpx;
+  height: 100%;
+}
+.gouwu,.xiadan{
+  line-height: 128rpx;
+  text-align: center;
+  font-size: 36rpx;
+  color:#fff;
+}
+.gouwu{
+  width: 226rpx;
+  background: #FA742A;
+}
+.bottom-btn .xiadan{
+  flex: 1;
+  background: #FF0000;
+}
+.bold{
+  font-weight: bold;
+  color: #666;
+}

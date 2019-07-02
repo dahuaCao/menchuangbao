@@ -1,0 +1,67 @@
+<!--pages/expressOrder/expressOrder.wxml-->
+<view class='container'>
+  <view class="pos"></view>
+  <view class='form'>
+    <view class='form-content'>
+      <view class='title'>填写预约下单信息</view>
+      <view class='form-item'>
+        <view class='cell-hd'>姓　　名</view>
+        <view class='cell-bd'>
+          <input class="name-input" placeholder="请输入您的姓名" />
+        </view>
+      </view>
+      <view class='form-item'>
+        <view class='cell-hd'>联系方式</view>
+        <view class='cell-bd'>
+          <input class="phone-input" placeholder="请输入您手机号码" />
+          <view class='yz'>
+            <input class='yz-input' />
+            <view class='yz-btn'>获取短信验证码</view>
+          </view>
+        </view>
+      </view>
+      <view class='form-item'>
+        <view class='cell-hd'>服务地区</view>
+        <view class='cell-bd' bindtap='onChangeAddress'>
+          <text class="iconfont icondingwei" style='font-size:34rpx;color:rgba(37,116,235,1);'></text>{{address}}
+        </view>
+      </view>
+      <view class='form-item'>
+        <view class='cell-hd'>详细地址</view>
+        <view class='cell-bd textArea'>
+          <!-- <input class="name-input" placeholder="请输入所要服务的详细地址" /> -->
+           <textarea  auto-height placeholder="请输入所要服务的详细地址"  rows="10" />
+        </view>
+      </view>
+      <view class='form-item'>
+        <view class='cell-hd'>服务类型</view>
+        <view class='cell-bd'>
+          <radio-group class="radio-group" bindchange="radioChange">
+            <label class="radio">
+              <radio value="" /> 门窗采购
+            </label>
+            <label class="radio">
+              <radio value="" /> 门窗维修
+            </label>
+          </radio-group>
+        </view>
+      </view>
+    </view>
+    <view class='form-bottom'>
+      <view class='clause'>
+        <checkbox-group bindchange="checkboxChange">
+          <label class="checkbox">
+            <checkbox value="1" />阅读并同意
+            <navigator url="" class="weui-agree__link">《相关条款》</navigator>
+          </label>
+        </checkbox-group>
+      </view>
+      <view class="btn-area">
+        <button class="btn" bindtap="showTopTips">提交</button>
+      </view>
+      <view class="tips">
+        提示：安装维修时间为早上8:00至晚上18:00
+      </view>
+    </view>
+  </view>
+</view>

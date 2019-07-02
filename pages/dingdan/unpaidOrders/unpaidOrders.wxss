@@ -1,0 +1,71 @@
+/* pages/unpaidOrders/unpaidOrders.wxss */
+.item{
+  padding: 0 30rpx 30rpx 28rpx;
+  box-shadow:0 0 20rpx 0 rgba(0, 0, 0, 0.18);
+  margin-bottom: 18rpx;
+}
+.i-title{
+  height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2rpx solid #858EA2;
+}
+.i-title .status{
+  color: #FE0707;
+}
+.hd{
+  padding:24rpx 0 30rpx;
+  display: flex;
+}
+.hd .left{
+  height: 190rpx;
+  width: 190rpx;
+  margin-right: 24rpx;
+}
+.left image{
+  width: 100%;
+  height: 100%;
+}
+.right{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.r-title{
+    width: 460rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.r-item{
+  height: 48rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pay-btn{
+  height: 100%;
+  width: 146rpx;
+  color: #FE0707;
+  border:2rpx solid #FE0707;
+  border-radius:8rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  
+}
+.goPay{
+  width: 146rpx;
+  height: 48rpx;
+  color: #FE0707;
+  border:2rpx solid #FE0707;
+  border-radius:8rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  bottom: -6rpx;
+}

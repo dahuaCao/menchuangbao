@@ -1,0 +1,95 @@
+<!--pages/coupon/coupon.wxml-->
+<view class='container'>
+  <view class="pos"></view>
+  <view class='tab'>
+    <view class='navbar'>
+      <block wx:for="{{tabs}}" wx:key="*this">
+        <view id="{{index}}" class="navbar-item {{activeIndex == index ? 'item-on' : ''}} {{index%2 != 0?'border':''}}" bindtap="tabClick">
+          <view class="navbar__title">{{item}}</view>
+        </view>
+      </block>
+      <view class="navbar-slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+    </view>
+    <view class="tab-panel">
+      <view class="tab-content" hidden="{{activeIndex != 0}}">
+        <block wx:if="{{lists.length >0}}">
+          <view class='content-item' wx:for="{{lists}}">
+            <view class='item-left red'>
+              <view class='top'>¥100</view>
+              <view class='bottom'>抵用券</view>
+            </view>
+            <view class='item-center'>
+              <view class='top'>单笔订单金额满3000元减100元</view>
+              <view class='center'></view>
+              <view class='bottom'>有效期限:截止至2018年12月31日</view>
+            </view>
+            <view class='item-right use'>
+              <view class='top'>去使用</view>
+              <view class='bottom'>即将失效</view>
+            </view>
+          </view>
+        </block>
+        <block wx:else>
+
+          <view class='text'>
+            <text class="iconfont iconzanwuyouhuiquan" style='font-size:200rpx;color:#D2ECFF;margin-bottom:20rpx;'></text>
+            暂时没有可用的优惠卷哦~
+          </view>
+        </block>
+
+      </view>
+      <view class="tab-content" hidden="{{activeIndex != 1}}">
+        <view class='content-item'>
+          <view class='item-left red'>
+            <view class='top'>¥100</view>
+            <view class='bottom'>抵用券</view>
+          </view>
+          <view class='item-center'>
+            <view class='top'>单笔订单金额满3000元减100元</view>
+            <view class='center'></view>
+            <view class='bottom'>有效期限:截止至2018年12月31日</view>
+          </view>
+          <view class='item-right red'>已失效</view>
+        </view>
+        <view class='content-item'>
+          <view class='item-left red'>
+            <view class='top'>¥100</view>
+            <view class='bottom'>抵用券</view>
+          </view>
+          <view class='item-center'>
+            <view class='top'>单笔订单金额满3000元减100元</view>
+            <view class='center'></view>
+            <view class='bottom'>有效期限:截止至2018年12月31日</view>
+          </view>
+          <view class='item-right red'>已失效</view>
+        </view>
+      </view>
+      <view class="tab-content" hidden="{{activeIndex != 2}}">
+        <view class='content-item'>
+          <view class='item-left'>
+            <view class='top'>¥100</view>
+            <view class='bottom'>抵用券</view>
+          </view>
+          <view class='item-center'>
+            <view class='top'>单笔订单金额满3000元减100元</view>
+            <view class='center'></view>
+            <view class='bottom'>有效期限:截止至2018年12月31日</view>
+          </view>
+          <view class='item-right'>已失效</view>
+        </view>
+        <view class='content-item'>
+          <view class='item-left'>
+            <view class='top'>¥100</view>
+            <view class='bottom'>抵用券</view>
+          </view>
+          <view class='item-center'>
+            <view class='top'>单笔订单金额满3000元减100元</view>
+            <view class='center'></view>
+            <view class='bottom'>有效期限:截止至2018年12月31日</view>
+          </view>
+          <view class='item-right'>已失效</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

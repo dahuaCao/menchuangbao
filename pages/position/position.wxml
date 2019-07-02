@@ -1,0 +1,10 @@
+<!--pages/position/position.wxml-->
+<!-- <view class='container'>
+  <view class="pos"></view>
+  <view class='searchBox'>
+    <input type="text" class="search-input" placeholder="请输入你需要服务的地址" bindinput="inputTyping" />
+  </view>
+  <view class='map-content'>
+    <map id="map"  scale="14"   bindregionchange="regionchange" show-location style="width: 100%; height: 100%;"></map>
+  </view>
+</view> -->

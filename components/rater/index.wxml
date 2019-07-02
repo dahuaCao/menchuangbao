@@ -1,0 +1,12 @@
+<!--components/rater/index.wxml-->
+
+  <view class='raters' wx:if="{{category}}">
+     <block wx:for="{{imgs}}" wx:key="{{item.id}}">
+      <image class="star" src="{{item.id>starId?no_url:yes_url}}" data-key="{{item.id}}" bindtap="select"></image>
+    </block>
+  </view>
+  <view class='raters' wx:else>
+    <block  wx:for="{{imgs}}" wx:key="{{item.id}}">
+      <image class="star" src="{{item.id>starId?no_url:yes_url}}"></image>
+    </block>
+  </view>

@@ -1,0 +1,40 @@
+
+@import '/styles/iconfont.wxss';
+.video-contain{
+  margin: 10rpx;
+}
+
+.video-area{
+  width: 240rpx;
+  height: 160rpx;
+}
+.video{
+  height: 100%;
+  width: 100%;
+}
+.delete-btn{
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  right: 0;
+  top:0;
+  padding: 6rpx;
+  background: rgba(255,169,169,.6)
+}
+.play{
+  position: absolute;
+  width: 80rpx;
+  height: 80rpx;
+  left: 50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+}
+.uploader-input{
+  width: 166rpx;
+  height: 118rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border:2rpx dashed rgba(169,169,169,1);
+  border-radius:4rpx;
+}

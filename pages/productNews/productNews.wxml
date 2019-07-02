@@ -1,0 +1,15 @@
+<!--pages/productNews/productNews.wxml-->
+<view class="pos"></view>
+<view class='container'>
+  <view class='content'>
+    <block wx:for="{{dataList}}" wx:key="index">
+      <navigator class='media-box' url='/pages/product/newsDetail/newsDetail?id={{item.id}}'>
+        <view class='media-left'>
+          <m-image original-image="{{item.outparam1}}" my-class='image' />
+        </view>
+        <view class='media-center'>{{item.title}}</view>
+        <view class='media-right'>{{item.yearMonth}}</view>
+      </navigator>
+    </block>
+  </view>
+</view>

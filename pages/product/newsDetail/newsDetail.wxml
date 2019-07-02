@@ -1,0 +1,10 @@
+<!--pages/product/newsDetail.wxml-->
+<view>
+<import src="/utils/wxParse/wxParse.wxml"/> 
+ <view class='pos'></view>
+
+ <view class="wxParse ">
+      <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    </view>
+
+</view>

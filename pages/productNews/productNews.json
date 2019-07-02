@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "m-image": "/components/imageLoader/index"
+  },
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "产品时讯",
+  "onReachBottomDistance": 100
+}

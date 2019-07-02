@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "my-time":"/components/timeLine/index"
+  }
+}

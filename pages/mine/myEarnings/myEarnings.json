@@ -1,0 +1,6 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "我的收益",
+  "onReachBottomDistance": 50,
+  "enablePullDownRefresh": true  
+}

@@ -1,0 +1,123 @@
+/* pages/repairApplication/repairApplication.wxss */
+
+.top{
+  padding: 0 30rpx 20rpx;
+}
+.top .depict{
+  min-height: 124rpx;
+  padding:25rpx 80rpx;
+  border-bottom: 2rpx solid rgba(236,236,236,1);
+}
+.depict-item{
+  display: flex;
+  justify-content: space-between;
+  font-size: 20rpx;
+}
+.depict-item view{
+  display: flex;
+  align-items: center;
+}
+.icon-item{
+  font-size: 34rpx;
+  margin-right: 10rpx;
+}
+.address{
+  min-height: 106rpx;
+  padding: 16rpx 0;
+  border-bottom: 2rpx solid rgba(236,236,236,1);
+}
+.link{
+  margin-top: 2rpx;
+  padding-left: 54rpx;
+}
+.select{
+  min-height: 106rpx;
+  padding: 25rpx 0 30rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 2rpx solid rgba(236,236,236,1);
+}
+.my-dingy{
+  margin-left: 28rpx;
+}
+.uploader{
+  min-height: 296rpx;
+}
+.uploader-hd{
+  display: flex;
+  justify-content: space-between;
+  padding:32rpx 0 22rpx;
+}
+.uploader-files{
+  overflow: hidden;
+}
+.uploader-file{
+  float: left;
+  margin: 0 18rpx 18rpx 0;
+  /* border: 2rpx solid #666; */
+  width: 166rpx;
+  height: 118rpx;
+}
+.uploader-img{
+  width: 166rpx;
+  height: 118rpx;
+
+}
+.uploader-input{
+  float: left;
+  margin: 0 18rpx 18rpx 0;
+  border: 2rpx dashed #666;
+  display: flex;
+  flex-direction: column;
+  width: 166rpx;
+  height: 118rpx;
+  justify-content: center;
+  align-items: center;
+}
+.uploader-fd{
+  display: flex;
+}
+.uploader-fd .input{
+  flex: 1;
+  padding-left: 20rpx;
+  border-bottom: 2rpx solid rgba(189,189,189,1);
+}
+.bottom{
+  /* min-height: 540rpx; */
+  padding: 0 30rpx 40rpx;
+}
+.bottom .time-select{
+  height: 110rpx;
+  border-bottom: 2rpx solid rgba(236,236,236,1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+.input-select{
+  display: flex;
+  width: 340rpx;
+
+}
+.input-select .section{
+  width:170rpx;
+}
+.tips{
+  padding: 60rpx 0 50rpx 30rpx;
+}
+.tips .title{
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+.tip-item{
+  font-size: 22rpx;
+  margin-bottom: 10rpx;
+}
+.tijiao{
+  height: 68rpx;
+  line-height: 68rpx;
+  text-align: center;
+  color: #fff;
+  background:rgba(37,116,235,1);
+  border-radius:34rpx;
+  margin: 0 50rpx 0;
+}

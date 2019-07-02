@@ -1,0 +1,76 @@
+/* pages/appeal/appeal.wxss */
+
+.content {
+  padding-left: 30rpx;
+  /* font-size: 32rpx; */
+}
+
+.title {
+  height: 75rpx;
+  line-height: 75rpx;
+}
+
+.item {
+  margin-bottom: 26rpx;
+}
+.area-content{
+  padding-right: 30rpx;
+}
+.area-title {
+  margin-bottom: 26rpx;
+}
+
+textarea {
+  border: 2rpx solid rgba(37, 116, 235, 1);
+  border-radius: 3px;
+  width: 100%;
+  height: 160rpx;
+  padding-top: 28rpx;
+  text-indent: 16rpx;
+}
+.uploader-title{
+  margin: 26rpx 0;
+}
+.uploader-files {
+  overflow: hidden;
+}
+
+.uploader-file {
+  float: left;
+ margin: 0 18rpx 18rpx 0;
+  /* border: 2rpx solid #666; */
+  width: 148rpx;
+  height: 130rpx;
+  box-shadow:2rpx 2rpx 2rpx #888888;
+}
+
+.uploader-img {
+  /* width: 148rpx;
+  height: 130rpx; */
+  width: 100%;
+  height: 100%;
+   
+}
+
+.uploader-input {
+  float: left;
+  margin: 0 18rpx 18rpx 0;
+  border: 2rpx dashed #666;
+  display: flex;
+  flex-direction: column;
+  width: 148rpx;
+  height: 130rpx;
+  justify-content: center;
+  align-items: center;
+  color: #A9A9A9;
+  font-size: 24rpx;
+}
+.btn{
+  margin: 0 80rpx;
+  height: 68rpx;
+  line-height: 68rpx;
+  background:#2574EB;
+  border-radius:34rpx;
+  text-align: center;
+  color: #fff;
+}

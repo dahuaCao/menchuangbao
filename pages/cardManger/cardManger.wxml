@@ -1,0 +1,31 @@
+<!--pages/cardManger/cardManger.wxml-->
+<view>
+  <view class='pos'></view>
+  <view>
+    <view class='cards'>
+      <radio-group class="radio-group" bindchange="radioChange">
+        <label class="radio" >
+          <radio value="hah" color='transparent'/> 
+          <view class='cards-item'>
+              <view class='item-title'>
+                <text class="iconfont iconjianhang" style='font-size:80rpx;margin-right:24rpx;'></text>中国建设银行
+              </view>
+              <view class='item-num'>6217 2000 0000 0000 000</view>
+          </view>
+        </label>
+        <label class="radio" >
+          <radio value="hah" color='transparent' /> 
+          <view class='cards-item'>
+              <view class='item-title'>
+                <text class="iconfont iconjianhang" style='font-size:80rpx;margin-right:24rpx;'></text>中国工商银行
+              </view>
+              <view class='item-num'>6217 2000 0000 0000 000</view>
+          </view>
+        </label>
+      </radio-group>
+    </view>
+    <view class='addBtn' bindtap='addCard'>
+        <text class="iconfont iconicon" style='font-size:70rpx;margin-right:24rpx;'></text>添加银行卡
+    </view>
+  </view>
+</view>

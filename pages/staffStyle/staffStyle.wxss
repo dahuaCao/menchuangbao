@@ -1,0 +1,32 @@
+/* pages/staffStyle/staffStyle.wxss */
+
+.staff-content{
+  flex: 1;
+  display: flex;
+  padding: 10rpx 28rpx;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* box-sizing: border-box; */
+}
+.contem-item{
+  width: 340rpx;
+  height: 487rpx;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 26rpx;
+}
+.contem-item .pic{
+  width: 340rpx;
+  height: 440rpx;
+}
+.contem-item .desc{
+  flex: 1;
+  line-height: 46rpx;
+  display: flex;
+  padding: 0 18rpx;
+  box-sizing: border-box;
+  justify-content: space-between;
+  font-size: 20rpx;
+  background:rgba(0,104,183,1);
+  color:#fff;
+}

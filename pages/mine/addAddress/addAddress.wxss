@@ -1,0 +1,121 @@
+/* pages/addAddress/addAddress.wxss */
+
+.contain {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content {
+  padding: 20rpx 60rpx 0;
+}
+
+.content .item {
+  padding: 16rpx 0;
+  display: flex;
+  align-items: center;
+}
+
+.lf {
+  margin-right: 40rpx;
+  height: 58rpx;
+  white-space: nowrap;
+}
+.textArea{
+  white-space: nowrap;
+}
+.rf {
+  flex: 1;
+  /* height: 58rpx; */
+  overflow: hidden;
+}
+.rf input {
+  height: 58rpx;
+  border: 2rpx solid rgba(37, 116, 235, 1);
+  border-radius: 5rpx;
+  padding-left: 15rpx;
+}
+.text{
+   border: 2rpx solid rgba(37, 116, 235, 1);
+   min-height: 58rpx;
+}
+.text textarea{
+  width: 100%;
+  padding-top: 10rpx;
+  text-indent: 20rpx;
+}
+picker{
+  width:100%;
+}
+.custom {
+  display: flex;
+ 
+  justify-content: space-between;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+input.cs-item {
+  
+  flex: 1;
+  height: 58rpx;
+  line-height: 58rpx;
+  text-align: center;
+  border: 2rpx solid rgba(37, 116, 235, 1);
+  border-radius: 5rpx;
+  color: #ccc;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 0 ;
+}
+input.cs-item.center{
+  margin: 0 16rpx;
+}
+
+
+
+
+
+.btns {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  display: flex;
+  height: 86rpx;
+  width: 100%;
+}
+.btns .cannel, .btns .save {
+  flex: 1;
+  height: 86rpx;
+  text-align: center;
+  line-height: 86rpx;
+  font-size: 28rpx;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+}
+.btns .cannel {
+  background: #E8EBF1;
+  color:#333;
+}
+
+.btns .save {
+  background: #2574EB;
+}
+.form-default{
+  width: 594rpx;
+  height: 68rpx;
+  background: #E8EBF1;
+  border-radius: 34rpx;
+  line-height: 68rpx;
+  text-align: center;
+  margin-top: 54rpx;
+
+}
+radio .wx-radio-input{
+   height: 32rpx; 
+    width: 32rpx;
+}

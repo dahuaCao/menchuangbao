@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "m-image": "/components/imageLoader/index"
+  }
+
+}

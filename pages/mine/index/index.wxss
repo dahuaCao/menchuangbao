@@ -1,0 +1,56 @@
+/* pages/my/my.wxss */
+
+.content{
+  padding: 0 30rpx;
+}
+.personInfo{
+  min-height: 184rpx;
+  display: flex;
+  align-items: center;
+  
+}
+.personInfo .lf{
+  width: 138rpx;
+  height: 138rpx;
+  /* border: 1rpx solid #ccc; */
+  margin-right:35rpx;
+  
+}
+.avatar{
+  height: 138rpx;
+  width: 138rpx;
+  border-radius: 50%;
+}
+.myClass{
+  border-radius: 50%;
+}
+.item{
+  height: 100rpx;
+  border-bottom:2rpx solid #B5B5B5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.item-c{
+  display: flex;
+  align-items: center;
+
+}
+.text-c{
+  margin-left: 20rpx;
+  position: relative;
+}
+.posi{
+  position: absolute;
+ width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+  background: #FF0000;
+   right: -30rpx;
+  top:-14rpx;
+  /* font-size: 20rpx; */
+  color:#fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

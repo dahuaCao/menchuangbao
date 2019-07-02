@@ -1,0 +1,26 @@
+<!--pages/bookedOrders/bookedOrders.wxml-->
+<view>
+ <view class='pos'></view>
+ <view>
+   <view class='item' bindtap='goDetail'>
+      <view class='title'>
+        <view>订单编号:201809242247</view>
+        <view class='tl-rf'>待上门</view>
+      </view>
+      <view class='hd'>
+        <view class='hd-lf'>
+          <image src='http://temp.im/250x235' mode='aspectFill'></image>
+        </view>
+        <view class='hd-rf'>
+          <view>铝合金一体窗105系列隔热防蚊平开窗</view>
+          <view class='time'>下单时间: 2018-09-24 09-10-00</view>
+          
+        </view>
+        <view class='btn'>取消订单</view>
+      </view>
+      <view class='fd'>
+        <my-time />
+      </view>
+   </view>
+ </view>
+</view>

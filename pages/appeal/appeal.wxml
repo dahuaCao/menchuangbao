@@ -1,0 +1,35 @@
+<!--pages/appeal/appeal.wxml-->
+<view>
+  <view class='pos'></view>
+  <view class='content'>
+    <view class='title'>维修类别: 窗户</view>
+    <view class='item'>订单编号: 201809242247</view>
+    <view class='item'>维修金额: ¥ 110.00</view>
+    <view class='item'>维修金额: ¥ 110.00</view>
+    <view class='item'>完工时间: 2018-12-15 08:00:15</view>
+    <view class='item'>服务人员: 张师傅</view>
+    <view class='item'>联系电话: 15115452200</view>
+    <view class='area-content'>
+      <view class='area-title'>投诉内容</view>
+       <textarea  placeholder="描述您要投诉的内容" placeholder-style="color:#A9A9A9;" adjust-position/>
+    </view>
+    <view class='uploader-bd'>
+      <view class='uploader-title'>图片上传</view>
+      <view class='uploader-files' id='uploaderFiles'>
+        <block wx:for="{{files}}" wx:key="*this">
+          <view class="uploader-file" bindtap="previewImage" id="{{item}}">
+            <image class="uploader-img" src="{{item}}" mode="aspectFill" />
+          </view>
+        </block>
+        <view class='uploader-input' bindtap="chooseImage">
+          <text class="iconfont iconxiangji" style='color:#515151;font-size:70rpx;'></text>
+          <text>添加图片</text>
+        </view>
+      </view>
+    </view>
+    
+  </view>
+  <view style='min-height:220rpx;padding-top:70rpx;'>
+    <view class='btn'>提交</view>
+  </view>
+</view>

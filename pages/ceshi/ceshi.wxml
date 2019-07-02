@@ -1,0 +1,11 @@
+
+<!-- <import src="../../utils/wxParse/wxParse.wxml"/> 
+<view>哈哈哈哈</view>
+<view class="wxParse">
+    <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+</view> -->
+<m-dialog id='dialog'>
+  <view slot="first">尊敬的用户:</view>
+</m-dialog>
+<button bindtap="bindAdd">点击事件</button>
+

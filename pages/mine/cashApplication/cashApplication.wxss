@@ -1,0 +1,42 @@
+/* pages/cashApplication/cashApplication.wxss */
+
+.total-money{
+  height: 186rpx;
+  background:linear-gradient(0deg,rgba(44,173,247,1) 0%,rgba(18,115,214,1) 100%);
+  text-align: center;
+  padding-top: 54rpx;
+  color: #fff;
+  font-size: 32rpx;
+}
+.money{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bottom{
+  padding: 0 30rpx;
+}
+.content{
+  height: 1000rpx;
+  width: 100%;
+  position: relative;
+  top:-58rpx;
+  background: #fff;
+  border-radius:42rpx 42rpx 0 0;
+  text-align: center;
+  padding-top: 82rpx;
+}
+.center{
+  margin: 116rpx 0 280rpx 0;
+  color:#A9A9A9;
+  font-size: 28rpx;
+}
+.btn{
+  height: 70rpx;
+  line-height: 70rpx;
+  background: #2574EB;
+  border-radius: 34rpx;
+  margin: 0 30rpx;
+  color: #fff;
+  font-size: 32rpx;
+}

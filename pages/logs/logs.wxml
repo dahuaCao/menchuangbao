@@ -1,0 +1,2 @@
+
+<m-city letter-class='cityListLetter' item-class='cityListItem' bind:citySelect='onCitySelect'/>

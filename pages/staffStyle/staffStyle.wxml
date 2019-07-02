@@ -1,0 +1,19 @@
+<!--pages/staffStyle/staffStyle.wxml-->
+
+<view class='container'>
+<view class="pos" style="height:17rpx"></view>
+  <view class='staff-content'>
+    <block wx:for="{{dataList}}" wx:key="index">
+      <view class='contem-item'>
+        <view class='pic'>
+          <image src='{{imgUrl}}' mode="scaleToFill" style='width:100%;height:100%'></image>
+        </view>
+        <view class='desc'>
+          <view style='font-size:24rpx;'>王师傅</view>
+          <view>武汉市</view>
+          <view>好评率:99%</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

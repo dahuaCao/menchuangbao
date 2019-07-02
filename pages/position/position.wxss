@@ -1,0 +1,22 @@
+/* pages/position/position.wxss */
+.container{
+  height: 100%;
+  
+}
+.searchBox{
+  height: 64rpx;
+  padding: 12rpx 30rpx;
+}
+.searchBox .search-input{
+  height: 50rpx;
+  width: 100%;
+  border:2rpx solid rgba(169,169,169,1);
+  border-radius:3px;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+}
+.map-content{
+  margin-top: 12rpx;
+  padding: 0 28rpx;
+  height:696rpx;
+}
