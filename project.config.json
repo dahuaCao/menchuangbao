@@ -21,7 +21,7 @@
 		}
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.5.2",
+	"libVersion": "2.2.5",
 	"appid": "wxd0bdf500464e1268",
 	"projectname": "my-xcx",
 	"debugOptions": {

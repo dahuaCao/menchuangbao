@@ -2,6 +2,8 @@
 const http = require('../../../utils/http.js');
 const utils = require('../../../utils/util.js');
 const api = require('../../../config/api.js');
+let  priceObj = {};
+let valueObj = {};
 Page({
 
   /**
@@ -10,17 +12,21 @@ Page({
   data: {
     goods:{},
     openAttr: false,
+    openBugdet:true,
     specificationList:{},
-    id:''
+    id:'',
+    scrollHeight:'',
+    scrollTop:0,
+    totalPrice:0,
+    budgetLists:[],//预算造价集合
+    attachs:[],//附加服务集合
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {  
-    console.log(options.goodId)
-  
-    this.getDetail(options.goodId)
+    this.getDetail(options.goodId)  
   },
 
   /**
@@ -43,33 +49,25 @@ Page({
   onHide: function () {
 
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
 
+  },
+  // 获取容器高度，使页面滚动到容器底部
+  pageScrollToBottom: function () {
+    const _this = this;
+    wx.createSelectorQuery().select('#attr_pop').boundingClientRect(function (rect) {
+      // 使页面滚动到底部
+      // wx.pageScrollTo({
+      //   scrollTop: rect.bottom
+      // })
+      console.log(rect)
+      _this.setData({
+        scrollHeight: rect.height
+      })
+    }).exec()
   },
   getDetail:function(id){
     const _this = this;
@@ -79,12 +77,37 @@ Page({
           specificationList: res.data.attr,
           id:res.data.goods.id
         })
+      _this.pageScrollToBottom();
     })
   },
   closeBox:function(){
     // this.setData({
     //   openAttr: false
     // });
+  },
+  getValue:function(event){
+    console.log(event)
+    const type = event.currentTarget.dataset.name;
+    const value = event.detail.value ? event.detail.value :1;
+    valueObj[type] = value;
+    this.caculPrice();
+
+  },
+  caculPrice:function(){
+    let totalPrice = 0;
+    Object.keys(priceObj).forEach(function(item){
+      totalPrice += priceObj[item].value * valueObj[item];
+      if (priceObj[item].control){
+        if (Number(valueObj[item]) > Number(priceObj[item].control.control.value)){
+          totalPrice += priceObj[item].control.attachGt.value;
+        }else{
+          totalPrice += priceObj[item].control.attachLte.value;
+        }
+      }
+    })
+    this.setData({
+      totalPrice
+    })
   },
   clickSkuValue:function(e){
     const _list = this.data.specificationList;
@@ -116,14 +139,39 @@ Page({
     })
   },
   getPrice:function(){
+    const _this = this;
     let dataObj = {};
     this.getCheckedSpecValue().forEach(function(item){
         Object.assign(dataObj,item)
     })
     delete dataObj.checked;
     let id = this.data.id;
+    wx.showLoading({
+      title: '加载中',
+    })
     http.$request(api.GoodsParams, {goodsId: id, standard: JSON.stringify(dataObj)}).then(function (res) {
-      
+      wx.hideLoading();
+      const data = res.data;
+      data.prices.forEach(function(item){
+        priceObj[item.name] = { value:item.value}
+        valueObj[item.name] = 1;
+        data.attach.forEach(function(item1){
+          if(item1.control.extend == item.extend){
+            priceObj[item.name].control = item1
+          }
+        })
+      })
+      console.log(priceObj)
+      _this.setData({
+        openBugdet: false,
+        budgetLists: res.data.prices,
+        attachs: res.data.attach
+      })
+      _this.setData({
+        scrollHeight:420,
+        scrollTop:500
+      })
+      _this.caculPrice();
     })
   },
   //获取选中的规格信息

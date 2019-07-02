@@ -35,43 +35,42 @@
 </view>
 <!-- 规格选择界面 -->
 <view class='attr-pop-box' hidden="{{openAttr}}" bindtap='closeBox'>
-  <view class='attr-pop' catchtap='openBox'>
-    <!-- 规格列表 -->
-    <view class="spec-con">
-      <view class="spec-item" wx:for="{{specificationList}}" wx:for-index="key" wx:for-item="value" wx:key="key">
-        <view class="name">{{key}}</view>
-        <view class="values">
-          <view class="value  {{item.value == '1' ? 'selected' : ''}}" bindtap="clickSkuValue" wx:for="{{value}}" data-value="{{item.name}}" data-name="{{key}}" wx:key="index">{{item.name}}</view>
+  <view class='attr-pop' id="attr_pop" catchtap='openBox'>
+    <scroll-view scroll-y="true" style="height:{{scrollHeight}}px;;" scroll-top="{{scrollTop}}">
+      <!-- 规格列表 -->
+      <view class="spec-con">
+        <view class="spec-item" wx:for="{{specificationList}}" wx:for-index="key" wx:for-item="value" wx:key="key">
+          <view class="name">{{key}}</view>
+          <view class="values">
+            <view class="value  {{item.value == '1' ? 'selected' : ''}}" bindtap="clickSkuValue" wx:for="{{value}}" data-value="{{item.name}}" data-name="{{key}}" wx:key="index">{{item.name}}</view>
+          </view>
         </view>
       </view>
-    </view>
-    <!-- 预算造价 -->
-    <view class='bugdetPrice'>
-      <view class='bugdet-title'>预算造价</view>
-      <view>
-        <view class='lists'>
-          <view class='list-item lt'>窗户面积</view>
-          <view class='list-item ct'>
-            <input /> 米
+      <!-- 预算造价 -->
+      <view class='bugdetPrice' hidden='{{openBugdet}}'>
+        <view class='bugdet-title'>预算造价</view>
+        <view>
+          <view class='lists' wx:for="{{budgetLists}}" wx:key="id">
+            <view class='list-item lt'>{{item.name}}</view>
+            <view class='list-item ct'>
+              <input placeholder="1" bindinput='getValue' type="number" data-name="{{item.name}}"/>
+            </view>
+            <view class='list-item rt'>{{item.value}}{{item.unit}}</view>
           </view>
-          <view class='list-item rt'>588.000</view>
-        </view>
-        <view class='lists'>
-          <view class='list-item lt'>开扇数量</view>
-          <view class='list-item ct'>
-            <input /> 个
+          <view class='attachPrice'>
+            <view class='attach-title'>服务附加</view>
+            <view class='attach-content' wx:for="{{attachs}}">
+              <text>{{item.control.unit}}大于<text class='bold'>{{item.control.value}}</text>附加<text class='bold'>{{item.attachGt.value}}元</text>,小于等于<text class='bold'>{{item.control.value}}</text> 附加<text class='bold'>{{item.attachLte.value}}元</text>。</text>
+            </view>
           </view>
-          <view class='list-item rt'>588.000</view>
-        </view>
-        <view class='lists'>
-          <view class='list-item lt'>开扇数量</view>
-          <view class='list-item ct'>
-            <input /> 个
+          <view class='totalPrice'>
+            <view class=''>合　　计</view>
+            <view class='amount'>{{totalPrice}}.00</view>
           </view>
-          <view class='list-item rt'>588.000</view>
         </view>
       </view>
-    </view>
+    </scroll-view>
+
   </view>
 </view>
 <view class='bottom-btn'>
