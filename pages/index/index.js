@@ -42,7 +42,7 @@ Page({
   },
   goSearch:function(){
     wx.navigateTo({
-      url: "/pages/productCenter/productCenter"
+      url: "/pages/product/productCenter/productCenter"
     });
   },
   goProduct:function(){
@@ -52,7 +52,7 @@ Page({
   },
   repairApply:function(e){
     const index = e.currentTarget.dataset.index;
-    const PageArr = ["/pages/repairApplication/repairApplication", "/pages/productCenter/productCenter"];
+    const PageArr = ["/pages/repairApplication/repairApplication", "/pages/product/productCenter/productCenter"];
     wx.navigateTo({
       url: PageArr[index]
     });

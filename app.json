@@ -36,11 +36,12 @@
     "pages/staffStyle/staffStyle",
     "pages/payResult/payResult",
     "pages/position/position",
-    "pages/productCenter/productCenter",
-    "pages/productDetail/productDetail",
+    "pages/product/productCenter/productCenter",
+    "pages/product/productLists/productLists",
     "pages/logs/logs",
     "pages/product/newsDetail/newsDetail",
-    "pages/goods/goodsDetail/goodsDetail"
+    "pages/product/productDetail/productDetail"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",

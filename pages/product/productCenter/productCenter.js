@@ -1,6 +1,6 @@
 // pages/productCenter/productCenter.js
-const http = require('../../utils/http.js');
-const api = require('../../config/api.js')
+const http = require('../../../utils/http.js');
+const api = require('../../../config/api.js')
 
 Page({
 
@@ -34,7 +34,7 @@ Page({
   goDetail:function(e){
     console.log(e.currentTarget.dataset.id)
     wx.navigateTo({
-      url: '../productDetail/productDetail?id='+e.currentTarget.dataset.id,
+      url: '/pages/product/productLists/productLists?id='+e.currentTarget.dataset.id,
     })
   },
   getDetail:function(){

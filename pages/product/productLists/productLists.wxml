@@ -4,7 +4,7 @@
   <view class='content'>
     <scroll-view style='height:100%' scroll-y>
       <block wx:if="{{dataList.length > 0}}">
-        <view class='content-item'  wx:for="{{dataList}}" wx:key="id" data-id="{{item.id}}">
+        <view class='content-item'  wx:for="{{dataList}}" wx:key="id" data-id="{{item.id}}" bindtap='goDetail'>
           <view class='image'>
             <m-image original-image="{{item.picture}}" my-class='item-imgage' />
           </view>
