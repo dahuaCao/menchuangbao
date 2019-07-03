@@ -1,5 +1,7 @@
 /**index.wxss**/
-
+page{
+  overflow: scroll;
+}
 .hd-search{
   height: 124rpx;
   background:linear-gradient(9deg,rgba(54,203,246,1),rgba(85,96,242,1));
