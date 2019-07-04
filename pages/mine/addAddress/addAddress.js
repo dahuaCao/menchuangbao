@@ -20,13 +20,12 @@ Page({
     address: {
       name: '',
       mobile: '',
-      address: '',
-      provinceName:'',
-      cityName:'',
-      areaName:'',
-      provinceId:'',
-      cityId: '',
-      areaId:''
+      addressName:'点击选择',
+      detailAddress:'',
+      longitude:'',
+      latitude:'',
+      doorplate:''
+      
     },
     addressId: '',
   },
@@ -46,7 +45,7 @@ Page({
   },
   bindinputAddress(event) {
     let address = this.data.address;
-    address.address = event.detail.value;
+    address.doorplate = event.detail.value;
     this.setData({
       address: address
     });
@@ -57,47 +56,14 @@ Page({
       isChecked: !isCheck
     })
   },
-  getRegion: function() {
-    let _this = this;
-    http.$request(api.GetRegionList, {}, 'POST').then(function(res) {
-      provinceData = res.data;
-      Provincial = provinceData.map(function(item) {
-        return {
-          "id": item.provinceId,
-          "name": item.provinceName
-        }
-      })
-      urban = provinceData[0].cityList.map(function(item) {
-        return {
-          "id": item.cityId,
-          "name": item.cityName
-        }
-      })
-      areas = provinceData[0].cityList[0].areaList.map(function(item) {
-        return {
-          "id": item.areaId,
-          "name": item.areaName
-        }
-      });
-      _this.setData({
-        multiArray: [Provincial, urban, areas]
-      })
-      console.log(_this.data.multiArray)
-    })
-  },
   getAddressDetail:function(id){
      const _this = this;
      http.$request(api.AddressDetail,{id:id},'POST').then(function(res){
         let address = {
           name: res.data.name,
           mobile:res.data.mobile,
-          address: res.data.address,
-          provinceName: res.data.provinceName,
-          cityName: res.data.cityName,
-          areaName: res.data.areaName,
-          provinceId: res.data.provinceId,
-          cityId: res.data.cityId,
-          areaId: res.data.areaId
+          addressName: res.data.addressName,
+          doorplate: res.data.doorplate
         }
         _this.setData({
           address:address,
@@ -105,55 +71,63 @@ Page({
         })
      })
   },
-  bindMultiPickerColumnChange: function(e) {
-    // console.log('修改的列为', e.detail.column, '，值为', e.detail.value)
-    console.log(e)
-    const data = {
-      multiArray: this.data.multiArray,
-      multiIndex: this.data.multiIndex
-    }
-    data.multiIndex[e.detail.column] = e.detail.value;
-    switch (e.detail.column) {
-      case 0:
-        console.log(provinceData[e.detail.value])
-        data.multiArray[1] = provinceData[e.detail.value].cityList.map(function(item) {
-          return {
-            "id": item.cityId,
-            "name": item.cityName
+  chooseAddress:function(){
+    const _this = this;
+    let address = this.data.address;
+    wx.chooseLocation({
+      success: function (res) {
+        address.addressName = res.name;
+        address.detailAddress = res.address;
+        address.latitude = res.latitude;
+        address.longitude = res.longitude;
+        console.log(res);
+        //选择地点之后返回到原来页面
+        _this.setData({
+          address
+        });
+
+      },
+      fail: function (err) {
+        wx.getSetting({
+          success: (res) => {
+            if (!res.authSetting['scope.userLocation']) {
+              wx.showModal({
+                title: '位置信息授权',
+                content: '位置授权暂未开启，无法完成签到',
+                confirmText: '开启授权',
+                confirmColor: '#345391',
+                cancelText: '仍然拒绝',
+                cancelColor: '#999999',
+                success: function (res) {
+                  if (res.confirm) {
+                    wx.openSetting({
+                      fail: function () {
+                        console.log('openSetting.failed')
+                      }
+                    })
+                  } else {
+                    wx.showModal({
+                      title: '签到失败',
+                      content: '无法使用定位权限，签到失败',
+                      confirmText: '太遗憾了',
+                      confirmColor: '#345391',
+                      showCancel: false
+                    })
+                  }
+
+                }
+              })
+            }
           }
         })
-        data.multiArray[2] = provinceData[e.detail.value].cityList[0].areaList.map(function(item) {
-          return {
-            "id": item.areaId,
-            "name": item.areaName
-          }
-        });
-        data.multiIndex[1] = 0;
-        data.multiIndex[2] = 0;
-        break;
-      case 1:
-        data.multiArray[2] = provinceData[data.multiIndex[0]].cityList[e.detail.value].areaList.map(function(item) {
-          return {
-            "id": item.areaId,
-            "name": item.areaName
-          }
-        });
-        data.multiIndex[2] = 0;
-        break;
-    }
-    this.setData(data)
-  },
-  bindMultiPickerChange: function(e) {
-    const regionArr = this.data.multiArray;
-    let address = this.data.address;
-    address.provinceName = regionArr[0][e.detail.value[0]].name;
-    address.cityName = regionArr[1][e.detail.value[1]].name;
-    address.areaName = regionArr[2][e.detail.value[2]].name;
-    address.provinceId=regionArr[0][e.detail.value[0]].id;
-    address.cityId=regionArr[1][e.detail.value[1]].id;
-    address.areaId= regionArr[2][e.detail.value[2]].id;
-    this.setData({
-      address
+
+      },
+      complete: function () {
+        console.log(123)
+      },
+      cancel: function () {
+
+      }
     })
   },
   cancelAddress() {
@@ -169,11 +143,11 @@ Page({
       util.showErrorToast('请输入手机号码');
       return false;
     }
-    if (!address.provinceId) {
-      util.showErrorToast('请输入省市区');
+    if (address.receipt == '点击选择'　) {
+      util.showErrorToast('请选择收货地址');
       return false;
     }
-    if (address.address == '') {
+    if (address.doorplate == '') {
       util.showErrorToast('请输入详细地址');
       return false;
     }
@@ -200,7 +174,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    this.getRegion();
     if (options.id && options.id != 0) {
       this.setData({
         addressId: options.id

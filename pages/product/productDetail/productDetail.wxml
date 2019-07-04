@@ -57,7 +57,7 @@
         <view class="spec-item" wx:for="{{specificationList}}"  wx:key="index">
           <view class="name">{{item.name}}</view>
           <view class="values">
-            <view class="value  {{list.value == '1' ? 'selected' : ''}}" bindtap="clickSkuValue" wx:for="{{item.list}}" wx:for-item="list" data-value="{{list.name}}" data-name="{{item.name}}" wx:key="id">{{list.name}}</view>
+            <view class="value  {{list.value == '1' ? 'selected' : ''}}" bindtap="clickSkuValue" wx:for="{{item.list}}" wx:for-item="list" data-value="{{list.name}}" data-name="{{item.name}}" wx:key="index">{{list.name}}</view>
           </view>
         </view>
       </view>

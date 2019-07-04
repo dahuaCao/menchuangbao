@@ -16,6 +16,12 @@
         </view>
       </view>
       <view class='item'>
+        <view class='lf'>收货地址</view>
+        <view class='rf address' bindtap='chooseAddress'>
+          <text class="iconfont icondingwei" style='font-size:34rpx;color:#ccc;'></text>{{address.addressName}}
+        </view>
+      </view>
+      <!-- <view class='item'>
         <view class='lf'>服务区域</view>
         <view class='rf'>
           <picker 
@@ -29,18 +35,14 @@
                 <input class='cs-item'  placeholder="省份" value="{{address.provinceName}}" disabled="true"/>
                 <input class='cs-item center' placeholder="城市" value="{{address.cityName}}" disabled="true"/>
                 <input class='cs-item' placeholder="区县" value="{{address.areaName}}" disabled="true"/>
-              <!-- <view class='cs-item hidden'>{{multiArray[0][multiIndex[0]]['name']}}</view> -->
-              <!-- <view class='cs-item hidden' style='margin:0 10rpx;'>{{multiArray[1][multiIndex[1]]['name']}}</view>
-              <view class='cs-item hidden'>{{multiArray[2][multiIndex[2]]['name']}}</view> -->
             </view>
-
           </picker>
         </view>
-      </view>
+      </view> -->
       <view class='item'>
-        <view class='lf textArea'>详细地址</view>
+        <view class='lf textArea'>门牌号　</view>
         <view class='rf text'>
-          <textarea auto-height placeholder="请输入所要服务的详细地址" bindinput="bindinputAddress"  value="{{address.address}}"/>
+          <textarea auto-height placeholder="详细地址 例:16号楼5层501室" bindinput="bindinputAddress"  value="{{address.doorplate}}"/>
         </view>
       </view>
       <view bindtap='bindIsDefault'>
@@ -50,10 +52,6 @@
           </label>
         </radio-group>
       </view>
-
-
-      <!-- <text bindtap="bindIsDefault" class="default-input {{address.isDefault == 1 ? 'selected' : ''}}">设为默认地址</text> -->
-
     </view>
     <view class="btns">
       <button class="cannel" bindtap="cancelAddress">取消</button>

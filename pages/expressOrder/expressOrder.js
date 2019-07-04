@@ -27,7 +27,6 @@ Page({
       fail: function (err) {
         wx.getSetting({
           success: (res) => {
-            console.log(res)
             if (!res.authSetting['scope.userLocation']) {
               wx.showModal({
                 title: '位置信息授权',

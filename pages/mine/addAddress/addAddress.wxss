@@ -30,6 +30,13 @@
   /* height: 58rpx; */
   overflow: hidden;
 }
+.rf.address{
+  height: 58rpx;
+  border: 2rpx solid rgba(37, 116, 235, 1);
+  border-radius: 5rpx;
+  padding-left: 15rpx;
+  line-height: 58rpx;
+}
 .rf input {
   height: 58rpx;
   border: 2rpx solid rgba(37, 116, 235, 1);
