@@ -1,5 +1,5 @@
 <!--pages/addressManger/addressManger.wxml-->
-<view>
+<view style='padding-bottom:200rpx'>
   <view class='pos'></view>
   <view class="address-list" wx:for="{{addressLists}}" wx:key="id">
     <view class='item' bindtap="addressUpdate" data-address-id="{{item.id}}">
@@ -16,5 +16,9 @@
       </view>
     </view>
   </view>
-  <view class='btn' bindtap='goAddress'>添加新地址</view>
+ 
 </view>
+ <view class='bottom'>
+    <view class='btn' bindtap='goAddress'>添加新地址</view>
+  </view>
+  

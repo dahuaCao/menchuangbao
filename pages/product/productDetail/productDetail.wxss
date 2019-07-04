@@ -52,6 +52,9 @@
   height: 84rpx;
   line-height: 84rpx;
   font-size: 26rpx;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10rpx;
 }
 .process{
   width: 100%;
@@ -198,4 +201,7 @@
 .bold{
   font-weight: bold;
   color: #666;
+}
+.wxParse{
+  padding: 6rpx 6rpx 130rpx 6rpx;
 }

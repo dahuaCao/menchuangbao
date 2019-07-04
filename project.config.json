@@ -10,6 +10,7 @@
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
+		"coverView": true,
 		"autoAudits": false,
 		"checkInvalidKey": true,
 		"checkSiteMap": true,
@@ -21,9 +22,9 @@
 		}
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.2.5",
+	"libVersion": "2.7.3",
 	"appid": "wxd0bdf500464e1268",
-	"projectname": "my-xcx",
+	"projectname": "%E9%97%A8%E7%AA%97%E5%AE%9D",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
@@ -48,7 +49,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 4,
+			"current": 2,
 			"list": [
 				{
 					"id": -1,
@@ -67,8 +68,8 @@
 				{
 					"id": 2,
 					"name": "3",
-					"pathName": "pages/goods/goodsDetail/goodsDetail",
-					"query": "goodId=15",
+					"pathName": "pages/product/productDetail/productDetail",
+					"query": "id=15",
 					"scene": null
 				},
 				{
@@ -83,6 +84,13 @@
 					"name": "新增地址",
 					"pathName": "pages/mine/addAddress/addAddress",
 					"query": "goodId=15",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "66",
+					"pathName": "pages/ceshi/ceshi",
+					"query": "",
 					"scene": null
 				}
 			]

@@ -13,24 +13,39 @@
   <view class='goods_price'>
     <view class='goods_price_left'>
       <text class='price-h'>工厂价</text>
-      <text class='price-b'>￥{{goods.goods.outparam1}}-{{goods.goods.outparam2}}</text>
+      <text class='price-b' wx:if="{{-goods.goods.outparam1}}">￥{{goods.goods.outparam1}}-{{goods.goods.outparam2}}</text>
+      <text class='price-b' wx:else>{{goods.goods.outparam1}}</text>
     </view>
     <view class="goods_price_right">月销152笔</view>
   </view>
   <view class='pos'></view>
-  <view class='goods-des'>
-    <text>服务</text>
-    <text>正品保证</text>
-    <text>不支持退换</text>
+  <view class='goods-des' bindtap='openAttr'>
+    <view>
+      <text>服务</text>
+      <text>正品保证</text>
+      <text>不支持退换</text>
+    </view>
+    <view class='arrow'>
+      <text class="iconfont iconjiantou" style='font-size:50rpx;'></text>
+    </view>
   </view>
   <view class='pos'></view>
   <view class='goods-des'>
-    <text>服务</text>
-    <text>正品保证</text>
-    <text>不支持退换</text>
+    <view>
+      <text>服务</text>
+      <text>正品保证</text>
+      <text>不支持退换</text>
+    </view>
+    <view class='arrow'>
+      <text class="iconfont iconjiantou" style='font-size:50rpx;'></text>
+    </view>
   </view>
   <!-- <view class='pos' style='background:#fff'></view> -->
   <view class='process'>
+  </view>
+  <import src="/utils/wxParse/wxParse.wxml" />
+  <view class="wxParse ">
+    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
   </view>
 </view>
 <!-- 规格选择界面 -->
@@ -39,27 +54,27 @@
     <scroll-view scroll-y="true" style="height:{{scrollHeight}}px;;" scroll-top="{{scrollTop}}">
       <!-- 规格列表 -->
       <view class="spec-con">
-        <view class="spec-item" wx:for="{{specificationList}}" wx:for-index="key" wx:for-item="value" wx:key="key">
-          <view class="name">{{key}}</view>
+        <view class="spec-item" wx:for="{{specificationList}}"  wx:key="index">
+          <view class="name">{{item.name}}</view>
           <view class="values">
-            <view class="value  {{item.value == '1' ? 'selected' : ''}}" bindtap="clickSkuValue" wx:for="{{value}}" data-value="{{item.name}}" data-name="{{key}}" wx:key="index">{{item.name}}</view>
+            <view class="value  {{list.value == '1' ? 'selected' : ''}}" bindtap="clickSkuValue" wx:for="{{item.list}}" wx:for-item="list" data-value="{{list.name}}" data-name="{{item.name}}" wx:key="id">{{list.name}}</view>
           </view>
         </view>
       </view>
       <!-- 预算造价 -->
-      <view class='bugdetPrice' hidden='{{openBugdet}}'>
+      <view class='bugdetPrice' hidden='{{openBugdet}}' >
         <view class='bugdet-title'>预算造价</view>
         <view>
-          <view class='lists' wx:for="{{budgetLists}}" wx:key="id">
+          <view class='lists' wx:for="{{budgetLists}}" wx:key="index">
             <view class='list-item lt'>{{item.name}}</view>
             <view class='list-item ct'>
-              <input placeholder="1" bindinput='getValue' type="number" data-name="{{item.name}}"/>
+              <input placeholder="1" bindinput='getValue' type="number" data-name="{{item.name}}" adjust-position  cursor-spacing="20" value="{{item.defaultCount}}"/>
             </view>
             <view class='list-item rt'>{{item.value}}{{item.unit}}</view>
           </view>
-          <view class='attachPrice'>
+          <view class='attachPrice' wx:if="{{attachs.length > 0}}">
             <view class='attach-title'>服务附加</view>
-            <view class='attach-content' wx:for="{{attachs}}">
+            <view class='attach-content' wx:for="{{attachs}}" wx:key="id" >
               <text>{{item.control.unit}}大于<text class='bold'>{{item.control.value}}</text>附加<text class='bold'>{{item.attachGt.value}}元</text>,小于等于<text class='bold'>{{item.control.value}}</text> 附加<text class='bold'>{{item.attachLte.value}}元</text>。</text>
             </view>
           </view>
