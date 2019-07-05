@@ -228,8 +228,8 @@ Page({
         console.log(res)
         if (res.errno == '0'){
             console.log(123)
-            wx.navigateTo({
-              url: '/pages/gouwu/gouwu',
+            wx.switchTab({
+              url: '/pages/shopCart/index/index',
             })
           }else{
             wx.showToast({

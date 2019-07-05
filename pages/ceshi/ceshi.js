@@ -20,8 +20,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-   
-    
+    console.log(123)
+    wx.openLocation({
+      latitude: 32.04487,
+      longitude: 112.13555,
+      scale: 18
+    })
    
 	
     

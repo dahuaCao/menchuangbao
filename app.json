@@ -19,7 +19,7 @@
     "pages/mulitySelect/mulitySelect",
     "pages/expressOrder/expressOrder",
     "pages/timeLine/timeLine",
-    "pages/gouwu/gouwu",
+    "pages/shopCart/index/index",
     "pages/Complaints/Complaints",
     "pages/mine/index/index",
     "pages/mine/coupon/coupon",
@@ -68,7 +68,7 @@
         "text": "订单"
       },
       {
-        "pagePath": "pages/gouwu/gouwu",
+        "pagePath": "pages/shopCart/index/index",
         "iconPath": "images/tab/shopCart.png",
         "selectedIconPath": "images/tab/shopCart-s.png",
         "text": "购物车"

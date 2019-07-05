@@ -11,7 +11,7 @@
   </view>
   <m-swiper swiper-class="my-swiper" swiperObj="{{swiperObj}}" imgUrls="{{dataObj.carousel}}" />
   <view class="nav">
-    <block wx:for="{{dataObj.top}}" wx:key="id">
+    <block wx:for="{{dataObj.top}}" wx:key="index">
       <view class='nav-img' data-index='{{index}}' bindtap='repairApply'>
         <m-image original-image="{{item.picture}}" my-class='nav-img-item' />
       </view>
@@ -55,7 +55,7 @@
   </view>
   <view style='height:10rpx;background:#F5F5F5'></view>
   <view class='staff'>
-    <block wx:for="{{dataObj.abovefloor}}" wx:key="id">
+    <block wx:for="{{dataObj.abovefloor}}" wx:key="index">
       <view class='staff-item'>
         <m-image original-image="{{item.picture}}" my-class='staff-img' />
       </view>
@@ -74,7 +74,7 @@
     </view>
   </view>
   <view class='ad'>
-    <block wx:for="{{dataObj.floor}}" wx:key="id" >
+    <block wx:for="{{dataObj.floor}}" wx:key="index" >
       <view class='ad-item'  bindtap='goProduct'>
         <m-image original-image="{{item.picture}}"  />
       </view>
