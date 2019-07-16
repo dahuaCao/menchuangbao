@@ -8,11 +8,11 @@
 }
 
 .content {
-  padding: 20rpx 60rpx 0;
+  padding-top: 20rpx;
 }
 
 .content .item {
-  padding: 16rpx 0;
+  padding: 16rpx 60rpx;
   display: flex;
   align-items: center;
 }
@@ -81,10 +81,6 @@ input.cs-item.center{
   margin: 0 16rpx;
 }
 
-
-
-
-
 .btns {
   position: fixed;
   bottom: 0;
@@ -112,17 +108,36 @@ input.cs-item.center{
 .btns .save {
   background: #2574EB;
 }
-.form-default{
-  width: 594rpx;
-  height: 68rpx;
-  background: #E8EBF1;
-  border-radius: 34rpx;
-  line-height: 68rpx;
-  text-align: center;
-  margin-top: 54rpx;
-
+.switch-item{
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60rpx;
 }
-radio .wx-radio-input{
-   height: 32rpx; 
-    width: 32rpx;
+/*swtich样式-start*/
+/*swtich整体大小*/
+.wx-switch-input{
+width:100rpx !important;
+height:50rpx !important;
+}
+/*白色样式（false的样式）*/
+.wx-switch-input::before{
+width:98rpx !important;
+height: 46rpx !important;
+background-color: #ccc !important;
+}
+/*绿色样式（true的样式）*/
+.wx-switch-input::after{
+width: 56rpx !important;
+height: 46rpx !important;
+}
+.delete-item{
+  height: 80rpx;
+  width: 100%;
+  box-shadow:0px 2rpx 10rpx 0px rgba(30,30,25,0.19);
+
+  line-height: 80rpx;
+  color:#FF0000;
+  padding: 0 60rpx;
 }

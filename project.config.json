@@ -53,44 +53,43 @@
 			"list": [
 				{
 					"id": -1,
-					"name": "1",
-					"pathName": "pages/productCenter/productCenter",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 1,
-					"name": "2",
-					"pathName": "pages/productDetail/productDetail",
-					"query": "id=10",
-					"scene": null
-				},
-				{
-					"id": 2,
-					"name": "3",
-					"pathName": "pages/product/productDetail/productDetail",
+					"name": "购物车",
+					"pathName": "pages/shopCart/index/index",
 					"query": "id=15",
 					"scene": null
 				},
 				{
-					"id": 3,
-					"name": "4",
-					"pathName": "pages/mine/addressManger/addressManger",
-					"query": "goodId=15",
+					"id": -1,
+					"name": "地址添加",
+					"pathName": "pages/mine/addAddress/addAddress",
+					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "新增地址",
-					"pathName": "pages/mine/addAddress/addAddress",
-					"query": "goodId=15",
+					"name": "地址管理",
+					"pathName": "pages/mine/addressManger/addressManger",
+					"query": "",
 					"scene": null
 				},
 				{
-					"id": 5,
-					"name": "66",
-					"pathName": "pages/ceshi/ceshi",
+					"id": -1,
+					"name": "预约下单",
+					"pathName": "pages/shopCart/applyOrders/applyOrders",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "二维码",
+					"pathName": "pages/erweima/erweima",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的主页",
+					"pathName": "pages/mine/index/index",
 					"scene": null
 				}
 			]

@@ -1,6 +1,6 @@
 /**index.wxss**/
 page{
-  overflow: scroll;
+  overflow: auto;
 }
 .hd-search{
   height: 124rpx;

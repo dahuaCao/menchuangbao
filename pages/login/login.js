@@ -12,12 +12,6 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   bindGetUserInfo: function (e) {
-    // if (e.detail.userInfo == undefined) {
-    //   app.globalData.hasLogin = false;
-    //   util.showErrorToast('微信登录失败');
-    //   return;
-    // }
-
     if (e.detail.userInfo) {
       user.checkLogin().then((res) =>{
         wx.switchTab({
@@ -58,6 +52,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(options)
+    console.log(decodeURIComponent(options.q))
+    console.log('扫码进入')
     var _this = this;
     // 查看是否授权
     wx.getSetting({

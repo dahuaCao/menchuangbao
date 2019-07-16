@@ -13,7 +13,7 @@
 
 .item {
   height: 336rpx;
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.18);
+  box-shadow: 0rpx 0rpx 10rpx 0rpx rgba(0, 0, 0, 0.18);
   margin-bottom: 28rpx;
 }
 
@@ -33,6 +33,10 @@
 
 .con-hd .lf {
   margin-left: 4rpx;
+  width: 480rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .con-hd .rf {
@@ -53,8 +57,11 @@
   height: 190rpx;
   background: #ccc;
   margin-right: 24rpx;
+   
 }
-
+.img-border{
+  box-shadow: 0 0 4rpx 2rpx  #ccc;
+}
 .con-bd .rf {
   max-width: 300rpx;
   /* margin-right: 142rpx; */
@@ -65,6 +72,7 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   margin-bottom: 10rpx;
+  width: 320rpx;
 }
 
 .price {

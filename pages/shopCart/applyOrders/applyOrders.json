@@ -1,6 +1,5 @@
 {
   "usingComponents": {
-    "m-rater": "/components/rater/index",
     "m-image": "/components/imageLoader/index"
   }
 }

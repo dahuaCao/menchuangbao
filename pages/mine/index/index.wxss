@@ -7,7 +7,7 @@
   min-height: 184rpx;
   display: flex;
   align-items: center;
-  
+  justify-content: space-between;
 }
 .personInfo .lf{
   width: 138rpx;
@@ -15,6 +15,16 @@
   /* border: 1rpx solid #ccc; */
   margin-right:35rpx;
   
+}
+.personInfo .center{
+  flex: 1;
+  width: 0;
+}
+.personInfo .rf{
+  width: 138rpx;
+  height: 138rpx;
+  text-align: right;
+  line-height: 138rpx;
 }
 .avatar{
   height: 138rpx;

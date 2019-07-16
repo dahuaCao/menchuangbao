@@ -1,0 +1,31 @@
+<!--pages/erweima/erweima.wxml-->
+<view>
+  <view class='pos'></view>
+  <view>
+    <view class='text'>扫描收下名片</view>
+    <view class='canvas'>
+      <canvas canvas-id="canvas" style="width:180px; height: 180px"></canvas>
+    </view>
+    <view class='btn'>
+      <view class='btn1' bindtap='saveShare'>保存到手机</view>
+      <view class='btn2' bindtap='shareFriendOrCircle'>分享</view>
+    </view>
+  </view>
+  <view class='share-pop-box' hidden="{{!openShare}}">
+    <view class='share-pop'>
+      <view class="close" bindtap="closeShare">
+        <text class="iconfont iconguanbi"></text>
+      </view>
+      <view class='share-info'>
+        <button class="sharebtn" open-type="share">
+          <image class='sharebtn_image' src='/images/wechat.png'></image>
+          <view class='sharebtn_text'>分享给好友</view>
+        </button>
+        <button class="savesharebtn" bindtap="saveShare">
+          <image class='sharebtn_image' src='/images/friend.png'></image>
+          <view class='sharebtn_text'>发朋友圈</view>
+        </button>
+      </view>
+    </view>
+  </view>
+</view>

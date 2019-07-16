@@ -1,5 +1,5 @@
 //接口服务器地址
-var WxApiRoot = 'https://192.168.31.195/api/';
+var WxApiRoot = 'http://192.168.31.195:8088/api/';
 // var WxApiRoot = 'https://192.168.31.156/api/';
 // var WxApiRoot = 'https://www.xyzcwl.com:8081/api/';
 
@@ -25,4 +25,9 @@ module.exports = {
   GoodsDetail:WxApiRoot + 'goods/goodsDetail', //产品详情
   GoodsParams: WxApiRoot + 'goods/goodsParams', //产品详情参数查询
   AddCart: WxApiRoot + 'cart/add', //商品添加购物车
+
+  CartLists: WxApiRoot + 'cart/index', //购物车列表
+  CartDelete: WxApiRoot + 'cart/delete', //购物车列表单项删除
+
+  AppointOrders:WxApiRoot + 'cart/bespeak', //预约下单(确认订单接口)
 }

@@ -41,7 +41,6 @@ function login() {
  * 调用微信登录
  */
 function loginByWeixin(userInfo) {
-  console.log('jiekou diaoyong')
   return new Promise(function (resolve, reject) {
     return login().then((res) => {
       //登录远程服务器

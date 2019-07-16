@@ -1,34 +1,30 @@
-// pages/my/my.js
-
+// pages/shopCart/applyOrders/applyOrders.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    userInfo: {}
+    url:'',
+    lists:{}
   },
-  lianjie:function(){
-    console.log('打印信息')
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const userInfo = wx.getStorageSync('userInfo');
-    if (userInfo){
-      console.log('获取个人信息成功')
-      this.setData({userInfo})
-    }
-  
-    console.log(this.data.userInfo)
+   let lists =  wx.getStorageSync('goodLists');
+   console.log(lists)
+   this.setData({
+     lists
+   })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
+
   },
 
   /**

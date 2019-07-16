@@ -21,38 +21,21 @@
           <text class="iconfont icondingwei" style='font-size:34rpx;color:#ccc;'></text>{{address.addressName}}
         </view>
       </view>
-      <!-- <view class='item'>
-        <view class='lf'>服务区域</view>
-        <view class='rf'>
-          <picker 
-          range="{{multiArray}}"
-          range-key="name"   
-          mode="multiSelector"
-          value="{{multiIndex}}"
-          bindchange="bindMultiPickerChange"
-          bindcolumnchange="bindMultiPickerColumnChange">
-            <view class='custom'>
-                <input class='cs-item'  placeholder="省份" value="{{address.provinceName}}" disabled="true"/>
-                <input class='cs-item center' placeholder="城市" value="{{address.cityName}}" disabled="true"/>
-                <input class='cs-item' placeholder="区县" value="{{address.areaName}}" disabled="true"/>
-            </view>
-          </picker>
-        </view>
-      </view> -->
       <view class='item'>
         <view class='lf textArea'>门牌号　</view>
         <view class='rf text'>
-          <textarea auto-height placeholder="详细地址 例:16号楼5层501室" bindinput="bindinputAddress"  value="{{address.doorplate}}"/>
+          <textarea auto-height placeholder="详细地址 例:16号楼5层501室" bindinput="bindinputAddress" value="{{address.doorplate}}" />
         </view>
       </view>
-      <view bindtap='bindIsDefault'>
-        <radio-group class="form-default">
-          <label class="radio">
-            <radio value="" checked="{{isChecked}}" color='#f00' />设为默认地址
-          </label>
-        </radio-group>
+      <view class="switch-item">
+        <text>设置默认地址</text>
+        <switch checked="{{isChecked}}" bindchange="switchChange" />
+      </view>
+      <view class='delete-item' wx:if="{{addressId}}" data-address-id="{{addressId}}" bindtap='deleteAddress'>
+        <text>删除收货地址</text>
       </view>
     </view>
+
     <view class="btns">
       <button class="cannel" bindtap="cancelAddress">取消</button>
       <button class="save" bindtap="saveAddress">保存</button>

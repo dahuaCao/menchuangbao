@@ -1,26 +1,31 @@
 // pages/gouwu/gouwu.js
+const utils = require('../../../utils/util.js');
+const api = require('../../../config/api.js');
+const http = require('../../../utils/http.js');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    items: [
-      { name: 'USA', value: '美国' },
-      { name: 'CHN', value: '中国', checked: 'true' },
-      { name: 'USA', value: '美国' },
-     
-    ],
-    selectAllStatus: true, // 全选状态，默认全选
+    selectAllStatus: false, // 全选状态，默认全选
+    cartLists:{},
+    checkCount:0,
+    checkIds:[]
   },
   checkboxChange(e) {
     console.log('checkbox发生change事件，携带value值为：', e.detail.value)
+    this.setData({
+      checkCount: e.detail.value.length,
+      checkIds: e.detail.value
+    })
   },
   myClick:function(e){
    
-    let index = e.currentTarget.dataset.index;
+    let cartId = e.currentTarget.dataset.id;
     let arrs = this.data.items;
-    
+    let _this = this;
+    console.log(cartId)
     wx.showModal({
       title: '温馨提示',
       content: '确定要删除此件商品吗?',
@@ -29,21 +34,18 @@ Page({
       cancelText: '取消',
       cancelColor: '#333',
       success:  (res) => {
-        if (res.confirm) {
-          arrs.splice(index,1)
-          this.setData({
-            items: arrs
+        console.log(res)
+        if(res.confirm){
+          wx.showLoading({
+            title: '加载中',
           })
-        } else {
-          // wx.showModal({
-          //   title: '签到失败',
-          //   content: '无法使用定位权限，签到失败',
-          //   confirmText: '太遗憾了',
-          //   confirmColor: '#345391',
-          //   showCancel: false
-          // })
+          http.$request(api.CartDelete, {cartId:cartId}).then(function (res) {
+            wx.hideLoading();
+            if(res.errno == '0'){
+                _this.getDetail();
+            }
+          })
         }
-
       }
     })
   },
@@ -55,22 +57,65 @@ Page({
     let selectAllStatus = this.data.selectAllStatus;
     // true  -----   false
     selectAllStatus = !selectAllStatus;
-    let list = this.data.items;
-    list.forEach(function(item){
-      item.checked = selectAllStatus;
+    let list = this.data.cartLists;
+    let checkIds = [];
+    list.cartList.forEach(function(item){
+      item.checked = !selectAllStatus;
+      if (selectAllStatus){
+        checkIds.push(item.id)
+      }
     })
     console.log(list)
     // 页面重新渲染
+    let count = selectAllStatus ? list.cartList.length : 0;
+    console.log(checkIds)
+    console.log(selectAllStatus)
     this.setData({
       selectAllStatus,
-      items:list
+      cartLists:list,
+      checkCount:count,
+      checkIds
     });
+    
+  },
+  getDetail:function(){
+    const _this = this;
+    wx.showLoading({
+      title: '加载中',
+    })
+    http.$request(api.CartLists).then(function(res) {
+      wx.hideLoading();
+        _this.setData({
+          cartLists:res.data
+        })
+    })
+  },
+  AppointOrder:function(){
+    let checkIds = this.data.checkIds;
+    if (checkIds.length < 1){
+      wx.showToast({
+        image: '/images/icon_error.png',
+        title: '请选择宝贝'
+      });
+      return;
+    }
+    let params = checkIds.join(',');
+    
+    http.$request(api.AppointOrders,{ids:params}).then(function(res){
+      if(res.errno == '0'){
+        console.log(res.data)
+        wx.setStorageSync( 'goodLists',res.data)
+        wx.navigateTo({
+          url: '/pages/shopCart/applyOrders/applyOrders',
+        })
+      }
+    })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+     
   },
 
   /**
@@ -84,28 +129,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
+    this.getDetail();
   },
 
   /**

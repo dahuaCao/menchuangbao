@@ -1,34 +1,28 @@
 <!--pages/gouwu/gouwu.wxml-->
 <scroll-view class="list" scroll-y>
   <view class='pos'></view>
-  <view class='hd'>共选中1件宝贝</view>
+  <view class='hd'>共选中{{checkCount}}件宝贝</view>
   <checkbox-group bindchange="checkboxChange">
-    <label class="checkbox item" wx:for="{{items}}" wx:key="{{index}}">
-      <checkbox value="{{item.name}}" checked="{{item.checked}}" />
+    <label class="checkbox item" wx:for="{{cartLists.cartList}}" wx:key="{{index}}">
+      <checkbox value="{{item.id}}" checked="{{!item.checked}}" />
       <view class='content' catchtap='goDetail' >
         <view class='con-hd'>
-          <view class='lf'>铝合金门窗隔音防尘推拉门</view>
-          <view class='rf' catchtap='myClick' data-index="{{index}}">删除</view>
+          <view class='lf'>{{item.goodsName}}</view>
+          <view class='rf' catchtap='myClick' data-id="{{item.id}}">删除</view>
         </view>
         <view class='con-bd'>
-          <view class='lf'></view>
+          <view class='lf'>
+            <m-image original-image="{{item.picUrl}}" my-class='img-border'/>
+          </view>
           <view class='rf'>
-            <view class='r-item'>拼接方式:有缝焊接</view>
-            <view class='r-item'>玻璃颜色:标配</view>
-            <view class='r-item'>颜色分类:室内咖啡色哈哈哈哈哈</view>
-            <view class='price'>¥ 688.00</view>
+            <view class='r-item'>{{item.specs}}</view>
+            <view class='r-item'></view>
+            <view class='r-item'></view>
+            <view class='price'>¥ {{item.unitPrice}}</view>
           </view>
         </view>
       </view>
-
     </label>
-    <!-- <label class="checkbox" >
-      <checkbox value="{{item.name}}" checked="{{item.checked}}" data-index="{{index}}" />
-      <view>{{item.value}}
-        <view style='padding:8rpx;background:#ccc;' catchtap='myClick' data-index="{{index}}">删除</view>
-      </view>
-
-    </label> -->
   </checkbox-group>
   <view style='height:150rpx;'></view>
 </scroll-view>
@@ -38,5 +32,5 @@
       <checkbox value="" checked="{{selectAllStatus}}"/> 全选
     </label>
   </checkbox-group>
-  <view class='subBtn'>预约下单</view>
+  <view class='subBtn' bindtap='AppointOrder'>预约下单</view>
 </view>

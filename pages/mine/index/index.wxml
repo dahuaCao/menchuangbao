@@ -3,21 +3,23 @@
   <scroll-view style='height:100%;display:flex;flex-direction:column;'>
     <view class='pos'></view>
     <view class='content'>
-      <view class='personInfo'>
+      <view class='personInfo' bindtap='lianjie'>
         <view class='lf'>
-          <view wx:if="{{!userInfo.avatarUrl}}">
+          <view wx:if="{{!userInfo.avatar}}">
             <text class="iconfont icongerenzhongxinxuanzhong" style='font-size:134rpx;color:#2574EB;position:relative;top:-10rpx;'></text>
           </view>
           <view wx:else class='avatar'>
-            <m-image original-image="{{userInfo.avatarUrl}}" my-class='myClass' />
+            <m-image original-image="{{userInfo.avatar}}" my-class='myClass' />
             <!-- <image src='{{userInfo.avatarUrl}}'></image> -->
           </view>
         </view>
         <view class='center'>
-          <view style='margin-bottom:8rpx;font-weight:700'>{{userInfo.nickName}}</view>
+          <view style='margin-bottom:8rpx;font-weight:700'>{{userInfo.nickname}}</view>
           <view>地址:{{userInfo.city}}</view>
         </view>
-        <view></view>
+        <view class='rf'>
+            <text class="iconfont iconerweima" style='font-size:68rpx;color:#000;'></text>
+        </view>
       </view>
       <navigator class='item' url="/pages/mine/coupon/coupon">
         <view class='item-c'>

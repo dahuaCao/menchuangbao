@@ -29,6 +29,37 @@ Page({
     },
     addressId: '',
   },
+  switchChange: function (e) {
+    this.setData({
+      isChecked: e.detail.value
+    })
+  },
+  deleteAddress(event) {
+    console.log(event.target)
+    let that = this;
+
+    wx.showModal({
+      title: '',
+      content: '确定要删除地址？',
+      success: function (res) {
+        if (res.confirm) {
+          let addressId = event.currentTarget.dataset.addressId;
+          wx.showLoading({
+            title: '加载中',
+          })
+          http.$request(api.AddressDelete, { id: addressId }, 'POST').then(function (res) {
+            wx.hideLoading();
+            if (res.errno == '0') {
+              wx.navigateBack();
+            }
+          })
+          console.log('用户点击确定')
+        }
+      }
+    })
+    return false;
+
+  },
   bindinputMobile(event) {
     let address = this.data.address;
     address.mobile = event.detail.value;
@@ -50,15 +81,13 @@ Page({
       address: address
     });
   },
-  bindIsDefault: function() {
-    const isCheck = this.data.isChecked;
-    this.setData({
-      isChecked: !isCheck
-    })
-  },
   getAddressDetail:function(id){
      const _this = this;
+    wx.showLoading({
+      title: '加载中',
+    })
      http.$request(api.AddressDetail,{id:id},'POST').then(function(res){
+       wx.hideLoading();
         let address = {
           name: res.data.name,
           mobile:res.data.mobile,
@@ -164,7 +193,11 @@ Page({
     }
    
     let url = this.data.addressId ? api.AddressUpdate : api.AddressSave;
+    wx.showLoading({
+      title: '加载中',
+    })
     http.$request(url,dataObj,'POST').then(function(res){
+      wx.hideLoading();
       if(res.errno == '0'){
         wx.navigateBack();
       }

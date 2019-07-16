@@ -1,0 +1,37 @@
+<!--pages/shopCart/applyOrders/applyOrders.wxml-->
+<view>
+  <view class='pos'></view>
+  <view class='address'>
+    <view class='icon'>
+      <text class="iconfont icondingwei" style='font-size:48rpx;color:#1296DB;'></text>
+    </view>
+    <view class='info'>
+      <view class='info-item'>{{lists.address_info.name}}　　{{lists.address_info.mobile}}</view>
+      <view class='info-item info-ad'>收货地址</view>
+      <view class='info-item info-a'>
+        <text>{{lists.address_info.detailAddress}}</text>
+        <text class="iconfont iconjiantou" style='font-size:50rpx;'></text>
+      </view>
+    </view>
+
+  </view>
+  <view class='pos'></view>
+  <view class='goods-list'>
+    <block wx:for="{{lists.goodsBuy}}" wx:key="index">
+      <view class='goods-item'>
+        <view class='item-l'>
+          <m-image original-image="{{item.picUrl}}" />
+        </view>
+        <view class='item-r'>
+          <view class='title'>{{item.goodsName}}</view>
+          <view class='price'>{{item.unitPrice}}.00</view>
+          <view class='des'>规格:{{item.specs}}</view>
+        </view>
+      </view>
+
+    </block>
+  </view>
+  <view class='submit-btn'>
+    <view class='btn' hover-class='btn1'>提 交</view>
+  </view>
+</view>

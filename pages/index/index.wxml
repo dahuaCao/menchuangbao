@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<view class="">
+<view class="" style='overflow:hidden'>
   <view class='hd-search'>
     <view class='location' bindtap='goLocation'>
       <text class="iconfont icondingwei" style='font-size:38rpx;'></text>{{location}}
