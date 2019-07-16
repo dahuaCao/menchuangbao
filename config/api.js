@@ -1,5 +1,5 @@
 //接口服务器地址
-var WxApiRoot = 'http://192.168.31.195:8088/api/';
+var WxApiRoot = 'https://192.168.31.195/api/';
 // var WxApiRoot = 'https://192.168.31.156/api/';
 // var WxApiRoot = 'https://www.xyzcwl.com:8081/api/';
 

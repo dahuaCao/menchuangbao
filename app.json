@@ -29,6 +29,7 @@
     "pages/mine/myEarnings/myEarnings",
     "pages/mine/cashApplication/cashApplication",
     "pages/mine/helpCenter/helpCenter",
+    "pages/mine/erweima/erweima",
     "pages/appeal/appeal",
     "pages/evaluations/evaluations",
     "pages/cardManger/cardManger",
@@ -41,8 +42,8 @@
     "pages/logs/logs",
     "pages/product/newsDetail/newsDetail",
     "pages/product/productDetail/productDetail",
-    "pages/shopCart/applyOrders/applyOrders",
-    "pages/erweima/erweima"
+    "pages/shopCart/applyOrders/applyOrders"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -14,7 +14,7 @@
   <view class='share-pop-box' hidden="{{!openShare}}">
     <view class='share-pop'>
       <view class="close" bindtap="closeShare">
-        <text class="iconfont iconguanbi"></text>
+        <text class="iconfont iconguanbi" style='font-size:48rpx;'></text>
       </view>
       <view class='share-info'>
         <button class="sharebtn" open-type="share">

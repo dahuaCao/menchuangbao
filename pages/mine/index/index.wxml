@@ -15,7 +15,7 @@
         </view>
         <view class='center'>
           <view style='margin-bottom:8rpx;font-weight:700'>{{userInfo.nickname}}</view>
-          <view>地址:{{userInfo.city}}</view>
+          <view>地址:{{userInfo.weixinAddress}}</view>
         </view>
         <view class='rf'>
             <text class="iconfont iconerweima" style='font-size:68rpx;color:#000;'></text>

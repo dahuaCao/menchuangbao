@@ -1,7 +1,7 @@
 // pages/erweima/erweima.js
 
 // const QRCode  = require('../../utils/libs/qrCode.js');
-import QRCode from '../../utils/libs/qrCode.js';
+import QRCode from '../../../utils/libs/qrCode.js';
 
 Page({
 
