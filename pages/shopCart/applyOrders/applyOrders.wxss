@@ -1,6 +1,6 @@
 /* pages/shopCart/applyOrders/applyOrders.wxss */
 
-.address{
+.address,.address-no{
   padding: 30rpx 60rpx;
   display: flex;
 }
@@ -9,6 +9,15 @@
 }
 .address .info{
   flex: 1;
+}
+.address-no{
+  padding: 50rpx 60rpx;
+  /* height: 100rpx; */
+  justify-items: center;
+  justify-content: space-between;
+  line-height: 0;
+  font-size: 34rpx;
+  color:#ccc;
 }
 .info-item{
   height: 48rpx;

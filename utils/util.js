@@ -55,6 +55,22 @@ const postion = function(callBack) {
     }
   });
 }
+
+const parseURL = (url) => {
+    if (url && url.indexOf("?") == -1) return {}
+    var startIndex = url.indexOf("?") + 1;
+    var str = url.substr(startIndex);
+    var strs = str.split("&");
+    var param = {}
+    for (var i = 0; i < strs.length; i++) {
+      var result = strs[i].split("=");
+      var key = result[0];
+      var value = result[1];
+      param[key] = value;
+    }
+    return param
+}
+
 const checkLocation = function(callBack) {
   const _this = this;
   wx.showModal({
@@ -109,5 +125,6 @@ module.exports = {
   formatTime: formatTime,
   getLocation: getLocation,
   showErrorToast,
-  debounce
+  debounce,
+  parseURL: parseURL
 }

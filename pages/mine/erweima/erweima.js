@@ -1,18 +1,16 @@
 // pages/erweima/erweima.js
 
-// const QRCode  = require('../../utils/libs/qrCode.js');
 import QRCode from '../../../utils/libs/qrCode.js';
-
+let app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    canvasWidth: '',//画布宽度
-    canvasHeight: '',//画布高度 
     openShare: false,
-    imageUrl:''
+    imageUrl:'',
+    userId:''
   },
   shareFriendOrCircle: function () {
     //var that = this;
@@ -30,16 +28,16 @@ Page({
     });
   },
   saveShare:function(){
-    this.canvasToTempImage();
+    let _this = this;
+    this.canvasToTempImage(_this.downloadIImg);
   },
-  canvasToTempImage:function(){
+  canvasToTempImage:function(callBack){
     let _this = this;
     wx.canvasToTempFilePath({
       canvasId: 'canvas',
       success: function (res) {
-        console.log(res)
         var tempFilePath = res.tempFilePath;
-        _this.downloadIImg(res.tempFilePath)
+        callBack&& callBack(res.tempFilePath)
         _this.setData({
           openShare: false,
           imageUrl: res.tempFilePath
@@ -86,30 +84,18 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-   
+    let userId = app.globalData.userId;
+    console.log(userId)
+    this.setData({
+      userId
+    })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    let that = this;
-    
-    wx.canvasToTempFilePath({
-      canvasId: 'canvas',
-      success: function (res) {
-        console.log("chenggong")
-        that.setData({
-          imageUrl: res.tempFilePath
-        })
-      },
-      fail: function (res) {
-        console.log("shibai")
-
-      }
-    });
-    console.log(2)
-
+    this.canvasToTempImage();
   },
 
   /**
@@ -117,53 +103,24 @@ Page({
    */
   onShow: function () {
     var qrcode = new QRCode('canvas', {
-      text: 'https://www.hbjlzn.com/xcx/test?userId=123',
+      text: 'https://www.hbjlzn.com/xcx/test?userId=' + app.globalData.userId,
       width: 180,
       height: 180,
       colorDark: '#000000',
       colorLight: '#ffffff',
       correctLevel: QRCode.correctLevel.H
     });
+    
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-    var that = this;
-    console.log(this.data.imageUrl)
+    let that = this;
     return {
       title: '微信二维码分享',
       desc: '唯爱与美食不可辜负',
-      path: '/pages/login/login?id=2',
+      path: '/pages/login/login?userId=' + app.globalData.userId,
       imageUrl: that.data.imageUrl,
     }
     this.closeShare();

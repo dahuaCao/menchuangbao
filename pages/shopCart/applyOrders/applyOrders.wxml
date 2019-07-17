@@ -1,20 +1,27 @@
 <!--pages/shopCart/applyOrders/applyOrders.wxml-->
 <view>
   <view class='pos'></view>
-  <view class='address'>
-    <view class='icon'>
-      <text class="iconfont icondingwei" style='font-size:48rpx;color:#1296DB;'></text>
-    </view>
-    <view class='info'>
-      <view class='info-item'>{{lists.address_info.name}}　　{{lists.address_info.mobile}}</view>
-      <view class='info-item info-ad'>收货地址</view>
-      <view class='info-item info-a'>
-        <text>{{lists.address_info.detailAddress}}</text>
-        <text class="iconfont iconjiantou" style='font-size:50rpx;'></text>
+  <block wx:if="{{lists.address_info.name}}">
+    <view class='address'>
+      <view class='icon'>
+        <text class="iconfont icondingwei" style='font-size:48rpx;color:#1296DB;'></text>
+      </view>
+      <view class='info'>
+        <view class='info-item'>{{lists.address_info.name}}　　{{lists.address_info.mobile}}</view>
+        <view class='info-item info-ad'>收货地址</view>
+        <view class='info-item info-a'>
+          <text>{{lists.address_info.detailAddress}}</text>
+          <text class="iconfont iconjiantou" style='font-size:50rpx;'></text>
+        </view>
       </view>
     </view>
-
-  </view>
+  </block>
+  <block>
+    <view class='address-no' bindtap='addAddress'>
+      <text>还没收货地址,去添加</text>
+      <text class="iconfont iconjiantou" style='font-size:50rpx;'></text>
+    </view>
+  </block>
   <view class='pos'></view>
   <view class='goods-list'>
     <block wx:for="{{lists.goodsBuy}}" wx:key="index">

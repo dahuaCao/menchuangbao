@@ -40,6 +40,7 @@ Page({
   userLogin:function(res){
     user.loginByWeixin(res).then(res => {
       app.globalData.hasLogin = true;
+      app.globalData.userId = res.data.userInfo.id;
       wx.switchTab({
         url: '/pages/index/index'
       })
@@ -55,6 +56,11 @@ Page({
     console.log(options)
     console.log(decodeURIComponent(options.q))
     console.log('扫码进入')
+  },
+  /**
+  * 生命周期函数--监听页面显示
+  */
+  onShow: function () {
     var _this = this;
     // 查看是否授权
     wx.getSetting({
@@ -62,11 +68,11 @@ Page({
         if (res.authSetting['scope.userInfo']) {
           wx.getUserInfo({
             success: function (res) {
-              _this.userLogin(res.userInfo);     
+              _this.userLogin(res.userInfo);
             }
           });
         }
       }
     })
-  }
+  },
 })

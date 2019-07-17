@@ -8,7 +8,13 @@ Page({
     url:'',
     lists:{}
   },
+  addAddress:function(){
+    console.log('选择地址')
+    wx.navigateTo({
+      url: '/pages/mine/addressManger/addressManger',
+    })
 
+  },
   /**
    * 生命周期函数--监听页面加载
    */
