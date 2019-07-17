@@ -4,7 +4,7 @@
   <view>
     <view class='text'>扫描收下名片</view>
     <view class='canvas'>
-      <canvas canvas-id="canvas" style="width:200px; height: 200px"></canvas>
+      <canvas canvas-id="canvas" style="width:180px; height: 180px"></canvas>
     </view>
     <view class='btn'>
       <view class='btn1' bindtap='saveShare'>保存到手机</view>

@@ -1,6 +1,6 @@
 // pages/erweima/erweima.js
-let QRCode = require('../../../utils/libs/qrCode.js');
-// import QRCode from '../../../utils/libs/qrCode.js';
+// let QRCode = require('../../../utils/libs/qrCode.js');
+import QRCode from '../../../utils/libs/qrCode.js';
 let app = getApp();
 Page({
 
@@ -101,15 +101,15 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    // var qrcode = new QRCode('canvas', {
-    //   text: 'https://www.hbjlzn.com/xcx/test?recommendId=' + app.globalData.recommendId,
-    //   width: 180,
-    //   height: 180,
-    //   colorDark: '#000000',
-    //   colorLight: '#ffffff',
-    //   correctLevel: QRCode.correctLevel.H
-    // });
-    QRCode.qrApi.draw('https://www.hbjlzn.com/xcx/test?recommendId=' + app.globalData.recommendId, "canvas", 200, 200, 4, "https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIWNgp1kLVtQiaGmdylEt2p96bNNSEJWvcpyXQ4Orlz2aq6NeoCaxGy45elFaAumgqhFNbj9uQEniaQ/132");
+    var qrcode = new QRCode('canvas', {
+      text: 'https://www.hbjlzn.com/xcx/test?recommendId=' + app.globalData.recommendId,
+      width: 180,
+      height: 180,
+      colorDark: '#000000',
+      colorLight: '#ffffff',
+      correctLevel: QRCode.correctLevel.H
+    });
+    // QRCode.qrApi.draw('https://www.hbjlzn.com/xcx/test?recommendId=' + app.globalData.recommendId, "canvas", 200, 200, 2, "https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIWNgp1kLVtQiaGmdylEt2p96bNNSEJWvcpyXQ4Orlz2aq6NeoCaxGy45elFaAumgqhFNbj9uQEniaQ/132");
     
   },
   /**

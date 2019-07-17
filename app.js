@@ -47,6 +47,7 @@ App({
   },
   globalData: {
     userInfo: null,
-    locatInfo:null
+    locatInfo:null,
+    recommendId:''
   }
 })
