@@ -1,6 +1,6 @@
 // pages/erweima/erweima.js
-
-import QRCode from '../../../utils/libs/qrCode.js';
+let QRCode = require('../../../utils/libs/qrCode.js');
+// import QRCode from '../../../utils/libs/qrCode.js';
 let app = getApp();
 Page({
 
@@ -10,7 +10,7 @@ Page({
   data: {
     openShare: false,
     imageUrl:'',
-    userId:''
+    recommendId:''
   },
   shareFriendOrCircle: function () {
     //var that = this;
@@ -84,10 +84,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let userId = app.globalData.userId;
-    console.log(userId)
+    let recommendId = app.globalData.recommendId;
     this.setData({
-      userId
+      recommendId
     })
   },
 
@@ -102,14 +101,15 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    var qrcode = new QRCode('canvas', {
-      text: 'https://www.hbjlzn.com/xcx/test?userId=' + app.globalData.userId,
-      width: 180,
-      height: 180,
-      colorDark: '#000000',
-      colorLight: '#ffffff',
-      correctLevel: QRCode.correctLevel.H
-    });
+    // var qrcode = new QRCode('canvas', {
+    //   text: 'https://www.hbjlzn.com/xcx/test?recommendId=' + app.globalData.recommendId,
+    //   width: 180,
+    //   height: 180,
+    //   colorDark: '#000000',
+    //   colorLight: '#ffffff',
+    //   correctLevel: QRCode.correctLevel.H
+    // });
+    QRCode.qrApi.draw('https://www.hbjlzn.com/xcx/test?recommendId=' + app.globalData.recommendId, "canvas", 200, 200, 4, "https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIWNgp1kLVtQiaGmdylEt2p96bNNSEJWvcpyXQ4Orlz2aq6NeoCaxGy45elFaAumgqhFNbj9uQEniaQ/132");
     
   },
   /**
@@ -120,7 +120,7 @@ Page({
     return {
       title: '微信二维码分享',
       desc: '唯爱与美食不可辜负',
-      path: '/pages/login/login?userId=' + app.globalData.userId,
+      path: '/pages/login/login?recommendId=' + app.globalData.recommendId,
       imageUrl: that.data.imageUrl,
     }
     this.closeShare();

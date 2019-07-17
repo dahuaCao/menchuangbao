@@ -49,7 +49,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 5,
+			"current": 6,
 			"list": [
 				{
 					"id": -1,
@@ -90,6 +90,13 @@
 					"id": -1,
 					"name": "预约下单页",
 					"pathName": "pages/shopCart/applyOrders/applyOrders",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "二维码页面",
+					"pathName": "pages/mine/erweima/erweima",
 					"query": "",
 					"scene": null
 				}

@@ -40,13 +40,14 @@ function login() {
 /**
  * 调用微信登录
  */
-function loginByWeixin(userInfo) {
+function loginByWeixin(userInfo,id) {
   return new Promise(function (resolve, reject) {
     return login().then((res) => {
       //登录远程服务器
       https.$request(api.AuthLoginByWeixin, {
         code: res.code,
-        userInfo: userInfo
+        userInfo: userInfo,
+        recommendId:id
       }, 'POST').then(res => {
         if (res.errno === 0) {
           //存储用户信息
@@ -82,7 +83,6 @@ function checkLogin() {
     }
   });
 }
-
 module.exports = {
   loginByWeixin,
   checkLogin,

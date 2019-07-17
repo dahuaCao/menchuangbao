@@ -9,17 +9,18 @@ Page({
    */
   data: {
     //判断小程序的API，回调，参数，组件等是否在当前版本可用。
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    recommendId:''
   },
   bindGetUserInfo: function (e) {
+    let id = this.data.recommendId;
     if (e.detail.userInfo) {
       user.checkLogin().then((res) =>{
         wx.switchTab({
           url: '/pages/index/index'
         })
       }).catch(() => {
-        this.userLogin(e.detail.userInfo);
-
+        this.userLogin(e.detail.userInfo,id);
       });
       
     } else {
@@ -37,10 +38,10 @@ Page({
       })
     }
   },
-  userLogin:function(res){
-    user.loginByWeixin(res).then(res => {
+  userLogin:function(res,id){
+    user.loginByWeixin(res,id).then(res => {
       app.globalData.hasLogin = true;
-      app.globalData.userId = res.data.userInfo.id;
+      app.globalData.recommendId = res.data.userInfo.id;
       wx.switchTab({
         url: '/pages/index/index'
       })
@@ -56,19 +57,30 @@ Page({
     console.log(options)
     console.log(decodeURIComponent(options.q))
     console.log('扫码进入')
+    if (options.q){
+      let url = decodeURIComponent(options.q);
+      let parms = util.parseURL(url);
+      console.log(parms)
+      if (parms.recommendId){
+        this.setData({
+          recommendId: parms.recommendId
+        })
+      }
+    }
   },
   /**
   * 生命周期函数--监听页面显示
   */
   onShow: function () {
     var _this = this;
+    console.log(_this.data.recommendId)
     // 查看是否授权
     wx.getSetting({
       success: function (res) {
         if (res.authSetting['scope.userInfo']) {
           wx.getUserInfo({
             success: function (res) {
-              _this.userLogin(res.userInfo);
+              _this.userLogin(res.userInfo,_this.data.recommendId);
             }
           });
         }
