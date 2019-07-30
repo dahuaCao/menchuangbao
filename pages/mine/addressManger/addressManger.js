@@ -11,6 +11,20 @@ Page({
     list:[1,2,3],
     addressLists:[]
   },
+  address: function (event){
+    //返回之前，先取出上一页对象，并设置addressId
+    var pages = getCurrentPages();
+    var prevPage = pages[pages.length - 2];
+    console.log(prevPage.route)
+    if (prevPage.route == "pages/shopCart/applyOrders/applyOrders"){
+      try {
+        wx.setStorageSync('addressId', event.currentTarget.dataset.addressId);
+      } catch (e) {
+
+      }
+      wx.navigateBack();
+    }
+  },
   goAddress:function(){
     wx.navigateTo({
       url: "/pages/mine/addAddress/addAddress"
@@ -26,30 +40,6 @@ Page({
       url: '/pages/mine/addAddress/addAddress?id=' + addressId
     })
   },
-  radioChange:function(e){
-    console.log('radio发生change事件，携带value值为：', e.detail.value)
-  },
-  deleteAddress(event) {
-    console.log(event.target)
-    let that = this;
-    wx.showModal({
-      title: '',
-      content: '确定要删除地址？',
-      success: function (res) {
-        if (res.confirm) {
-          let addressId = event.currentTarget.dataset.addressId;
-          http.$request(api.AddressDelete, { id:addressId},'POST').then(function(res){
-            if(res.errno == '0'){
-              that.getAddressList();
-            }
-          })
-          console.log('用户点击确定')
-        }
-      }
-    })
-    return false;
-
-  },
   getAddressList:function(){
     let _this = this;
     wx.showLoading({
@@ -57,6 +47,7 @@ Page({
     })
     http.$request(api.AddressList,{},'POST').then(function(res){
       wx.hideLoading();
+      
       _this.setData({
         addressLists:res.data
       })

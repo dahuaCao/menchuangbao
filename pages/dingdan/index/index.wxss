@@ -29,4 +29,5 @@
   color: #fff;
   right: -30rpx;
   top:-14rpx;
+  font-size: 20rpx;
 }

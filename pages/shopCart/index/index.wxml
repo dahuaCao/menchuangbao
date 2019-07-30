@@ -1,36 +1,48 @@
 <!--pages/gouwu/gouwu.wxml-->
-<scroll-view class="list" scroll-y>
+<view class='cartPage'>
   <view class='pos'></view>
-  <view class='hd'>共选中{{checkCount}}件宝贝</view>
-  <checkbox-group bindchange="checkboxChange">
-    <label class="checkbox item" wx:for="{{cartLists.cartList}}" wx:key="{{index}}">
-      <checkbox value="{{item.id}}" checked="{{!item.checked}}" />
-      <view class='content' catchtap='goDetail' >
-        <view class='con-hd'>
-          <view class='lf'>{{item.goodsName}}</view>
-          <view class='rf' catchtap='myClick' data-id="{{item.id}}">删除</view>
-        </view>
-        <view class='con-bd'>
-          <view class='lf'>
-            <m-image original-image="{{item.picUrl}}" my-class='img-border'/>
+  <block wx:if="{{cartLists.cartList.length > 0}}">
+    <scroll-view class="list" scroll-y>
+      <view class='hd'>共选中{{checkCount}}件宝贝</view>
+      <checkbox-group bindchange="checkboxChange">
+        <label class="checkbox item" wx:for="{{cartLists.cartList}}" wx:key="{{index}}">
+          <checkbox value="{{item.id}}" checked="{{!item.checked}}" />
+          <view class='content' catchtap='goDetail'>
+            <view class='con-hd'>
+              <view class='lf'>{{item.goodsName}}</view>
+              <view class='rf' catchtap='myClick' data-id="{{item.id}}">删除</view>
+            </view>
+            <view class='con-bd'>
+              <view class='lf'>
+                <m-image original-image="{{item.picUrl}}" my-class='img-border' />
+              </view>
+              <view class='rf'>
+                <view class='r-item'>{{item.specs}}</view>
+                <view class='r-item'></view>
+                <view class='r-item'></view>
+                <view class='price'>¥ {{item.unitPrice}}</view>
+              </view>
+            </view>
           </view>
-          <view class='rf'>
-            <view class='r-item'>{{item.specs}}</view>
-            <view class='r-item'></view>
-            <view class='r-item'></view>
-            <view class='price'>¥ {{item.unitPrice}}</view>
-          </view>
-        </view>
+        </label>
+      </checkbox-group>
+      <view style='height:150rpx;'></view>
+    </scroll-view>
+    <view class='bottom'>
+      <checkbox-group bindchange="selectAll">
+        <label class="checkbox checkAll">
+          <checkbox value="" checked="{{selectAllStatus}}" /> 全选
+        </label>
+      </checkbox-group>
+      <view class='subBtn' bindtap='AppointOrder'>预约下单</view>
+    </view>
+  </block>
+  <block wx:else>
+    <view class='empt-cart'>
+      <text class="iconfont iconwudingdan" style='font-size:200rpx;margin-bottom:20rpx;'></text>
+      <view>
+        <text>购物车空空,请移步商品中心..</text>
       </view>
-    </label>
-  </checkbox-group>
-  <view style='height:150rpx;'></view>
-</scroll-view>
-<view class='bottom'>
-  <checkbox-group bindchange="selectAll">
-    <label class="checkbox checkAll">
-      <checkbox value="" checked="{{selectAllStatus}}"/> 全选
-    </label>
-  </checkbox-group>
-  <view class='subBtn' bindtap='AppointOrder'>预约下单</view>
+    </view>
+  </block>
 </view>

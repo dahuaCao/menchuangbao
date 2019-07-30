@@ -90,7 +90,7 @@
         <text>合　　　计</text>
         <text>¥ 90000.00</text>
       </view>
-      <view class='pay-btn' wx:if="{{!paid}}" >支付定金</view>
+      <view class='pay-btn' wx:if="{{!paid}}"  bindtap='pay'>支付定金</view>
     </view>
   </view>
 </view>

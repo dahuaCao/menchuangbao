@@ -100,16 +100,19 @@ Page({
       return;
     }
     let params = checkIds.join(',');
-    
-    http.$request(api.AppointOrders,{ids:params}).then(function(res){
-      if(res.errno == '0'){
-        console.log(res.data)
-        wx.setStorageSync( 'goodLists',res.data)
-        wx.navigateTo({
-          url: '/pages/shopCart/applyOrders/applyOrders',
-        })
-      }
+    console.log(params)
+    wx.navigateTo({
+      url: '/pages/shopCart/applyOrders/applyOrders?parms=' + encodeURI(params),
     })
+    // http.$request(api.AppointOrders,{ids:params}).then(function(res){
+    //   if(res.errno == '0'){
+    //     console.log(res.data)
+    //     wx.setStorageSync( 'goodLists',res.data)
+    //     wx.navigateTo({
+    //       url: '/pages/shopCart/applyOrders/applyOrders',
+    //     })
+    //   }
+    // })
   },
   /**
    * 生命周期函数--监听页面加载

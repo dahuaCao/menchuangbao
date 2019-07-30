@@ -1,5 +1,5 @@
 {
   "usingComponents": {
-    "my-time":"/components/timeLine/index"
+    "my-time":"/components/timeLin/index"
   }
 }

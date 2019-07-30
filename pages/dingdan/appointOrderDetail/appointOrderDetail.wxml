@@ -1,36 +1,60 @@
 <!--pages/appointOrderDetail/appointOrderDetail.wxml-->
 <view>
- <view class='pos'></view>
- <view class='masterInfo'>
+  <view class='pos'></view>
+  <view class='masterInfo'>
     <view class='master-hd'>
       <text class="iconfont iconicontouxiang" style='font-size:28rpx;color:#1296DB;margin-right:16rpx;'></text>师傅信息
     </view>
     <view class='master-bd'>
-       <view class='m-bd-item'>
+      <block wx:if="{{masterInfo.name}}">
+        <view class='m-bd-item'>
           姓　　　名: 王大军
-       </view>
-       <view class='m-bd-item'>
-          电　　　话: 1857****2356  <text class="iconfont iconicontouxiang" style='font-size:28rpx;color:#1296DB;margin-right:16rpx;'></text>     
-       </view>
-       <view class='m-bd-item'>
+        </view>
+        <view class='m-bd-item'>
+          电　　　话: 1857****2356
+          <text class="iconfont iconicontouxiang" style='font-size:28rpx;color:#1296DB;margin-right:16rpx;'></text>
+        </view>
+        <view class='m-bd-item'>
           好　评　率: 98%
-       </view>
+        </view>
+      </block>
+      <block wx:else>
+        <view class='info-none'>
+          正在极速派单中,请小主耐心等待...
+        </view>
+
+      </block>
+
     </view>
- </view>
- <view class='orderInfo'>
+  </view>
+  <view class='orderInfo'>
     <view class='order-hd'>
-       <text class="iconfont iconshangpinxinxi" style='font-size:56rpx;color:#1296DB;margin-right:16rpx;'></text>订单信息
+      <text class="iconfont iconshangpinxinxi" style='font-size:56rpx;color:#1296DB;margin-right:16rpx;'></text>订单信息
     </view>
     <view>
       <view class='o-bd-item'>
-        订单编号: 201809242248
-      </view>
-       <view class='o-bd-item'>
-        商品名称: 铝合金一体窗105系列隔热防蚊平开窗
+        订单编号: {{orderInfo.orderId}}
       </view>
       <view class='o-bd-item'>
-        下单时间: 2018-08-24 09:32:47
+        下单时间: {{orderInfo.orderTime}}
+      </view>
+      <view class='product-content'>
+        <block wx:for="{{orderInfo.productInfos}}" wx:key="index">
+          <view class='p-item'>
+          <view class='l-img'>
+             <m-image original-image="{{item.picture}}" my-class='nav-img-item' />
+          </view>
+          <view class='r-info'>
+             <view class='info-item title'>{{item.title}}</view>
+             <view class='info-item'>{{item.standard}}</view>
+          </view>
+        </view>
+        
+        </block>
       </view>
     </view>
- </view>
+  </view>
+  <view class='commInfo'>
+      
+  </view>
 </view>

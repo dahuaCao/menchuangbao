@@ -1,6 +1,14 @@
 /* pages/addressManger/addressManger.wxss */
 
-
+.address_no{
+  width: 100%;
+  height: 500rpx;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ccc;
+}
 .address-list{
   padding:0 30rpx;
 }

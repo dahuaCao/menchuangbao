@@ -54,9 +54,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options)
-    console.log(decodeURIComponent(options.q))
-    console.log('扫码进入')
     if (options.q){
       let url = decodeURIComponent(options.q);
       let parms = util.parseURL(url);
@@ -73,7 +70,6 @@ Page({
   */
   onShow: function () {
     var _this = this;
-    console.log(_this.data.recommendId)
     // 查看是否授权
     wx.getSetting({
       success: function (res) {

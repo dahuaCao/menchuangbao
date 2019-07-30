@@ -49,7 +49,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 6,
+			"current": 9,
 			"list": [
 				{
 					"id": -1,
@@ -74,13 +74,6 @@
 				},
 				{
 					"id": -1,
-					"name": "预约下单",
-					"pathName": "pages/shopCart/applyOrders/applyOrders",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
 					"name": "我的主页",
 					"pathName": "pages/mine/index/index",
 					"query": "",
@@ -88,16 +81,43 @@
 				},
 				{
 					"id": -1,
-					"name": "预约下单页",
-					"pathName": "pages/shopCart/applyOrders/applyOrders",
+					"name": "订单主页",
+					"pathName": "pages/dingdan/index/index",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "二维码页面",
-					"pathName": "pages/mine/erweima/erweima",
+					"name": "时间轴",
+					"pathName": "pages/timeLine/timeLine",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "粤语",
+					"pathName": "pages/shopCart/applyOrders/applyOrders",
+					"query": "speId=54",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "预约订单详情",
+					"pathName": "pages/dingdan/appointOrderDetail/appointOrderDetail",
+					"query": "orderId=201907221625449925",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "登陆",
+					"pathName": "pages/login/login",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "付款",
+					"pathName": "pages/dingdan/unpaidFixDetail/unpaidFixDetail",
 					"scene": null
 				}
 			]

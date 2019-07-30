@@ -1,7 +1,7 @@
 //接口服务器地址
 var WxApiRoot = 'https://192.168.31.195/api/';
-var WxApiRoot = 'https://192.168.31.156/api/';
-// var WxApiRoot = 'https://www.xyzcwl.com:8081/api/';
+// var WxApiRoot = 'https://192.168.31.156/api/';
+var WxApiRoot = 'https://www.xyzcwl.com:8081/ruoyi-admin/api/';
 
 
 module.exports = {
@@ -30,4 +30,13 @@ module.exports = {
   CartDelete: WxApiRoot + 'cart/delete', //购物车列表单项删除
 
   AppointOrders:WxApiRoot + 'cart/bespeak', //预约下单(确认订单接口)
+
+  BookOrder: WxApiRoot + 'order/placeOrder', //预约下单(生成预约订单)
+
+  aboutOrders: WxApiRoot + 'order/entryMyOrderCenter', //total订单查询
+  queryMyOrder: WxApiRoot + 'order/queryMyOrder', //订单查询接口
+  Query_OrderDetail: WxApiRoot + 'order/queryOrderDetail', //订单查询接口
+  Cancel_Order: WxApiRoot + 'order/cancelOrder', //订单查询接口
+
+  prePya: WxApiRoot + 'order/prepay', //微信预付款
 }

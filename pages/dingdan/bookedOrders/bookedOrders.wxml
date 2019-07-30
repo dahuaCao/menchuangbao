@@ -1,26 +1,58 @@
 <!--pages/bookedOrders/bookedOrders.wxml-->
 <view>
- <view class='pos'></view>
- <view>
-   <view class='item' bindtap='goDetail'>
-      <view class='title'>
-        <view>订单编号:201809242247</view>
-        <view class='tl-rf'>待上门</view>
-      </view>
-      <view class='hd'>
-        <view class='hd-lf'>
-          <image src='http://temp.im/250x235' mode='aspectFill'></image>
+  <view class='pos'></view>
+  <view class='order-content'>
+    <block wx:if="{{orderLists.length > 0}}" >
+      <block wx:for="{{orderLists}}" wx:key="index">
+        <view class='item' data-order-id="{{item.orderId}}" bindtap='goDetail'>
+          <view class='title'>
+            <view>订单编号:{{item.orderId}}</view>
+            <view class='tl-rf'>{{item.orderType}}/{{item.status}}</view>
+          </view>
+          <view class='hd-content'>
+            <block wx:if="{{item.orderProducts.length > 1}}">
+              <block wx:for="{{item.orderProducts}}" wx:for-item="product">
+                <view class='hd-item'>
+                  <view class='hd-lf'>
+                    <image src='{{product.picture}}' mode='aspectFill' my-class="image-show"></image>
+                  </view>
+                  <view class='hd-rf'>
+                    <view>{{product.title}}</view>
+                    <view class='time'>下单时间: {{item.orderTime}}</view>
+                  </view>
+
+                </view>
+              </block>
+            </block>
+            <block wx:else>
+              <view class='hd-item'>
+                <view class='hd-lf'>
+                  <image src='{{item.orderProducts[0].picture}}' mode='aspectFill' my-class="image-show"></image>
+                </view>
+                <view class='hd-rf'>
+                  <view>{{item.orderProducts[0].title}}</view>
+                  <view class='time'>下单时间: {{item.orderTime}}</view>
+                </view>
+
+              </view>
+            </block>
+          </view>
+          <view class='btn-content'>
+            <view class='btn' data-order-id="{{item.orderId}}" hover-class='btn-bg' catchtap='cancelOrder'>取消订单</view>
+          </view>
+          <view class='fd'>
+            <my-time lists="{{item.orderTrail}}" />
+          </view>
         </view>
-        <view class='hd-rf'>
-          <view>铝合金一体窗105系列隔热防蚊平开窗</view>
-          <view class='time'>下单时间: 2018-09-24 09-10-00</view>
-          
+      </block>
+    </block>
+    <block wx:else>
+      <view class='empt-cart'>
+        <text class="iconfont iconwudingdan" style='font-size:200rpx;margin-bottom:20rpx;'></text>
+        <view>
+          <text>购物车空空,请移步商品中心..</text>
         </view>
-        <view class='btn'>取消订单</view>
       </view>
-      <view class='fd'>
-        <my-time />
-      </view>
-   </view>
- </view>
+    </block>
+  </view>
 </view>

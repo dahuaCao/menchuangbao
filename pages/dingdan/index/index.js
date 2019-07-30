@@ -1,11 +1,13 @@
 // pages/dingdan/dingdan.js
+const utils = require('../../../utils/util.js');
+const api = require('../../../config/api.js');
+const http = require('../../../utils/http.js');
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-
+    coutLists:{}
   },
 
   /**
@@ -28,7 +30,13 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    let _this = this;
+    http.$request(api.aboutOrders,{},'POST').then(function(res){
+      console.log(res)
+      _this.setData({
+        coutLists:res.data
+      })
+    })
   },
 
   /**
@@ -44,21 +52,6 @@ Page({
   onUnload: function () {
 
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
   /**
    * 用户点击右上角分享
    */

@@ -94,5 +94,5 @@
     <text>联系客服</text>
   </view>
   <view class='gouwu' bindtap='addToCart'>加入购物车</view>
-  <view class='xiadan'>预约下单</view>
+  <view class='xiadan' bindtap='bookPurchase'>预约下单</view>
 </view>

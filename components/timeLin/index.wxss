@@ -1,0 +1,50 @@
+@import '/styles/iconfont.wxss';
+
+.weui-cell-third {
+  background: #fff;
+  position: relative;
+  padding: 10px 0 6px 0;
+  /* border: 1px solid #000; */
+  overflow: hidden;
+  transition: max-height 0.5s linear;
+}
+
+.weui-cell-list {
+  background: #fff;
+  /* margin: 5px 50px 5px 50px; */
+  margin-left: 10rpx;
+}
+
+.weui-cell-line {
+  /* width: 100px; */
+  margin-left: 5px;
+  border-left: 1px solid #ddd;
+  height: 40px;
+  background: #fff;
+  position: relative;
+  padding-left: 10px;
+}
+
+.weui-cell-circle {
+  border: 1px solid #000;
+  border-radius: 5px;
+  width: 10px;
+  height: 10px;
+  border-color: red;
+}
+
+.weui-cell-line .item {
+  position: relative;
+  top: -12px;
+}
+
+.btn {
+  /* background: red; */
+  width: 240rpx;
+  padding: 5rpx;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}

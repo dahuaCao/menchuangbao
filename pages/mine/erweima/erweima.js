@@ -121,7 +121,7 @@ Page({
       title: '微信二维码分享',
       desc: '唯爱与美食不可辜负',
       path: '/pages/login/login?recommendId=' + app.globalData.recommendId,
-      imageUrl: that.data.imageUrl,
+      // imageUrl: that.data.imageUrl,
     }
     this.closeShare();
   }

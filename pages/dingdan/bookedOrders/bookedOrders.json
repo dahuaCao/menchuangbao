@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "my-time": "/components/timeLine/index"
+    "my-time": "/components/timeLin/index"
   },
   "navigationBarTitleText": "已预约"
 }

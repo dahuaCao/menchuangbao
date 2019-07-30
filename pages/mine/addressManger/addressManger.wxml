@@ -1,27 +1,37 @@
 <!--pages/addressManger/addressManger.wxml-->
 <view style='padding-bottom:200rpx'>
   <view class='pos'></view>
-  <view class="address-list" wx:for="{{addressLists}}" wx:key="id">
-    <view class='item'  data-address-id="{{item.id}}">
-      <view class='item-content'>
-        <view class="l">
-          <view class="name">{{item.name}}</view>
-          <view class="default" wx:if="{{!item.isDefault}}">默认地址</view>
+  <block wx:if="{{addressLists.length > 0}}">
+    <view class="address-list" wx:for="{{addressLists}}" wx:key="index">
+      <view class='item' data-address-id="{{item.id}}" bindtap='address'>
+        <view class='item-content'>
+          <view class="l">
+            <view class="name">{{item.name}}</view>
+            <view class="default" wx:if="{{!item.isDefault}}">默认地址</view>
+          </view>
+          <view class="c">
+            <view class="mobile">{{item.mobile}}</view>
+            <view class="address">{{item.completeAddress}}</view>
+          </view>
         </view>
-        <view class="c">
-          <view class="mobile">{{item.mobile}}</view>
-          <view class="address">{{item.completeAddress}}</view>
+        <view class='eidtor' data-address-id="{{item.id}}" catchtap="addressUpdate">
+          <view class="r">
+            编辑
+            <!-- <text class="iconfont iconshanchu" style='font-size:44rpx;color:#666;' data-address-id="{{item.id}}" catchtap="deleteAddress"></text> -->
+          </view>
         </view>
       </view>
-     <view class='eidtor' data-address-id="{{item.id}}" bindtap="addressUpdate">
-       <view class="r">
-       编辑
-        <!-- <text class="iconfont iconshanchu" style='font-size:44rpx;color:#666;' data-address-id="{{item.id}}" catchtap="deleteAddress"></text> -->
-      </view>
-     </view>
     </view>
-  </view>
 
+  </block>
+  <block wx:else>
+    <view class='address_no'>
+       <text class="iconfont iconwudingdan" style='font-size:200rpx;margin-bottom:20rpx;'></text>
+       <view>
+        <text>还没有添加地址,请添加..</text>
+       </view>
+    </view>
+  </block>
 </view>
 <view class='bottom'>
   <view class='btn' bindtap='goAddress'>添加新地址</view>

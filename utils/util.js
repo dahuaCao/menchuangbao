@@ -111,20 +111,26 @@ function debounce(handler,delay){
     },delay)
   }
 }
-function throttle(fn,gapTime){
-  let _lastTime = null;
+function throttle(fn, gapTime) {
+  if (gapTime == null || gapTime == undefined) {
+    gapTime = 1500
+  }
+
+  let _lastTime = null
   return function () {
     let _nowTime = + new Date()
     if (_nowTime - _lastTime > gapTime || !_lastTime) {
-      fn.apply(this,arguments);
+      fn.apply(this, arguments)
       _lastTime = _nowTime
     }
   }
 }
+
 module.exports = {
   formatTime: formatTime,
   getLocation: getLocation,
   showErrorToast,
   debounce,
+  throttle,
   parseURL: parseURL
 }

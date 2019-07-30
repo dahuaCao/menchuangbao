@@ -2,7 +2,7 @@
 <view>
   <view class='pos'></view>
   <block wx:if="{{lists.address_info.name}}">
-    <view class='address'>
+    <view class='address' bindtap='addAddress' >
       <view class='icon'>
         <text class="iconfont icondingwei" style='font-size:48rpx;color:#1296DB;'></text>
       </view>
@@ -16,7 +16,7 @@
       </view>
     </view>
   </block>
-  <block>
+  <block wx:else>
     <view class='address-no' bindtap='addAddress'>
       <text>还没收货地址,去添加</text>
       <text class="iconfont iconjiantou" style='font-size:50rpx;'></text>
@@ -39,6 +39,6 @@
     </block>
   </view>
   <view class='submit-btn'>
-    <view class='btn' hover-class='btn1'>提 交</view>
+    <view class='btn' hover-class='btn1' bindtap='bookOrders'>提 交</view>
   </view>
 </view>
